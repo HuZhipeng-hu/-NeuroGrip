@@ -1,0 +1,14 @@
+{
+  "status": "ok",
+  "bundle_type": "event_session_bundle",
+  "session_id": "s3_demo3_0317",
+  "bundle_path": "F:\\ICT\\义肢核心代码\\code\\artifacts\\bundles\\s3_demo3_0317_session.zip",
+  "bundle_sha256": "50f1b2f30daf23e16c619c43faf522ec3b95ee9f3c114afee1c8a0e9f8ce79a1",
+  "recording_count": 148,
+  "labels": {
+    "CONTINUE": 44,
+    "TENSE_OPEN": 73,
+    "THUMB_UP": 14,
+    "WRIST_CW": 17
+  }
+}

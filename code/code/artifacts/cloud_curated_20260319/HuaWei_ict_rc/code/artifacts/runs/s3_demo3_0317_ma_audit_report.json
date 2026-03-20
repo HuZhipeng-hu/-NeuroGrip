@@ -1,0 +1,177 @@
+{
+  "status": "ok",
+  "run_root": "/home/ma-user/work/HuaWei_ict_rc/code/artifacts/runs",
+  "run_prefix": "s3_demo3_0317_ma",
+  "checks": {
+    "design": {
+      "name": "design_contract",
+      "passed": true,
+      "issues": [],
+      "details": {
+        "split_counts": {
+          "train_sources": 45,
+          "val_sources": 17,
+          "test_sources": 17,
+          "train_indices": 140,
+          "val_indices": 52,
+          "test_indices": 52
+        },
+        "training_config": "configs/training_event_onset_demo3_two_stage.yaml",
+        "runtime_config": "configs/runtime_event_onset_demo3_latch.yaml",
+        "split_manifest": "/home/ma-user/work/HuaWei_ict_rc/code/artifacts/splits/s3_demo3_0317_ma_demo3_seed42_v2.json",
+        "expected_class_names": [
+          "CONTINUE",
+          "TENSE_OPEN",
+          "THUMB_UP",
+          "WRIST_CW"
+        ],
+        "release_mode": "command_only",
+        "release_command_labels": [
+          1
+        ]
+      }
+    },
+    "implementation": {
+      "name": "implementation_artifacts",
+      "passed": true,
+      "issues": [],
+      "details": {
+        "run_count": 47,
+        "runs_checked": [
+          "s3_demo3_0317_ma_long_c1_s42",
+          "s3_demo3_0317_ma_long_c1_s52",
+          "s3_demo3_0317_ma_long_c1_s62",
+          "s3_demo3_0317_ma_long_c2_s42",
+          "s3_demo3_0317_ma_long_c2_s52",
+          "s3_demo3_0317_ma_long_c2_s62",
+          "s3_demo3_0317_ma_nbr_01_ref_lcb_focal_bc16_fz6_elr0p24",
+          "s3_demo3_0317_ma_nbr_02_lr_down_lcb_focal_bc16_fz6_elr0p192",
+          "s3_demo3_0317_ma_nbr_03_lr_up_lcb_focal_bc16_fz6_elr0p288",
+          "s3_demo3_0317_ma_nbr_04_freeze_down_lcb_focal_bc16_fz4_elr0p24",
+          "s3_demo3_0317_ma_nbr_05_freeze_up_lcb_focal_bc16_fz8_elr0p24",
+          "s3_demo3_0317_ma_scr_01_lcross_entropy_bc16_fz6_elr0p24_ptoff",
+          "s3_demo3_0317_ma_scr_02_lcross_entropy_bc16_fz6_elr0p3_ptoff",
+          "s3_demo3_0317_ma_scr_03_lcross_entropy_bc16_fz6_elr0p36_ptoff",
+          "s3_demo3_0317_ma_scr_04_lcross_entropy_bc16_fz8_elr0p24_ptoff",
+          "s3_demo3_0317_ma_scr_05_lcross_entropy_bc16_fz8_elr0p3_ptoff",
+          "s3_demo3_0317_ma_scr_06_lcross_entropy_bc16_fz8_elr0p36_ptoff",
+          "s3_demo3_0317_ma_scr_07_lcross_entropy_bc16_fz10_elr0p24_ptoff",
+          "s3_demo3_0317_ma_scr_08_lcross_entropy_bc16_fz10_elr0p3_ptoff",
+          "s3_demo3_0317_ma_scr_09_lcross_entropy_bc16_fz10_elr0p36_ptoff",
+          "s3_demo3_0317_ma_scr_10_lcross_entropy_bc24_fz6_elr0p24_ptoff",
+          "s3_demo3_0317_ma_scr_11_lcross_entropy_bc24_fz6_elr0p3_ptoff",
+          "s3_demo3_0317_ma_scr_12_lcross_entropy_bc24_fz6_elr0p36_ptoff",
+          "s3_demo3_0317_ma_scr_13_lcross_entropy_bc24_fz8_elr0p24_ptoff",
+          "s3_demo3_0317_ma_scr_14_lcross_entropy_bc24_fz8_elr0p3_ptoff",
+          "s3_demo3_0317_ma_scr_15_lcross_entropy_bc24_fz8_elr0p36_ptoff",
+          "s3_demo3_0317_ma_scr_16_lcross_entropy_bc24_fz10_elr0p24_ptoff",
+          "s3_demo3_0317_ma_scr_17_lcross_entropy_bc24_fz10_elr0p3_ptoff",
+          "s3_demo3_0317_ma_scr_18_lcross_entropy_bc24_fz10_elr0p36_ptoff",
+          "s3_demo3_0317_ma_scr_19_lcb_focal_bc16_fz6_elr0p24_ptoff",
+          "s3_demo3_0317_ma_scr_20_lcb_focal_bc16_fz6_elr0p3_ptoff",
+          "s3_demo3_0317_ma_scr_21_lcb_focal_bc16_fz6_elr0p36_ptoff",
+          "s3_demo3_0317_ma_scr_22_lcb_focal_bc16_fz8_elr0p24_ptoff",
+          "s3_demo3_0317_ma_scr_23_lcb_focal_bc16_fz8_elr0p3_ptoff",
+          "s3_demo3_0317_ma_scr_24_lcb_focal_bc16_fz8_elr0p36_ptoff",
+          "s3_demo3_0317_ma_scr_25_lcb_focal_bc16_fz10_elr0p24_ptoff",
+          "s3_demo3_0317_ma_scr_26_lcb_focal_bc16_fz10_elr0p3_ptoff",
+          "s3_demo3_0317_ma_scr_27_lcb_focal_bc16_fz10_elr0p36_ptoff",
+          "s3_demo3_0317_ma_scr_28_lcb_focal_bc24_fz6_elr0p24_ptoff",
+          "s3_demo3_0317_ma_scr_29_lcb_focal_bc24_fz6_elr0p3_ptoff",
+          "s3_demo3_0317_ma_scr_30_lcb_focal_bc24_fz6_elr0p36_ptoff",
+          "s3_demo3_0317_ma_scr_31_lcb_focal_bc24_fz8_elr0p24_ptoff",
+          "s3_demo3_0317_ma_scr_32_lcb_focal_bc24_fz8_elr0p3_ptoff",
+          "s3_demo3_0317_ma_scr_33_lcb_focal_bc24_fz8_elr0p36_ptoff",
+          "s3_demo3_0317_ma_scr_34_lcb_focal_bc24_fz10_elr0p24_ptoff",
+          "s3_demo3_0317_ma_scr_35_lcb_focal_bc24_fz10_elr0p3_ptoff",
+          "s3_demo3_0317_ma_scr_36_lcb_focal_bc24_fz10_elr0p36_ptoff"
+        ]
+      }
+    },
+    "params": {
+      "name": "param_coverage",
+      "passed": true,
+      "issues": [],
+      "details": {
+        "screen_expected_rows": 36,
+        "screen_actual_rows": 36,
+        "longrun_candidate_ranks": [
+          1,
+          2
+        ],
+        "longrun_expected_seeds": [
+          42,
+          52,
+          62
+        ],
+        "neighbor_row_count": 5,
+        "neighbor_significant_improvement": false,
+        "neighbor_event_gain": -0.0625,
+        "neighbor_command_gain": 0.0
+      }
+    },
+    "stability": {
+      "name": "evaluation_stability",
+      "passed": true,
+      "issues": [],
+      "details": {
+        "run_id": "s3_demo3_0317_ma_long_c1_s42",
+        "repeats": 2,
+        "tolerance": 1e-06,
+        "metrics_by_repeat": [
+          {
+            "command_success_rate": 0.6470588235294118,
+            "false_trigger_rate": 0.35294117647058826,
+            "false_release_rate": 0.0
+          },
+          {
+            "command_success_rate": 0.6470588235294118,
+            "false_trigger_rate": 0.35294117647058826,
+            "false_release_rate": 0.0
+          }
+        ],
+        "metric_spans": {
+          "command_success_rate": 0.0,
+          "false_trigger_rate": 0.0,
+          "false_release_rate": 0.0
+        },
+        "command": "/home/ma-user/anaconda3/envs/MindSpore/bin/python scripts/evaluate_event_demo_control.py --run_root artifacts/runs --run_id s3_demo3_0317_ma_long_c1_s42 --training_config configs/training_event_onset_demo3_two_stage.yaml --runtime_config configs/runtime_event_onset_demo3_latch.yaml --data_dir ../data --split_manifest /home/ma-user/work/HuaWei_ict_rc/code/artifacts/splits/s3_demo3_0317_ma_demo3_seed42_v2.json --target_db5_keys TENSE_OPEN,THUMB_UP,WRIST_CW --backend ckpt --device_target Ascend --output_json /home/ma-user/work/HuaWei_ict_rc/code/artifacts/runs/s3_demo3_0317_ma_long_c1_s42/evaluation/stability_reruns/control_eval_repeat_02.json --recordings_manifest /home/ma-user/work/HuaWei_ict_rc/code/s3_demo3_0317_ma_demo3_train_manifest.csv"
+      }
+    }
+  },
+  "blocking_issue_count": 0,
+  "blocking_issues": [],
+  "data_only_ready": true,
+  "goal_assessment": {
+    "conclusion": "data_bottleneck_only",
+    "data_only_bottleneck": true,
+    "development_gate": {
+      "event_action_accuracy": 0.625,
+      "event_action_macro_f1": 0.6004477004477005,
+      "target_event_action_accuracy": 0.9,
+      "target_event_action_macro_f1": 0.88,
+      "passed": false,
+      "source_run_id": "longrun_candidate:rank2:loss=cb_focal,bc=16,freeze=10,elr=0.3,pt=off"
+    },
+    "demo_gate": {
+      "command_success_rate": 0.6862745098039216,
+      "false_trigger_rate": 0.3137254901960784,
+      "false_release_rate": 0.1111111111111111,
+      "target_command_success_rate": 0.9,
+      "max_false_trigger_rate": 0.05,
+      "max_false_release_rate": 0.05,
+      "passed": false,
+      "source": "run:longrun_candidate:rank1:loss=cb_focal,bc=16,freeze=6,elr=0.24,pt=off"
+    }
+  },
+  "data_only_bottleneck": true,
+  "conclusion": "data_bottleneck_only",
+  "root_cause_category": "data_bottleneck",
+  "root_cause_summary": "engineering gates are clear and the remaining gap is primarily data quality, coverage, or label separability",
+  "root_cause_check": "goal_assessment",
+  "root_cause_evidence": [
+    "development_gate.passed=False",
+    "demo_gate.passed=False",
+    "conclusion=data_bottleneck_only"
+  ]
+}

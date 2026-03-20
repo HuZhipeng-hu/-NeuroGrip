@@ -1,0 +1,42 @@
+{
+  "status": "ok",
+  "target_state": "TENSE_OPEN",
+  "start_state": "CONTINUE",
+  "rows": 190,
+  "frames": 19,
+  "emg_packs": 190,
+  "elapsed_sec": 45.292,
+  "estimated_emg_rate_hz": 4.195,
+  "stream_csv_path": "F:\\ICT\\义肢核心代码\\data\\_streams\\TENSE_OPEN\\20260318T120904__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+  "manifest_path": "F:\\ICT\\义肢核心代码\\data\\recordings_manifest.csv",
+  "sample_rate_hz": 500,
+  "onset_count": 0,
+  "slice_candidate_count": 0,
+  "accepted_clip_count": 0,
+  "rejected_clip_count": 0,
+  "detection": {
+    "onsets": [],
+    "threshold": 2.6322,
+    "q_low": 2.0838,
+    "q_high": 3.6506,
+    "smooth_window": 40
+  },
+  "keep_quality": [
+    "pass",
+    "warn"
+  ],
+  "clips": [],
+  "collection_gate": {
+    "passed": false,
+    "failures": [
+      "rows<15000",
+      "slice_candidate_count<4",
+      "accepted_clip_count<4"
+    ],
+    "thresholds": {
+      "min_rows_gate": 15000,
+      "min_candidates_gate": 4,
+      "min_accepted_gate": 4
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "status": "ok",
+  "target_state": "WRIST_CW",
+  "start_state": "CONTINUE",
+  "rows": 22580,
+  "frames": 2258,
+  "emg_packs": 22580,
+  "elapsed_sec": 45.019,
+  "estimated_emg_rate_hz": 501.564,
+  "stream_csv_path": "F:\\ICT\\义肢核心代码\\data\\_streams\\WRIST_CW\\20260317T214557__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+  "manifest_path": "F:\\ICT\\义肢核心代码\\data\\recordings_manifest.csv",
+  "sample_rate_hz": 500,
+  "onset_count": 5,
+  "slice_candidate_count": 5,
+  "accepted_clip_count": 5,
+  "rejected_clip_count": 0,
+  "detection": {
+    "onsets": [
+      1142,
+      4015,
+      8817,
+      18643,
+      21329
+    ],
+    "threshold": 8.6968,
+    "q_low": 3.2313,
+    "q_high": 18.8472,
+    "smooth_window": 40
+  },
+  "keep_quality": [
+    "pass",
+    "warn"
+  ],
+  "clips": [
+    {
+      "clip_index": 1,
+      "onset_sample": 1142,
+      "start_sample": 892,
+      "end_sample": 2392,
+      "relative_path": "WRIST_CW/20260317T214557__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-001.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 60,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 2,
+      "onset_sample": 4015,
+      "start_sample": 3765,
+      "end_sample": 5265,
+      "relative_path": "WRIST_CW/20260317T214557__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-002.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 77,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 3,
+      "onset_sample": 8817,
+      "start_sample": 8567,
+      "end_sample": 10067,
+      "relative_path": "WRIST_CW/20260317T214557__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-003.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 67,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 4,
+      "onset_sample": 18643,
+      "start_sample": 18393,
+      "end_sample": 19893,
+      "relative_path": "WRIST_CW/20260317T214557__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-004.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 70,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 5,
+      "onset_sample": 21329,
+      "start_sample": 21079,
+      "end_sample": 22579,
+      "relative_path": "WRIST_CW/20260317T214557__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-005.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 58,
+      "total_windows": 139
+    }
+  ],
+  "collection_gate": {
+    "passed": true,
+    "failures": [],
+    "thresholds": {
+      "min_rows_gate": 15000,
+      "min_candidates_gate": 4,
+      "min_accepted_gate": 4
+    }
+  }
+}

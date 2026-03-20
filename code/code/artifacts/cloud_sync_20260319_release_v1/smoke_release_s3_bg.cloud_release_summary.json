@@ -1,0 +1,49 @@
+{
+  "status": "ok",
+  "run_id": "smoke_release_s3_bg",
+  "session_bundle": "/home/ma-user/work/s3_demo3_0317_session.zip",
+  "release_summary_json": "artifacts/runs/smoke_release_s3_bg/release/release_summary.json",
+  "bundle": {
+    "status": "ok",
+    "bundle_type": "event_release_bundle",
+    "run_id": "smoke_release_s3_bg",
+    "bundle_path": "/home/ma-user/work/cloud_bundle_v1/artifacts/bundles/smoke_release_s3_bg.zip",
+    "bundle_sha256": "91784f7633d3b95ee5fa02d8e1e459dfde88f716cc6a0a377f90add8bc130ec8",
+    "included_checkpoint": false,
+    "files": [
+      "configs/event_actuation_mapping.yaml",
+      "configs/runtime_event_onset.yaml",
+      "models/event_onset.mindir",
+      "models/event_onset.model_metadata.json",
+      "release_summary.json"
+    ],
+    "file_hashes": {
+      "models/event_onset.mindir": "3a07b42abf57546bf710e97553a56482f118bff13d0cdbfb95718549879563c0",
+      "models/event_onset.model_metadata.json": "ef2a2eb3bea4a71090058bd683fc3ad638cde48a4bc05f7ec944fc85fa1f8523",
+      "configs/runtime_event_onset.yaml": "ad6d8ae42d60b7b2dee6bfc52e4553a90ddfcd13bde894c156d2ccc6777df332",
+      "configs/event_actuation_mapping.yaml": "b3b14b45a60dc43e2d864091c135a42a9e5370cca3f2f63bdbaf58798dcd181d",
+      "release_summary.json": "fb299c779b225c24cb0df9cf5e86273c91a8e85becb7ee7c5a546f8ed1bddd03"
+    }
+  },
+  "parity": {
+    "thresholds": {
+      "command_success_rate": 0.05,
+      "false_trigger_rate": 0.05,
+      "false_release_rate": 0.02,
+      "event_action_accuracy": 0.02
+    },
+    "deltas": {
+      "command_success_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "false_release_rate": 0.0,
+      "event_action_accuracy": 0.0
+    },
+    "passes": {
+      "command_success_rate": true,
+      "false_trigger_rate": true,
+      "false_release_rate": true,
+      "event_action_accuracy": true
+    },
+    "passed": true
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "status": "ok",
+  "run_id": "smoke_release_s3_bg",
+  "run_dir": "artifacts/runs/smoke_release_s3_bg",
+  "runtime_config": "configs/runtime_event_onset.yaml",
+  "training_config": "configs/training_event_onset.yaml",
+  "checkpoint_path": "artifacts/runs/smoke_release_s3_bg/checkpoints/event_onset_best.ckpt",
+  "window_test_accuracy": 0.88,
+  "window_macro_f1": 0.8591577540106952,
+  "test_accuracy": 0.88,
+  "test_macro_f1": 0.8591577540106952,
+  "event_action_accuracy": 0.8717948717948718,
+  "event_action_macro_f1": 0.8536838978015449,
+  "command_success_rate": 0.6896551724137931,
+  "false_release_rate": 0.16666666666666666,
+  "false_trigger_rate": 0.2413793103448276,
+  "sanity_flags": {
+    "metric_invariant_ok": true
+  },
+  "total_clip_count": 29,
+  "action_clip_count": 6,
+  "continue_clip_count": 9,
+  "release_command_clip_count": 14,
+  "target_db5_keys": [
+    "TENSE_OPEN",
+    "THUMB_UP",
+    "WRIST_CW"
+  ],
+  "mapping": {
+    "CONTINUE": "CONTINUE",
+    "TENSE_OPEN": "CONTINUE",
+    "THUMB_UP": "THUMB_UP",
+    "WRIST_CW": "WRIST_CW"
+  },
+  "split_manifest": "/home/ma-user/work/cloud_bundle_v1/artifacts/splits/event_onset_demo3_split_manifest.json",
+  "recordings_manifest": "artifacts/runs/smoke_release_s3_bg/session_input/recordings_manifest.csv"
+}

@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "stage": "neighbor",
+  "root_cause": "missing artifact: artifacts/runs/s3_demo3_0317_ma\r_longrun_summary.json",
+  "next_command": ""
+}

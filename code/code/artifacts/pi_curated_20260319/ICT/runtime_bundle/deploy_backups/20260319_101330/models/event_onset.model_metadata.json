@@ -1,0 +1,59 @@
+{
+  "model_type": "event_onset",
+  "model_variant": "event_onset_two_stage_demo3",
+  "training_config": "configs/training_event_onset_demo3_two_stage.yaml",
+  "checkpoint_path": "artifacts/runs/s3_demo3_0317_scr_tuned_scr_22_lcb_focal_bc16_fz8_elr0p24_ptoff/checkpoints/event_onset_best.ckpt",
+  "model_path": "models/event_onset_scr22.mindir",
+  "inputs": [
+    {
+      "name": "emg",
+      "shape": [
+        1,
+        8,
+        24,
+        3
+      ],
+      "dtype": "float32"
+    },
+    {
+      "name": "imu",
+      "shape": [
+        1,
+        6,
+        16
+      ],
+      "dtype": "float32"
+    }
+  ],
+  "class_names": [
+    "CONTINUE",
+    "TENSE_OPEN",
+    "THUMB_UP",
+    "WRIST_CW"
+  ],
+  "public_class_names": [
+    "CONTINUE",
+    "TENSE_OPEN",
+    "THUMB_UP",
+    "WRIST_CW"
+  ],
+  "outputs": [
+    {
+      "name": "gate_logits",
+      "dtype": "float32"
+    },
+    {
+      "name": "command_logits",
+      "dtype": "float32"
+    }
+  ],
+  "gate_classes": [
+    "CONTINUE",
+    "COMMAND"
+  ],
+  "command_classes": [
+    "TENSE_OPEN",
+    "THUMB_UP",
+    "WRIST_CW"
+  ]
+}

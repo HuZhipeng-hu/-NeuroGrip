@@ -1,0 +1,276 @@
+{
+  "status": "ok",
+  "target_state": "TENSE_OPEN",
+  "start_state": "RELAX",
+  "rows": 30110,
+  "frames": 3011,
+  "emg_packs": 30110,
+  "elapsed_sec": 60.014,
+  "estimated_emg_rate_hz": 501.714,
+  "stream_csv_path": "F:\\ICT\\义肢核心代码\\data\\_streams\\TENSE_OPEN\\20260315T191659__u-demo_user__s-s2__d-armband01__w-normal.csv",
+  "manifest_path": "F:\\ICT\\义肢核心代码\\data\\recordings_manifest.csv",
+  "sample_rate_hz": 500,
+  "onset_count": 15,
+  "slice_candidate_count": 14,
+  "accepted_clip_count": 14,
+  "rejected_clip_count": 0,
+  "detection": {
+    "onsets": [
+      1195,
+      3133,
+      4890,
+      7311,
+      9061,
+      11181,
+      13373,
+      15583,
+      17696,
+      19381,
+      21458,
+      23633,
+      25699,
+      27321,
+      29072
+    ],
+    "threshold": 2.0579,
+    "q_low": 1.0344,
+    "q_high": 5.1284,
+    "smooth_window": 40
+  },
+  "keep_quality": [
+    "pass",
+    "warn"
+  ],
+  "clips": [
+    {
+      "clip_index": 1,
+      "onset_sample": 1195,
+      "start_sample": 945,
+      "end_sample": 2445,
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-001.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "low_energy",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 54,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 2,
+      "onset_sample": 3133,
+      "start_sample": 2883,
+      "end_sample": 4383,
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-002.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "low_energy",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 42,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 3,
+      "onset_sample": 4890,
+      "start_sample": 4640,
+      "end_sample": 6140,
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-003.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "low_energy",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 44,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 4,
+      "onset_sample": 7311,
+      "start_sample": 7061,
+      "end_sample": 8561,
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-004.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "low_energy",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 44,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 5,
+      "onset_sample": 9061,
+      "start_sample": 8811,
+      "end_sample": 10311,
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-005.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "low_energy",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 49,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 6,
+      "onset_sample": 11181,
+      "start_sample": 10931,
+      "end_sample": 12431,
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-006.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "low_energy",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 48,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 7,
+      "onset_sample": 13373,
+      "start_sample": 13123,
+      "end_sample": 14623,
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-007.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "low_energy",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 43,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 8,
+      "onset_sample": 15583,
+      "start_sample": 15333,
+      "end_sample": 16833,
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-008.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "low_energy",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 40,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 9,
+      "onset_sample": 17696,
+      "start_sample": 17446,
+      "end_sample": 18946,
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-009.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "low_energy",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 40,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 10,
+      "onset_sample": 19381,
+      "start_sample": 19131,
+      "end_sample": 20631,
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-010.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "low_energy",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 39,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 11,
+      "onset_sample": 21458,
+      "start_sample": 21208,
+      "end_sample": 22708,
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-011.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "low_energy",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 38,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 12,
+      "onset_sample": 23633,
+      "start_sample": 23383,
+      "end_sample": 24883,
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-012.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "low_energy",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 41,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 13,
+      "onset_sample": 25699,
+      "start_sample": 25449,
+      "end_sample": 26949,
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-013.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "low_energy",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 39,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 14,
+      "onset_sample": 27321,
+      "start_sample": 27071,
+      "end_sample": 28571,
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-014.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "low_energy",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 34,
+      "total_windows": 139
+    }
+  ],
+  "collection_gate": {
+    "passed": true,
+    "failures": [],
+    "thresholds": {
+      "min_rows_gate": 15000,
+      "min_candidates_gate": 4,
+      "min_accepted_gate": 2
+    }
+  }
+}

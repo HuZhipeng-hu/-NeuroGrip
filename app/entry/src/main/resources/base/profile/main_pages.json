@@ -1,0 +1,15 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/HomePage",
+    "pages/Training",
+    "pages/Data",
+    "pages/Profile",
+    "pages/Settings",
+    "pages/Location",
+    "pages/EmgRealtimePage",
+    "pages/AnnotationPage",
+    "pages/ModelTrainingPage",
+    "pages/ModelManagePage"
+  ]
+}

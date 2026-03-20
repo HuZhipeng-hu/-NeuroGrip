@@ -1,0 +1,413 @@
+{
+  "status": "ok",
+  "target_state": "TENSE_OPEN",
+  "start_state": "RELAX",
+  "rows": 22590,
+  "frames": 2259,
+  "emg_packs": 22590,
+  "elapsed_sec": 45.021,
+  "estimated_emg_rate_hz": 501.764,
+  "stream_csv_path": "F:\\ICT\\义肢核心代码\\data\\_streams\\TENSE_OPEN\\20260314T201437__u-demo_user__s-s2__d-armband01__w-normal.csv",
+  "manifest_path": "F:\\ICT\\义肢核心代码\\data\\recordings_manifest.csv",
+  "sample_rate_hz": 500,
+  "onset_count": 23,
+  "slice_candidate_count": 22,
+  "accepted_clip_count": 0,
+  "rejected_clip_count": 22,
+  "detection": {
+    "onsets": [
+      1676,
+      2526,
+      3044,
+      4024,
+      4551,
+      5118,
+      5662,
+      6205,
+      6932,
+      7470,
+      8608,
+      9154,
+      10162,
+      10721,
+      12028,
+      12721,
+      13943,
+      15141,
+      16860,
+      18300,
+      18825,
+      19828,
+      21410
+    ],
+    "threshold": 9.9898,
+    "q_low": 1.5938,
+    "q_high": 25.5825,
+    "smooth_window": 40
+  },
+  "keep_quality": [
+    "pass"
+  ],
+  "clips": [
+    {
+      "clip_index": 1,
+      "onset_sample": 1676,
+      "start_sample": 1426,
+      "end_sample": 2926,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-001.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy",
+        "static"
+      ],
+      "kept": false,
+      "selected_windows": 66,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 2,
+      "onset_sample": 2526,
+      "start_sample": 2276,
+      "end_sample": 3776,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-002.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy"
+      ],
+      "kept": false,
+      "selected_windows": 71,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 3,
+      "onset_sample": 3044,
+      "start_sample": 2794,
+      "end_sample": 4294,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-003.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped"
+      ],
+      "kept": false,
+      "selected_windows": 96,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 4,
+      "onset_sample": 4024,
+      "start_sample": 3774,
+      "end_sample": 5274,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-004.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy"
+      ],
+      "kept": false,
+      "selected_windows": 101,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 5,
+      "onset_sample": 4551,
+      "start_sample": 4301,
+      "end_sample": 5801,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-005.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy"
+      ],
+      "kept": false,
+      "selected_windows": 86,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 6,
+      "onset_sample": 5118,
+      "start_sample": 4868,
+      "end_sample": 6368,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-006.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped"
+      ],
+      "kept": false,
+      "selected_windows": 108,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 7,
+      "onset_sample": 5662,
+      "start_sample": 5412,
+      "end_sample": 6912,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-007.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy"
+      ],
+      "kept": false,
+      "selected_windows": 105,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 8,
+      "onset_sample": 6205,
+      "start_sample": 5955,
+      "end_sample": 7455,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-008.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy"
+      ],
+      "kept": false,
+      "selected_windows": 109,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 9,
+      "onset_sample": 6932,
+      "start_sample": 6682,
+      "end_sample": 8182,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-009.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy"
+      ],
+      "kept": false,
+      "selected_windows": 90,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 10,
+      "onset_sample": 7470,
+      "start_sample": 7220,
+      "end_sample": 8720,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-010.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy",
+        "static"
+      ],
+      "kept": false,
+      "selected_windows": 68,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 11,
+      "onset_sample": 8608,
+      "start_sample": 8358,
+      "end_sample": 9858,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-011.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy",
+        "static"
+      ],
+      "kept": false,
+      "selected_windows": 90,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 12,
+      "onset_sample": 9154,
+      "start_sample": 8904,
+      "end_sample": 10404,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-012.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy",
+        "static"
+      ],
+      "kept": false,
+      "selected_windows": 73,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 13,
+      "onset_sample": 10162,
+      "start_sample": 9912,
+      "end_sample": 11412,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-013.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy",
+        "static"
+      ],
+      "kept": false,
+      "selected_windows": 85,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 14,
+      "onset_sample": 10721,
+      "start_sample": 10471,
+      "end_sample": 11971,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-014.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy",
+        "static"
+      ],
+      "kept": false,
+      "selected_windows": 67,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 15,
+      "onset_sample": 12028,
+      "start_sample": 11778,
+      "end_sample": 13278,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-015.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy",
+        "static"
+      ],
+      "kept": false,
+      "selected_windows": 101,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 16,
+      "onset_sample": 12721,
+      "start_sample": 12471,
+      "end_sample": 13971,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-016.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "low_energy",
+        "static"
+      ],
+      "kept": false,
+      "selected_windows": 66,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 17,
+      "onset_sample": 13943,
+      "start_sample": 13693,
+      "end_sample": 15193,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-017.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy",
+        "static"
+      ],
+      "kept": false,
+      "selected_windows": 56,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 18,
+      "onset_sample": 15141,
+      "start_sample": 14891,
+      "end_sample": 16391,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-018.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy"
+      ],
+      "kept": false,
+      "selected_windows": 60,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 19,
+      "onset_sample": 16860,
+      "start_sample": 16610,
+      "end_sample": 18110,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-019.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy"
+      ],
+      "kept": false,
+      "selected_windows": 76,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 20,
+      "onset_sample": 18300,
+      "start_sample": 18050,
+      "end_sample": 19550,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-020.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy"
+      ],
+      "kept": false,
+      "selected_windows": 52,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 21,
+      "onset_sample": 18825,
+      "start_sample": 18575,
+      "end_sample": 20075,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-021.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy",
+        "static"
+      ],
+      "kept": false,
+      "selected_windows": 47,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 22,
+      "onset_sample": 19828,
+      "start_sample": 19578,
+      "end_sample": 21078,
+      "relative_path": "TENSE_OPEN/20260314T201437__u-demo_user__s-s2__d-armband01__w-normal__seg-022.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "clipped",
+        "low_energy",
+        "static"
+      ],
+      "kept": false,
+      "selected_windows": 37,
+      "total_windows": 139
+    }
+  ]
+}

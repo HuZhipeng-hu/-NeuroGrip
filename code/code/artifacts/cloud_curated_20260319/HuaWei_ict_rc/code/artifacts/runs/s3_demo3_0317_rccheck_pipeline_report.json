@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "stage": "prepare",
+  "run_prefix": "s3_demo3_0317_rccheck",
+  "artifacts": {
+    "prepare_summary": "artifacts/runs/s3_demo3_0317_rccheck_prepare_summary.json"
+  },
+  "prepare_done": true
+}

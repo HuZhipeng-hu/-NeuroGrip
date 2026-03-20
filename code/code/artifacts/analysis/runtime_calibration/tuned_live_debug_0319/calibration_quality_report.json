@@ -1,0 +1,488 @@
+{
+  "clip_counts": {
+    "CONTINUE": 5,
+    "THUMB_UP": 9,
+    "WRIST_CW": 8
+  },
+  "window_counts": {
+    "clips_total": 22,
+    "selected_windows": 54,
+    "label_CONTINUE": 20,
+    "label_THUMB_UP": 18,
+    "label_WRIST_CW": 16
+  },
+  "action_window_policy": "onset_peak",
+  "clip_diagnostics": [
+    {
+      "relative_path": "CONTINUE/20260319T121549__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          890,
+          1010
+        ],
+        [
+          570,
+          690
+        ],
+        [
+          560,
+          680
+        ],
+        [
+          580,
+          700
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260319T121555__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1670,
+          1790
+        ],
+        [
+          1680,
+          1800
+        ],
+        [
+          1390,
+          1510
+        ],
+        [
+          1410,
+          1530
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260319T121601__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          520,
+          640
+        ],
+        [
+          510,
+          630
+        ],
+        [
+          500,
+          620
+        ],
+        [
+          530,
+          650
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260319T121607__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1890,
+          2010
+        ],
+        [
+          1880,
+          2000
+        ],
+        [
+          1870,
+          1990
+        ],
+        [
+          1860,
+          1980
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260319T121613__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1010,
+          1130
+        ],
+        [
+          1040,
+          1160
+        ],
+        [
+          1020,
+          1140
+        ],
+        [
+          1030,
+          1150
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "THUMB_UP/20260319T121705__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-001.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        303
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          250,
+          370
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260319T121705__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-002.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        282
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260319T121705__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-003.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        280
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260319T121705__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-004.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        284
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260319T121705__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-005.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        279
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260319T121705__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-006.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        285
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260319T121705__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-007.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        279
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260319T121705__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-008.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        283
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260319T121705__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-009.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        291
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260319T121750__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-001.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        318
+      ],
+      "selected_window_ranges": [
+        [
+          310,
+          430
+        ],
+        [
+          320,
+          440
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260319T121750__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-002.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        312
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260319T121750__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-003.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        307
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260319T121750__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-004.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        307
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260319T121750__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-005.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        311
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260319T121750__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-006.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        308
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260319T121750__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-007.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        305
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260319T121750__u-live_user__s-pi_live_debug_0319__d-armband01__w-normal__seg-008.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        308
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    }
+  ],
+  "manifest_path": "F:\\ICT\\义肢核心代码\\code\\artifacts\\live_debug_0319\\recordings_manifest.csv"
+}

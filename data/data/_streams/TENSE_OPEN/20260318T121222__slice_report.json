@@ -1,0 +1,226 @@
+{
+  "status": "ok",
+  "target_state": "TENSE_OPEN",
+  "start_state": "CONTINUE",
+  "rows": 22560,
+  "frames": 2256,
+  "emg_packs": 22560,
+  "elapsed_sec": 45.025,
+  "estimated_emg_rate_hz": 501.055,
+  "stream_csv_path": "F:\\ICT\\义肢核心代码\\data\\_streams\\TENSE_OPEN\\20260318T121222__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+  "manifest_path": "F:\\ICT\\义肢核心代码\\data\\recordings_manifest.csv",
+  "sample_rate_hz": 500,
+  "onset_count": 12,
+  "slice_candidate_count": 12,
+  "accepted_clip_count": 12,
+  "rejected_clip_count": 0,
+  "detection": {
+    "onsets": [
+      2043,
+      4125,
+      5825,
+      7931,
+      9549,
+      11342,
+      13041,
+      14649,
+      16115,
+      18063,
+      19778,
+      21279
+    ],
+    "threshold": 4.2963,
+    "q_low": 3.2375,
+    "q_high": 6.2625,
+    "smooth_window": 40
+  },
+  "keep_quality": [
+    "pass",
+    "warn"
+  ],
+  "clips": [
+    {
+      "clip_index": 1,
+      "onset_sample": 2043,
+      "start_sample": 1793,
+      "end_sample": 3293,
+      "relative_path": "TENSE_OPEN/20260318T121222__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-001.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly"
+      ],
+      "kept": true,
+      "selected_windows": 139,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 2,
+      "onset_sample": 4125,
+      "start_sample": 3875,
+      "end_sample": 5375,
+      "relative_path": "TENSE_OPEN/20260318T121222__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-002.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 131,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 3,
+      "onset_sample": 5825,
+      "start_sample": 5575,
+      "end_sample": 7075,
+      "relative_path": "TENSE_OPEN/20260318T121222__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-003.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly"
+      ],
+      "kept": true,
+      "selected_windows": 139,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 4,
+      "onset_sample": 7931,
+      "start_sample": 7681,
+      "end_sample": 9181,
+      "relative_path": "TENSE_OPEN/20260318T121222__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-004.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 107,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 5,
+      "onset_sample": 9549,
+      "start_sample": 9299,
+      "end_sample": 10799,
+      "relative_path": "TENSE_OPEN/20260318T121222__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-005.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly"
+      ],
+      "kept": true,
+      "selected_windows": 139,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 6,
+      "onset_sample": 11342,
+      "start_sample": 11092,
+      "end_sample": 12592,
+      "relative_path": "TENSE_OPEN/20260318T121222__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-006.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 127,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 7,
+      "onset_sample": 13041,
+      "start_sample": 12791,
+      "end_sample": 14291,
+      "relative_path": "TENSE_OPEN/20260318T121222__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-007.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 76,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 8,
+      "onset_sample": 14649,
+      "start_sample": 14399,
+      "end_sample": 15899,
+      "relative_path": "TENSE_OPEN/20260318T121222__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-008.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly"
+      ],
+      "kept": true,
+      "selected_windows": 139,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 9,
+      "onset_sample": 16115,
+      "start_sample": 15865,
+      "end_sample": 17365,
+      "relative_path": "TENSE_OPEN/20260318T121222__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-009.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 132,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 10,
+      "onset_sample": 18063,
+      "start_sample": 17813,
+      "end_sample": 19313,
+      "relative_path": "TENSE_OPEN/20260318T121222__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-010.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly"
+      ],
+      "kept": true,
+      "selected_windows": 139,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 11,
+      "onset_sample": 19778,
+      "start_sample": 19528,
+      "end_sample": 21028,
+      "relative_path": "TENSE_OPEN/20260318T121222__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-011.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "static"
+      ],
+      "kept": true,
+      "selected_windows": 88,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 12,
+      "onset_sample": 21279,
+      "start_sample": 21029,
+      "end_sample": 22529,
+      "relative_path": "TENSE_OPEN/20260318T121222__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-012.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly"
+      ],
+      "kept": true,
+      "selected_windows": 139,
+      "total_windows": 139
+    }
+  ],
+  "collection_gate": {
+    "passed": true,
+    "failures": [],
+    "thresholds": {
+      "min_rows_gate": 15000,
+      "min_candidates_gate": 4,
+      "min_accepted_gate": 4
+    }
+  }
+}

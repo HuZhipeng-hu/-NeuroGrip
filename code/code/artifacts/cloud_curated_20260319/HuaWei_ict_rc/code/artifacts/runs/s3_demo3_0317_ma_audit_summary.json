@@ -1,0 +1,5 @@
+{
+  "status": "ok",
+  "stage": "audit",
+  "output_json": "artifacts/runs/s3_demo3_0317_ma_audit_report.json"
+}

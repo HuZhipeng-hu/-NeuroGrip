@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "target_state": "THUMB_UP",
+  "start_state": "RELAX",
+  "rows": 1580,
+  "frames": 158,
+  "emg_packs": 1580,
+  "elapsed_sec": 45.096,
+  "estimated_emg_rate_hz": 35.036,
+  "stream_csv_path": "F:\\ICT\\义肢核心代码\\data\\_streams\\THUMB_UP\\20260314T214721__u-demo_user__s-s2__d-armband01__w-normal.csv",
+  "manifest_path": "F:\\ICT\\义肢核心代码\\data\\recordings_manifest.csv",
+  "sample_rate_hz": 500,
+  "onset_count": 1,
+  "slice_candidate_count": 0,
+  "accepted_clip_count": 0,
+  "rejected_clip_count": 0,
+  "detection": {
+    "onsets": [
+      1264
+    ],
+    "threshold": 4.6443,
+    "q_low": 1.1156,
+    "q_high": 11.1975,
+    "smooth_window": 40
+  },
+  "keep_quality": [
+    "pass",
+    "warn"
+  ],
+  "clips": []
+}

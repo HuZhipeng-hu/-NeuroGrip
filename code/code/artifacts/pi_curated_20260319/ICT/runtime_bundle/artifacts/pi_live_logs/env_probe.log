@@ -1,0 +1,5 @@
+WARNING:root:Found no Ascend home path, please set env ASCEND_HOME_PATH, for example: export ASCEND_HOME_PATH=/usr/local/Ascend/latest and source ${ASCEND_HOME_PATH}/set_env.sh to setup Ascend envs.
+WARNING:root:Found no Ascend home path, please set env ASCEND_HOME_PATH, for example: export ASCEND_HOME_PATH=/usr/local/Ascend/latest and source ${ASCEND_HOME_PATH}/set_env.sh to setup Ascend envs.
+PYTHON /usr/bin/python3
+PATH0 
+LITE None None None

@@ -1,0 +1,64 @@
+{
+  "status": "ok",
+  "target_state": "V_SIGN",
+  "start_state": "RELAX",
+  "rows": 4620,
+  "frames": 462,
+  "emg_packs": 4620,
+  "elapsed_sec": 45.158,
+  "estimated_emg_rate_hz": 102.308,
+  "stream_csv_path": "F:\\ICT\\义肢核心代码\\data\\_streams\\V_SIGN\\20260314T214529__u-demo_user__s-s2__d-armband01__w-normal.csv",
+  "manifest_path": "F:\\ICT\\义肢核心代码\\data\\recordings_manifest.csv",
+  "sample_rate_hz": 500,
+  "onset_count": 3,
+  "slice_candidate_count": 2,
+  "accepted_clip_count": 2,
+  "rejected_clip_count": 0,
+  "detection": {
+    "onsets": [
+      427,
+      2105,
+      4201
+    ],
+    "threshold": 4.0988,
+    "q_low": 1.1656,
+    "q_high": 9.5463,
+    "smooth_window": 40
+  },
+  "keep_quality": [
+    "pass",
+    "warn"
+  ],
+  "clips": [
+    {
+      "clip_index": 1,
+      "onset_sample": 427,
+      "start_sample": 177,
+      "end_sample": 1677,
+      "relative_path": "V_SIGN/20260314T214529__u-demo_user__s-s2__d-armband01__w-normal__seg-001.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "low_energy"
+      ],
+      "kept": true,
+      "selected_windows": 87,
+      "total_windows": 139
+    },
+    {
+      "clip_index": 2,
+      "onset_sample": 2105,
+      "start_sample": 1855,
+      "end_sample": 3355,
+      "relative_path": "V_SIGN/20260314T214529__u-demo_user__s-s2__d-armband01__w-normal__seg-002.csv",
+      "quality_status": "warn",
+      "quality_reasons": [
+        "channel_anomaly",
+        "low_energy"
+      ],
+      "kept": true,
+      "selected_windows": 70,
+      "total_windows": 139
+    }
+  ]
+}

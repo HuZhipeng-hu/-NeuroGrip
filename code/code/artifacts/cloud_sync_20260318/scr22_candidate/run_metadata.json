@@ -1,0 +1,45 @@
+{
+  "run_id": "s3_demo3_0317_scr_tuned_scr_22_lcb_focal_bc16_fz8_elr0p24_ptoff",
+  "run_dir": "artifacts/runs/s3_demo3_0317_scr_tuned_scr_22_lcb_focal_bc16_fz8_elr0p24_ptoff",
+  "config_path": "configs/training_event_onset_demo3_two_stage.yaml",
+  "split_manifest_path": "/home/ma-user/work/HuaWei_ict_rc/code/artifacts/splits/s3_demo3_0317_ma_b10_demo3_seed42_v2.json",
+  "training_device": {
+    "target": "Ascend",
+    "id": 0
+  },
+  "recordings_manifest_path": "/home/ma-user/work/HuaWei_ict_rc/code/s3_demo3_0317_ma_b10_demo3_train_manifest.csv",
+  "quality_report": "artifacts/runs/s3_demo3_0317_scr_tuned_scr_22_lcb_focal_bc16_fz8_elr0p24_ptoff/quality/quality_report.json",
+  "training_history": "artifacts/runs/s3_demo3_0317_scr_tuned_scr_22_lcb_focal_bc16_fz8_elr0p24_ptoff/training_history.csv",
+  "evaluation_outputs": {
+    "metrics_json": "artifacts/runs/s3_demo3_0317_scr_tuned_scr_22_lcb_focal_bc16_fz8_elr0p24_ptoff/evaluation/test_metrics.json",
+    "per_class_csv": "artifacts/runs/s3_demo3_0317_scr_tuned_scr_22_lcb_focal_bc16_fz8_elr0p24_ptoff/evaluation/test_per_class_metrics.csv",
+    "confusion_csv": "artifacts/runs/s3_demo3_0317_scr_tuned_scr_22_lcb_focal_bc16_fz8_elr0p24_ptoff/evaluation/test_confusion_matrix.csv"
+  },
+  "class_names": [
+    "CONTINUE",
+    "TENSE_OPEN",
+    "THUMB_UP",
+    "WRIST_CW"
+  ],
+  "public_class_names": [
+    "CONTINUE",
+    "TENSE_OPEN",
+    "THUMB_UP",
+    "WRIST_CW"
+  ],
+  "model_variant": "event_onset_two_stage_demo3",
+  "gate_classes": [
+    "CONTINUE",
+    "COMMAND"
+  ],
+  "command_classes": [
+    "TENSE_OPEN",
+    "THUMB_UP",
+    "WRIST_CW"
+  ],
+  "incremental_transfer": {
+    "enabled": false
+  },
+  "incremental_command_template": "python scripts/finetune_event_onset.py --config configs/training_event_onset_demo3_two_stage.yaml --data_dir ../data --target_db5_keys TENSE_OPEN,THUMB_UP,WRIST_CW --incremental_from_checkpoint <previous_event_ckpt> --incremental_old_target_db5_keys <old_action_keys_csv> --budget_per_class 0 --budget_seed 42",
+  "elapsed_minutes": 3.7941861550013223
+}
