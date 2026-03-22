@@ -351,3 +351,11 @@ systemctl daemon-reload && systemctl restart emg-backend
 - [ ] 华为云安全组已开放 8080 端口
 - [ ] `curl http://1.95.65.51:8080/api/training/tasks` 返回 200
 - [ ] WebSocket `ws://1.95.65.51:8080/ws/app` 连接成功
+
+编译：mvn clean package -DskipTests
+
+后端运行：nohup java -jar ./target/emg-backend-1.0.0.jar > stdout.log 2> stderr.log &
+
+查找pid：ps -ef | grep emg-backend
+
+停止：kill -15 12345

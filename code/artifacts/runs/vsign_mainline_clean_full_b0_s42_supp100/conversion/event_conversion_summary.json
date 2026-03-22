@@ -1,0 +1,19 @@
+{
+  "run_id": "vsign_mainline_clean_full_b0_s42_supp100",
+  "training_config": "configs/training_event_onset.yaml",
+  "checkpoint_path": "artifacts/runs/vsign_mainline_clean_full_b0_s42_supp100/checkpoints/event_onset_best.ckpt",
+  "output_path": "models/event_onset.mindir",
+  "metadata_path": "models/event_onset.model_metadata.json",
+  "emg_input_shape": [
+    1,
+    8,
+    24,
+    3
+  ],
+  "imu_input_shape": [
+    1,
+    6,
+    16
+  ],
+  "device_target": "Ascend"
+}

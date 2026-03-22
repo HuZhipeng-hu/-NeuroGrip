@@ -21,10 +21,6 @@ export struct HomePage {
   @State armbandBattery: number = 0;
   @State armbandBatteryText: string = '🔋 0%';
 
-  @State gloveStatus: string = '🔴 未连接';
-  @State gloveSignal: string = '';
-  @State gloveBattery: number = 0;
-  @State gloveBatteryText: string = '🔋 0%';
 
   private emgService: EmgService | null = null;
 
@@ -46,28 +42,18 @@ export struct HomePage {
       this.armbandBattery = data.battery || 0;
       this.armbandBatteryText = `🔋 ${this.armbandBattery}%`;
 
-      // 假设连接到服务器即意味着手套也在线（由于EmgData暂无手套独立状态）
-      this.gloveStatus = '🟢 已连接';
-      this.gloveSignal = '📶 强';
-      this.gloveBattery = 100;
-      this.gloveBatteryText = '🔋 100%';
+
     };
 
     this.emgService.onConnectionChanged = (connected: boolean) => {
       if (connected) {
          this.armbandStatus = '🟢 已连接';
-         this.gloveStatus = '🟢 已连接';
          this.armbandSignal = '📶 强';
-         this.gloveSignal = '📶 强';
       } else {
          this.armbandStatus = '🔴 未连接';
-         this.gloveStatus = '🔴 未连接';
          this.armbandSignal = '';
-         this.gloveSignal = '';
          this.armbandBattery = 0;
          this.armbandBatteryText = '🔋 0%';
-         this.gloveBattery = 0;
-         this.gloveBatteryText = '🔋 0%';
       }
     };
 
@@ -115,22 +101,14 @@ export struct HomePage {
 
           Column({ space: 8 }) {
             DeviceCard({
-              icon: '📡',
-              name: '肌电手环',
+              icon: '🔘',
+              name: '肌电臂环',
               status: this.armbandStatus,
               battery: this.armbandBattery,
               batteryText: this.armbandBatteryText,
               signal: this.armbandSignal
             });
 
-            DeviceCard({
-              icon: '🧤',
-              name: '抓握手套',
-              status: this.gloveStatus,
-              battery: this.gloveBattery,
-              batteryText: this.gloveBatteryText,
-              signal: this.gloveSignal
-            });
           }
           .width('100%');
 
@@ -433,3 +411,4 @@ struct TodayProgress {
     .border({ width: 1, color: '#E5E7EB' });
   }
 }
+

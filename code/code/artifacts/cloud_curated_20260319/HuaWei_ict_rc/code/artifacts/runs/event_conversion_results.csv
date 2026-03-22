@@ -1,3 +1,0 @@
-run_id,training_config,checkpoint_path,output_path,metadata_path,emg_input_shape,imu_input_shape,device_target
-s3_demo3_0317_ma_b10_baseline_convert,configs/training_event_onset_demo3_two_stage.yaml,artifacts/runs/s3_demo3_0317_ma_b10_baseline_s42/checkpoints/event_onset_best.ckpt,models/event_onset.mindir,models/event_onset.model_metadata.json,"[1, 8, 24, 3]","[1, 6, 16]",Ascend
-s3_demo3_0317_scr22_convert,configs/training_event_onset_demo3_two_stage.yaml,artifacts/runs/s3_demo3_0317_scr_tuned_scr_22_lcb_focal_bc16_fz8_elr0p24_ptoff/checkpoints/event_onset_best.ckpt,models/event_onset_scr22.mindir,models/event_onset_scr22.model_metadata.json,"[1, 8, 24, 3]","[1, 6, 16]",Ascend

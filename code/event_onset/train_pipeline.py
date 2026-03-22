@@ -1,0 +1,816 @@
+"""Training pipeline for event-onset experiments."""
+
+from __future__ import annotations
+
+import csv
+import json
+import logging
+import time
+from dataclasses import fields as dataclass_fields
+from pathlib import Path
+from typing import Optional, Sequence
+
+import numpy as np
+
+from event_onset.config import EventModelConfig, load_event_training_config
+from event_onset.dataset import EventClipDatasetLoader
+from event_onset.head_expansion import (
+    build_event_class_names,
+    expand_classifier_rows,
+    normalize_action_keys,
+)
+from event_onset.evaluate import load_and_evaluate_event
+from event_onset.model import (
+    TWO_STAGE_GATE_CLASSES,
+    build_event_model,
+    is_two_stage_demo3_model,
+    resolve_two_stage_command_classes,
+)
+from event_onset.trainer import EventTrainer
+from shared.event_labels import public_event_labels
+from shared.label_modes import get_label_mode_spec
+from shared.run_utils import append_csv_row, copy_config_snapshot, dump_json, dump_yaml, ensure_run_dir
+from training.reporting import save_classification_report, save_prediction_rows
+from training.data.split_strategy import SplitManifest, build_manifest, load_manifest, save_manifest
+
+logger = logging.getLogger("training.event_onset")
+
+OFFLINE_SUMMARY_FIELDS = [
+    "run_id",
+    "manifest_path",
+    "checkpoint_path",
+    "model_type",
+    "base_channels",
+    "use_se",
+    "loss_type",
+    "hard_mining_ratio",
+    "augment_enabled",
+    "augment_factor",
+    "use_mixup",
+    "budget_per_class",
+    "budget_seed",
+    "target_db5_keys",
+    "incremental_mode",
+    "incremental_reused_class_count",
+    "incremental_new_class_count",
+    "test_accuracy",
+    "test_macro_f1",
+    "test_macro_recall",
+    "event_action_accuracy",
+    "event_action_macro_f1",
+    "top_confusion_pair",
+]
+
+
+class _ManifestLoadIssue(ValueError):
+    """Raised when a manifest cannot be safely reused for the current event training run."""
+
+
+_MANIFEST_FIELD_NAMES = {item.name for item in dataclass_fields(SplitManifest)}
+
+
+def _set_training_device(*, target: str, device_id: int) -> None:
+    """Configure MindSpore runtime device for the training stage."""
+    try:
+        from mindspore import context
+    except Exception as exc:  # pragma: no cover
+        raise RuntimeError("MindSpore is required for event training.") from exc
+
+    mode = context.GRAPH_MODE
+    context.set_context(mode=mode, device_target=str(target))
+    if str(target).strip().upper() in {"GPU", "ASCEND"}:
+        context.set_context(device_id=int(device_id))
+    logger.info("Training device configured: mode=graph target=%s device_id=%d", str(target), int(device_id))
+
+
+def _apply_cli_overrides(args, model_cfg: EventModelConfig, train_cfg, augmentation_cfg):
+    if args.base_channels is not None:
+        model_cfg.base_channels = int(args.base_channels)
+    if args.use_se is not None:
+        model_cfg.use_se = bool(args.use_se)
+    if args.loss_type is not None:
+        train_cfg.loss.type = args.loss_type
+    if args.hard_mining_ratio is not None:
+        train_cfg.sampler.hard_mining_ratio = float(args.hard_mining_ratio)
+    if getattr(args, "freeze_emg_epochs", None) is not None:
+        train_cfg.freeze_emg_epochs = int(args.freeze_emg_epochs)
+    if getattr(args, "encoder_lr_ratio", None) is not None:
+        train_cfg.encoder_lr_ratio = float(args.encoder_lr_ratio)
+    if args.augment_factor is not None:
+        augmentation_cfg.augment_factor = int(args.augment_factor)
+    if args.use_mixup is not None:
+        augmentation_cfg.use_mixup = bool(args.use_mixup)
+    if args.augmentation_enabled is not None:
+        augmentation_cfg.enabled = bool(args.augmentation_enabled)
+    if args.split_seed is not None:
+        train_cfg.split_seed = int(args.split_seed)
+    return model_cfg, train_cfg, augmentation_cfg
+
+
+def _apply_data_cli_overrides(args, data_cfg):
+    raw = getattr(args, "target_db5_keys", None)
+    if raw:
+        keys = [item.strip().upper() for item in str(raw).split(",") if item.strip()]
+        if not keys:
+            raise ValueError("--target_db5_keys provided but no valid keys parsed.")
+        data_cfg.target_db5_keys = keys
+    return data_cfg
+
+
+def _apply_incremental_phase_policy(train_cfg, *, enabled: bool) -> None:
+    if not enabled:
+        return
+    total_epochs = max(1, int(train_cfg.epochs))
+    default_freeze = max(2, int(round(total_epochs * 0.35)))
+    freeze_epochs = max(int(train_cfg.freeze_emg_epochs), default_freeze)
+    if freeze_epochs >= total_epochs:
+        freeze_epochs = max(0, total_epochs - 1)
+    train_cfg.freeze_emg_epochs = int(freeze_epochs)
+
+
+def _infer_old_class_names(
+    *,
+    explicit_old_keys: Sequence[str],
+    new_class_names: Sequence[str],
+    old_output_rows: int,
+) -> list[str]:
+    explicit = list(build_event_class_names(explicit_old_keys)) if explicit_old_keys else []
+    if explicit:
+        return explicit
+    if old_output_rows <= 0:
+        return []
+    inferred = list(new_class_names[: int(old_output_rows)])
+    if not inferred:
+        inferred = ["RELAX"]
+    return inferred
+
+
+def _apply_incremental_checkpoint(
+    model,
+    *,
+    checkpoint_path: str,
+    old_action_keys: Sequence[str],
+    new_class_names: Sequence[str],
+    init_seed: int,
+) -> dict[str, object]:
+    try:
+        from mindspore import Tensor, load_checkpoint
+    except Exception as exc:  # pragma: no cover
+        raise RuntimeError("Incremental checkpoint loading requires MindSpore.") from exc
+
+    param_dict = load_checkpoint(str(checkpoint_path))
+    current_params = {param.name: param for param in model.get_parameters()}
+    loaded = 0
+    skipped = 0
+    expansion_summary: dict[str, object] | None = None
+    pending_head_weight = None
+    pending_head_bias = None
+
+    for source_name, source_value in param_dict.items():
+        target = current_params.get(source_name)
+        if target is None:
+            skipped += 1
+            continue
+        if tuple(int(v) for v in target.shape) == tuple(int(v) for v in source_value.shape):
+            target.set_data(source_value)
+            loaded += 1
+            continue
+        if source_name == "fusion.3.weight":
+            pending_head_weight = source_value
+            continue
+        if source_name == "fusion.3.bias":
+            pending_head_bias = source_value
+            continue
+        skipped += 1
+
+    head_weight = current_params.get("fusion.3.weight")
+    head_bias = current_params.get("fusion.3.bias")
+    if pending_head_weight is not None and head_weight is not None:
+        old_weight_np = pending_head_weight.asnumpy().astype(np.float32)
+        old_bias_np = pending_head_bias.asnumpy().astype(np.float32) if pending_head_bias is not None else None
+        old_class_names = _infer_old_class_names(
+            explicit_old_keys=old_action_keys,
+            new_class_names=new_class_names,
+            old_output_rows=int(old_weight_np.shape[0]),
+        )
+        expanded_weight, expanded_bias, stats = expand_classifier_rows(
+            old_weight=old_weight_np,
+            old_bias=old_bias_np,
+            target_weight=head_weight.asnumpy().astype(np.float32),
+            target_bias=head_bias.asnumpy().astype(np.float32) if head_bias is not None else None,
+            old_class_names=old_class_names,
+            new_class_names=new_class_names,
+            init_seed=int(init_seed),
+        )
+        head_weight.set_data(Tensor(expanded_weight, dtype=head_weight.dtype))
+        loaded += 1
+        if head_bias is not None and expanded_bias is not None:
+            head_bias.set_data(Tensor(expanded_bias, dtype=head_bias.dtype))
+            loaded += 1
+        expansion_summary = stats.to_dict()
+        expansion_summary["old_class_names"] = public_event_labels(old_class_names)
+        expansion_summary["new_class_names"] = public_event_labels(new_class_names)
+
+    return {
+        "loaded": int(loaded),
+        "skipped": int(skipped),
+        "expanded_head": bool(expansion_summary is not None),
+        "expansion": expansion_summary or {},
+        "checkpoint_path": str(checkpoint_path),
+    }
+
+
+def _apply_train_budget_to_manifest(
+    manifest: SplitManifest,
+    labels: np.ndarray,
+    class_names: Sequence[str],
+    *,
+    budget_per_class: int,
+    budget_seed: int,
+) -> tuple[SplitManifest, dict[str, dict[str, int]]]:
+    if budget_per_class <= 0:
+        raise ValueError("budget_per_class must be > 0")
+
+    rng = np.random.default_rng(int(budget_seed))
+    train_idx = np.asarray(manifest.train_indices, dtype=np.int32)
+    kept: list[int] = []
+    report: dict[str, dict[str, int]] = {}
+    missing_classes: list[str] = []
+    for class_id, class_name in enumerate(class_names):
+        class_train_idx = train_idx[labels[train_idx] == class_id]
+        available = int(class_train_idx.shape[0])
+        if available <= 0:
+            missing_classes.append(str(class_name))
+        selected = min(available, int(budget_per_class))
+        if selected > 0:
+            if available > selected:
+                chosen = rng.choice(class_train_idx, size=selected, replace=False)
+            else:
+                chosen = class_train_idx
+            kept.extend(int(idx) for idx in chosen.tolist())
+        report[class_name] = {"available": available, "selected": selected}
+
+    if missing_classes:
+        raise RuntimeError(
+            "Budgeting failed: train split has zero samples for classes: "
+            + ", ".join(missing_classes)
+        )
+
+    if not kept:
+        raise RuntimeError("Budgeted train subset is empty; check data quality and budget_per_class.")
+
+    # Preserve split metadata and only shrink train indices.
+    budget_manifest = SplitManifest(
+        train_indices=sorted(kept),
+        val_indices=list(manifest.val_indices),
+        test_indices=list(manifest.test_indices),
+        train_sources=list(manifest.train_sources),
+        val_sources=list(manifest.val_sources),
+        test_sources=list(manifest.test_sources),
+        seed=manifest.seed,
+        split_mode=manifest.split_mode,
+        manifest_strategy=manifest.manifest_strategy,
+        num_samples=manifest.num_samples,
+        val_ratio=manifest.val_ratio,
+        test_ratio=manifest.test_ratio,
+        class_distribution=dict(manifest.class_distribution),
+        group_keys_train=list(manifest.group_keys_train),
+        group_keys_val=list(manifest.group_keys_val),
+        group_keys_test=list(manifest.group_keys_test),
+    )
+    return budget_manifest, report
+
+
+def _save_history(history: dict, out_csv: str | Path) -> None:
+    out = Path(out_csv)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    keys = list(history.keys())
+    rows = zip(*(history[key] for key in keys))
+    with open(out, "w", newline="", encoding="utf-8") as handle:
+        writer = csv.writer(handle)
+        writer.writerow(keys)
+        writer.writerows(rows)
+
+
+def _build_prediction_rows(
+    *,
+    test_indices: Sequence[int],
+    source_ids: np.ndarray,
+    source_metadata: Sequence[dict[str, object]],
+    labels: np.ndarray,
+    predictions: np.ndarray,
+    public_probs: np.ndarray,
+    class_names: Sequence[str],
+) -> list[dict[str, object]]:
+    rows: list[dict[str, object]] = []
+    normalized_names = [str(name).strip().upper() for name in class_names]
+    for sample_index, dataset_index in enumerate(test_indices):
+        pred_label = int(predictions[sample_index])
+        true_label = int(labels[sample_index])
+        probs = np.asarray(public_probs[sample_index], dtype=np.float32)
+        top_indices = np.argsort(probs)[::-1]
+        top1 = int(top_indices[0]) if top_indices.size > 0 else pred_label
+        top2 = int(top_indices[1]) if top_indices.size > 1 else top1
+        metadata = dict(source_metadata[int(dataset_index)])
+        rows.append(
+            {
+                "sample_index": int(sample_index),
+                "relative_path": str(source_ids[int(dataset_index)]),
+                "target_class_name": normalized_names[true_label],
+                "pred_class_name": normalized_names[pred_label],
+                "pred_confidence": float(probs[top1]) if probs.size > 0 else 0.0,
+                "top2_class_name": normalized_names[top2],
+                "top2_confidence": float(probs[top2]) if probs.size > 1 else float(probs[top1]) if probs.size > 0 else 0.0,
+                "session_id": str(metadata.get("session_id", "")),
+                "user_id": str(metadata.get("user_id", "")),
+                "timestamp": str(metadata.get("timestamp", "")),
+                "wearing_state": str(metadata.get("wearing_state", "")),
+                "armband_orientation": str(metadata.get("armband_orientation", "")),
+                "quality_status": str(metadata.get("quality_status", "")),
+                "quality_reasons": str(metadata.get("quality_reasons", "")),
+                "source_origin": str(metadata.get("source_origin", "")),
+                "selection_mode": str(metadata.get("selection_mode", "")),
+                "window_energy": metadata.get("window_energy", ""),
+                "window_start_index": metadata.get("window_start_index", ""),
+                "window_end_index": metadata.get("window_end_index", ""),
+            }
+        )
+    return rows
+
+
+def _build_current_manifest(
+    *,
+    labels: np.ndarray,
+    source_ids: np.ndarray,
+    source_metadata: Sequence[dict],
+    seed: int,
+    split_mode: str,
+    val_ratio: float,
+    test_ratio: float,
+    class_names: Sequence[str],
+    manifest_strategy: str,
+) -> SplitManifest:
+    return build_manifest(
+        labels,
+        source_ids,
+        seed=seed,
+        split_mode=split_mode,
+        val_ratio=val_ratio,
+        test_ratio=test_ratio,
+        num_classes=len(class_names),
+        class_names=class_names,
+        manifest_strategy=manifest_strategy,
+        source_metadata=source_metadata,
+    )
+
+
+def _read_manifest_json(in_path: str) -> dict:
+    try:
+        with open(in_path, "r", encoding="utf-8") as handle:
+            payload = json.load(handle)
+    except json.JSONDecodeError as exc:
+        raise _ManifestLoadIssue(f"manifest is not valid JSON: {exc.msg}") from exc
+    if not isinstance(payload, dict):
+        raise _ManifestLoadIssue("manifest root must be a JSON object")
+    return payload
+
+
+def _load_manifest_for_training(in_path: str, *, current_num_samples: int) -> SplitManifest:
+    payload = _read_manifest_json(in_path)
+    unknown_fields = sorted(key for key in payload.keys() if key not in _MANIFEST_FIELD_NAMES)
+    if unknown_fields:
+        raise _ManifestLoadIssue(f"unsupported legacy fields: {', '.join(unknown_fields)}")
+    try:
+        manifest = load_manifest(in_path)
+    except (TypeError, ValueError, json.JSONDecodeError) as exc:
+        raise _ManifestLoadIssue(f"failed validation: {exc}") from exc
+    if manifest.num_samples != current_num_samples:
+        raise _ManifestLoadIssue(
+            f"sample count mismatch: manifest={manifest.num_samples}, loaded={current_num_samples}"
+        )
+    return manifest
+
+
+def _prepare_manifest(
+    *,
+    labels: np.ndarray,
+    source_ids: np.ndarray,
+    source_metadata: Sequence[dict],
+    seed: int,
+    split_mode: str,
+    val_ratio: float,
+    test_ratio: float,
+    class_names: Sequence[str],
+    manifest_in_cli: Optional[str],
+    manifest_in_config: Optional[str],
+    manifest_out_cli: Optional[str],
+    manifest_strategy: str,
+) -> tuple[SplitManifest, Optional[str]]:
+    current_num_samples = int(labels.shape[0])
+    manifest_out_path = manifest_out_cli or manifest_in_config
+    force_rebuild = bool(manifest_out_cli and not manifest_in_cli)
+
+    if manifest_in_cli:
+        if not Path(manifest_in_cli).exists():
+            raise FileNotFoundError(
+                "Explicit --split_manifest_in path does not exist: "
+                f"{manifest_in_cli}. Fix: generate first with --split_manifest_out <path> "
+                "or use an existing --split_manifest_in <path>."
+            )
+        try:
+            manifest = _load_manifest_for_training(manifest_in_cli, current_num_samples=current_num_samples)
+        except _ManifestLoadIssue as exc:
+            raise ValueError(
+                "Explicit --split_manifest_in is not compatible with the current dataset: "
+                f"{manifest_in_cli} ({exc}). Fix: regenerate it with --split_manifest_out <path> and retry."
+            ) from exc
+        logger.info("Using split manifest from CLI: %s", manifest_in_cli)
+        return manifest, manifest_in_cli
+
+    if manifest_in_config:
+        if Path(manifest_in_config).exists():
+            if force_rebuild:
+                manifest = _build_current_manifest(
+                    labels=labels,
+                    source_ids=source_ids,
+                    source_metadata=source_metadata,
+                    seed=seed,
+                    split_mode=split_mode,
+                    val_ratio=val_ratio,
+                    test_ratio=test_ratio,
+                    class_names=class_names,
+                    manifest_strategy=manifest_strategy,
+                )
+                saved = save_manifest(manifest, manifest_out_path or manifest_in_config)
+                logger.info(
+                    "Rebuilt split manifest at %s because --split_manifest_out was provided without --split_manifest_in.",
+                    saved,
+                )
+                return manifest, str(saved)
+            try:
+                manifest = _load_manifest_for_training(manifest_in_config, current_num_samples=current_num_samples)
+            except _ManifestLoadIssue as exc:
+                logger.warning(
+                    "Configured split manifest at %s is legacy/stale/invalid (%s). Rebuilding with strategy=%s.",
+                    manifest_in_config,
+                    exc,
+                    manifest_strategy,
+                )
+                manifest = _build_current_manifest(
+                    labels=labels,
+                    source_ids=source_ids,
+                    source_metadata=source_metadata,
+                    seed=seed,
+                    split_mode=split_mode,
+                    val_ratio=val_ratio,
+                    test_ratio=test_ratio,
+                    class_names=class_names,
+                    manifest_strategy=manifest_strategy,
+                )
+                saved = save_manifest(manifest, manifest_in_config)
+                logger.info("Rebuilt split manifest at %s", saved)
+                return manifest, str(saved)
+            logger.info("Using split manifest from config: %s", manifest_in_config)
+            return manifest, manifest_in_config
+
+        logger.info(
+            "Configured split manifest does not exist (%s). Building one with strategy=%s.",
+            manifest_in_config,
+            manifest_strategy,
+        )
+        manifest = _build_current_manifest(
+            labels=labels,
+            source_ids=source_ids,
+            source_metadata=source_metadata,
+            seed=seed,
+            split_mode=split_mode,
+            val_ratio=val_ratio,
+            test_ratio=test_ratio,
+            class_names=class_names,
+            manifest_strategy=manifest_strategy,
+        )
+        saved = save_manifest(manifest, manifest_out_path or manifest_in_config)
+        logger.info("Auto-generated split manifest at %s", saved)
+        return manifest, str(saved)
+
+    manifest = _build_current_manifest(
+        labels=labels,
+        source_ids=source_ids,
+        source_metadata=source_metadata,
+        seed=seed,
+        split_mode=split_mode,
+        val_ratio=val_ratio,
+        test_ratio=test_ratio,
+        class_names=class_names,
+        manifest_strategy=manifest_strategy,
+    )
+    saved_path = None
+    if manifest_out_path:
+        saved = save_manifest(manifest, manifest_out_path)
+        logger.info("Saved split manifest: %s", saved)
+        saved_path = str(saved)
+    return manifest, saved_path
+
+
+def _split_arrays_by_manifest(
+    emg_samples: np.ndarray,
+    imu_samples: np.ndarray,
+    labels: np.ndarray,
+    manifest: SplitManifest,
+):
+    train_idx = np.asarray(manifest.train_indices, dtype=np.int32)
+    val_idx = np.asarray(manifest.val_indices, dtype=np.int32)
+    test_idx = np.asarray(manifest.test_indices, dtype=np.int32)
+    return (
+        (emg_samples[train_idx], imu_samples[train_idx], labels[train_idx]),
+        (emg_samples[val_idx], imu_samples[val_idx], labels[val_idx]),
+        (emg_samples[test_idx], imu_samples[test_idx], labels[test_idx]),
+    )
+
+
+def _top_confusion_pair_text(report: dict) -> str:
+    pairs = report.get("top_confusion_pairs") or []
+    if not pairs:
+        return ""
+    pair = pairs[0]
+    return f"{pair['pair'][0]}<->{pair['pair'][1]}:{pair['count']}"
+
+
+def run_event_training(args) -> None:
+    start = time.time()
+    run_id, run_dir = ensure_run_dir(args.run_root, args.run_id, default_tag="event_train")
+    logger.info("Run ID: %s", run_id)
+    logger.info("Run directory: %s", run_dir)
+
+    model_cfg, data_cfg, train_cfg, augmentation_cfg = load_event_training_config(args.config)
+    copy_config_snapshot(args.config, run_dir / "config_snapshots" / Path(args.config).name)
+    model_cfg, train_cfg, augmentation_cfg = _apply_cli_overrides(args, model_cfg, train_cfg, augmentation_cfg)
+    data_cfg = _apply_data_cli_overrides(args, data_cfg)
+    label_spec = get_label_mode_spec(data_cfg.label_mode, data_cfg.target_db5_keys)
+    model_cfg.num_classes = int(len(label_spec.class_names))
+    _set_training_device(
+        target=str(getattr(args, "device_target", "CPU")),
+        device_id=int(getattr(args, "device_id", 0)),
+    )
+    incremental_checkpoint = str(getattr(args, "incremental_from_checkpoint", "") or "").strip()
+    incremental_old_action_keys = normalize_action_keys(getattr(args, "incremental_old_target_db5_keys", None))
+    incremental_head_only = bool(getattr(args, "incremental_head_only", True))
+    if incremental_checkpoint:
+        _apply_incremental_phase_policy(train_cfg, enabled=incremental_head_only)
+
+    dump_yaml(
+        run_dir / "config_snapshots" / "effective_overrides.yaml",
+        {
+            "run_id": run_id,
+            "device": {
+                "device_target": str(getattr(args, "device_target", "CPU")),
+                "device_id": int(getattr(args, "device_id", 0)),
+            },
+            "model": {
+                "model_type": model_cfg.model_type,
+                "num_classes": model_cfg.num_classes,
+                "base_channels": model_cfg.base_channels,
+                "use_se": model_cfg.use_se,
+                "dropout_rate": model_cfg.dropout_rate,
+            },
+            "training": {
+                "loss_type": train_cfg.loss.type,
+                "hard_mining_ratio": train_cfg.sampler.hard_mining_ratio,
+                "split_seed": train_cfg.split_seed,
+                "freeze_emg_epochs": train_cfg.freeze_emg_epochs,
+                "unfreeze_last_blocks": train_cfg.unfreeze_last_blocks,
+                "encoder_lr_ratio": train_cfg.encoder_lr_ratio,
+                "head_lr_ratio": train_cfg.head_lr_ratio,
+            },
+            "data": {
+                "label_mode": data_cfg.label_mode,
+                "target_db5_keys": list(data_cfg.target_db5_keys),
+                "capture_mode_filter": data_cfg.capture_mode_filter,
+                "device_sampling_rate_hz": data_cfg.device_sampling_rate_hz,
+                "imu_sampling_rate_hz": data_cfg.imu_sampling_rate_hz,
+                "context_window_ms": data_cfg.feature.context_window_ms,
+                "window_step_ms": data_cfg.feature.window_step_ms,
+                "top_k_windows_per_clip": data_cfg.top_k_windows_per_clip,
+                "idle_top_k_windows_per_clip": data_cfg.idle_top_k_windows_per_clip,
+                "action_window_policy": data_cfg.action_window_policy,
+                "action_onset_pre_ms": data_cfg.action_onset_pre_ms,
+                "action_onset_post_ms": data_cfg.action_onset_post_ms,
+                "action_onset_min_gap_ms": data_cfg.action_onset_min_gap_ms,
+                "action_onset_threshold_alpha": data_cfg.action_onset_threshold_alpha,
+                "use_imu": data_cfg.use_imu,
+                "budget_per_class": int(getattr(args, "budget_per_class", 0) or 0),
+                "budget_seed": int(getattr(args, "budget_seed", train_cfg.split_seed) or train_cfg.split_seed),
+            },
+            "incremental": {
+                "enabled": bool(incremental_checkpoint),
+                "checkpoint_path": incremental_checkpoint,
+                "old_target_db5_keys": list(incremental_old_action_keys),
+                "head_only_priority": bool(incremental_head_only),
+                "init_seed": int(getattr(args, "incremental_init_seed", 42)),
+            },
+        },
+    )
+
+    recordings_manifest_path = args.recordings_manifest or data_cfg.recordings_manifest_path
+    loader = EventClipDatasetLoader(args.data_dir, data_cfg, recordings_manifest_path=recordings_manifest_path)
+    dataset_stats = loader.get_stats()
+    logger.info("Event dataset stats: %s", dataset_stats)
+    emg_samples, imu_samples, labels, source_ids, source_meta = loader.load_all_with_sources(return_metadata=True)
+    logger.info(
+        "Loaded event samples: emg=%s imu=%s labels=%d",
+        tuple(emg_samples.shape),
+        tuple(imu_samples.shape),
+        labels.shape[0],
+    )
+
+    quality_report_path = Path(args.quality_report_out) if args.quality_report_out else run_dir / "quality" / "quality_report.json"
+    q_path = loader.save_quality_report(quality_report_path)
+    logger.info("Saved quality report: %s", q_path)
+
+    manifest, manifest_path = _prepare_manifest(
+        labels=labels,
+        source_ids=source_ids,
+        source_metadata=source_meta,
+        seed=train_cfg.split_seed,
+        split_mode=data_cfg.split_mode,
+        val_ratio=train_cfg.val_ratio,
+        test_ratio=train_cfg.test_ratio,
+        class_names=label_spec.class_names,
+        manifest_in_cli=args.split_manifest_in,
+        manifest_in_config=data_cfg.split_manifest_path,
+        manifest_out_cli=args.split_manifest_out,
+        manifest_strategy=args.manifest_strategy,
+    )
+    if manifest_path:
+        manifest_snapshot = run_dir / "manifests" / Path(manifest_path).name
+        if Path(manifest_path).resolve() != manifest_snapshot.resolve():
+            copy_config_snapshot(manifest_path, manifest_snapshot)
+
+    budget_per_class = int(getattr(args, "budget_per_class", 0) or 0)
+    budget_seed = int(getattr(args, "budget_seed", train_cfg.split_seed) or train_cfg.split_seed)
+    if budget_per_class > 0:
+        manifest, budget_report = _apply_train_budget_to_manifest(
+            manifest,
+            labels,
+            label_spec.class_names,
+            budget_per_class=budget_per_class,
+            budget_seed=budget_seed,
+        )
+        dump_json(
+            run_dir / "manifests" / "train_budget_report.json",
+            {
+                "budget_per_class": budget_per_class,
+                "budget_seed": budget_seed,
+                "class_budget": budget_report,
+                "train_samples_after_budget": len(manifest.train_indices),
+            },
+        )
+        logger.info(
+            "Applied train budget: per_class=%d seed=%d train_samples=%d",
+            budget_per_class,
+            budget_seed,
+            len(manifest.train_indices),
+        )
+
+    (train_emg, train_imu, train_y), (val_emg, val_imu, val_y), (test_emg, test_imu, test_y) = _split_arrays_by_manifest(
+        emg_samples,
+        imu_samples,
+        labels,
+        manifest,
+    )
+    logger.info("Split sizes => train=%d, val=%d, test=%d", len(train_y), len(val_y), len(test_y))
+
+    if augmentation_cfg.enabled and augmentation_cfg.augment_factor > 1:
+        logger.warning("Event-onset pipeline does not yet augment EMG+IMU jointly. Ignoring augmentation factor=%s.", augmentation_cfg.augment_factor)
+
+    model = build_event_model(model_cfg)
+    incremental_transfer: dict[str, object] = {"enabled": False}
+    if incremental_checkpoint:
+        incremental_transfer = _apply_incremental_checkpoint(
+            model,
+            checkpoint_path=incremental_checkpoint,
+            old_action_keys=incremental_old_action_keys,
+            new_class_names=label_spec.class_names,
+            init_seed=int(getattr(args, "incremental_init_seed", 42)),
+        )
+        incremental_transfer["enabled"] = True
+        logger.info(
+            "Loaded incremental checkpoint from %s (loaded=%s skipped=%s expanded_head=%s)",
+            incremental_checkpoint,
+            incremental_transfer.get("loaded"),
+            incremental_transfer.get("skipped"),
+            incremental_transfer.get("expanded_head"),
+        )
+    trainer = EventTrainer(model, model_cfg, train_cfg, label_spec.class_names, output_dir=str(run_dir))
+    history = trainer.train(train_emg, train_imu, train_y, val_emg, val_imu, val_y)
+    history_path = run_dir / "training_history.csv"
+    _save_history(history, history_path)
+
+    eval_result = load_and_evaluate_event(
+        ckpt_path=trainer.checkpoint_path,
+        emg_samples=test_emg,
+        imu_samples=test_imu,
+        labels=test_y,
+        class_names=label_spec.class_names,
+        model_config=model_cfg,
+        device_target=args.device_target,
+        device_id=args.device_id,
+        return_prediction_payload=True,
+    )
+    report = dict(eval_result["report"])
+    prediction_payload = dict(eval_result["prediction_payload"])
+    report.update(
+        {
+            "eval_protocol": args.eval_protocol,
+            "manifest_path": manifest_path,
+            "checkpoint_path": str(trainer.checkpoint_path),
+            "run_id": run_id,
+        }
+    )
+    report_paths = save_classification_report(report, out_dir=run_dir / "evaluation", prefix="test")
+    test_indices = [int(idx) for idx in manifest.test_indices]
+    prediction_rows = _build_prediction_rows(
+        test_indices=test_indices,
+        source_ids=source_ids,
+        source_metadata=source_meta,
+        labels=test_y,
+        predictions=np.asarray(prediction_payload["predictions"], dtype=np.int32),
+        public_probs=np.asarray(prediction_payload["public_probs"], dtype=np.float32),
+        class_names=label_spec.class_names,
+    )
+    report_paths["predictions_csv"] = save_prediction_rows(
+        prediction_rows,
+        out_dir=run_dir / "evaluation",
+        prefix="test",
+    )
+
+    summary = {
+        "run_id": run_id,
+        "manifest_path": manifest_path or "",
+        "checkpoint_path": str(trainer.checkpoint_path),
+        "model_type": model_cfg.model_type,
+        "base_channels": model_cfg.base_channels,
+        "use_se": model_cfg.use_se,
+        "loss_type": train_cfg.loss.type,
+        "hard_mining_ratio": train_cfg.sampler.hard_mining_ratio,
+        "augment_enabled": False,
+        "augment_factor": 1,
+        "use_mixup": False,
+        "budget_per_class": int(budget_per_class),
+        "budget_seed": int(budget_seed),
+        "target_db5_keys": ",".join(data_cfg.target_db5_keys),
+        "incremental_mode": bool(incremental_checkpoint),
+        "incremental_reused_class_count": int(
+            ((incremental_transfer.get("expansion") or {}).get("reused_class_count", 0))
+        ),
+        "incremental_new_class_count": int(
+            ((incremental_transfer.get("expansion") or {}).get("new_class_count", 0))
+        ),
+        "test_accuracy": report["accuracy"],
+        "test_macro_f1": report["macro_f1"],
+        "test_macro_recall": report["macro_recall"],
+        "event_action_accuracy": report.get("event_action_accuracy", 0.0),
+        "event_action_macro_f1": report.get("event_action_macro_f1", 0.0),
+        "top_confusion_pair": _top_confusion_pair_text(report),
+    }
+    dump_json(run_dir / "offline_summary.json", summary)
+    append_csv_row(Path(args.run_root) / "offline_results.csv", OFFLINE_SUMMARY_FIELDS, summary)
+    incremental_template = (
+        "python scripts/finetune_event_onset.py "
+        f"--config {args.config} "
+        f"--data_dir {args.data_dir} "
+        f"--target_db5_keys {','.join(data_cfg.target_db5_keys)} "
+        "--incremental_from_checkpoint <previous_event_ckpt> "
+        "--incremental_old_target_db5_keys <old_action_keys_csv> "
+        f"--budget_per_class {int(budget_per_class)} "
+        f"--budget_seed {int(budget_seed)}"
+    )
+    dump_json(
+        run_dir / "run_metadata.json",
+        {
+            "run_id": run_id,
+            "run_dir": str(run_dir),
+            "config_path": args.config,
+            "split_manifest_path": str(manifest_path or ""),
+            "training_device": {
+                "target": str(getattr(args, "device_target", "CPU")),
+                "id": int(getattr(args, "device_id", 0)),
+            },
+            "recordings_manifest_path": str(recordings_manifest_path),
+            "quality_report": str(q_path),
+            "training_history": str(history_path),
+            "evaluation_outputs": report_paths,
+            "class_names": public_event_labels(label_spec.class_names),
+            "public_class_names": public_event_labels(label_spec.class_names),
+            "model_variant": str(model_cfg.model_type),
+            "gate_classes": list(TWO_STAGE_GATE_CLASSES) if is_two_stage_demo3_model(model_cfg.model_type) else [],
+            "command_classes": (
+                public_event_labels(resolve_two_stage_command_classes(label_spec.class_names))
+                if is_two_stage_demo3_model(model_cfg.model_type)
+                else []
+            ),
+            "incremental_transfer": incremental_transfer,
+            "incremental_command_template": incremental_template,
+            "elapsed_minutes": (time.time() - start) / 60.0,
+        },
+    )

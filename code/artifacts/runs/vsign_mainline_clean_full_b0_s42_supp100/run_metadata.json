@@ -1,0 +1,49 @@
+{
+  "run_id": "vsign_mainline_clean_full_b0_s42_supp100",
+  "run_dir": "artifacts/runs/vsign_mainline_clean_full_b0_s42_supp100",
+  "config_path": "configs/training_event_onset.yaml",
+  "split_manifest_path": "/home/ma-user/work/ICT-vsign-mainline-clean/code/artifacts/runs/vsign_mainline_clean_full_b0_s42_supp100/manifests/event_onset_demo3_split_manifest.json",
+  "training_device": {
+    "target": "Ascend",
+    "id": 0
+  },
+  "recordings_manifest_path": "/home/ma-user/work/ICT-vsign-mainline-clean/data/recordings_manifest.csv",
+  "quality_report": "artifacts/runs/vsign_mainline_clean_full_b0_s42_supp100/quality/quality_report.json",
+  "training_history": "artifacts/runs/vsign_mainline_clean_full_b0_s42_supp100/training_history.csv",
+  "evaluation_outputs": {
+    "metrics_json": "artifacts/runs/vsign_mainline_clean_full_b0_s42_supp100/evaluation/test_metrics.json",
+    "per_class_csv": "artifacts/runs/vsign_mainline_clean_full_b0_s42_supp100/evaluation/test_per_class_metrics.csv",
+    "confusion_csv": "artifacts/runs/vsign_mainline_clean_full_b0_s42_supp100/evaluation/test_confusion_matrix.csv",
+    "predictions_csv": "artifacts/runs/vsign_mainline_clean_full_b0_s42_supp100/evaluation/test_predictions.csv"
+  },
+  "class_names": [
+    "CONTINUE",
+    "TENSE_OPEN",
+    "V_SIGN",
+    "THUMB_UP",
+    "WRIST_CW"
+  ],
+  "public_class_names": [
+    "CONTINUE",
+    "TENSE_OPEN",
+    "V_SIGN",
+    "THUMB_UP",
+    "WRIST_CW"
+  ],
+  "model_variant": "event_onset_two_stage_demo3",
+  "gate_classes": [
+    "CONTINUE",
+    "COMMAND"
+  ],
+  "command_classes": [
+    "TENSE_OPEN",
+    "V_SIGN",
+    "THUMB_UP",
+    "WRIST_CW"
+  ],
+  "incremental_transfer": {
+    "enabled": false
+  },
+  "incremental_command_template": "python scripts/finetune_event_onset.py --config configs/training_event_onset.yaml --data_dir ../data --target_db5_keys TENSE_OPEN,V_SIGN,THUMB_UP,WRIST_CW --incremental_from_checkpoint <previous_event_ckpt> --incremental_old_target_db5_keys <old_action_keys_csv> --budget_per_class 0 --budget_seed 42",
+  "elapsed_minutes": 3.754388968149821
+}

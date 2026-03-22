@@ -1,0 +1,8261 @@
+{
+  "clip_counts": {
+    "CONTINUE": 82,
+    "TENSE_OPEN": 108,
+    "THUMB_UP": 65,
+    "V_SIGN": 69,
+    "WRIST_CW": 65
+  },
+  "window_counts": {
+    "clips_total": 389,
+    "selected_windows": 933,
+    "label_CONTINUE": 324,
+    "filtered_clips": 2,
+    "label_TENSE_OPEN": 215,
+    "label_THUMB_UP": 130,
+    "label_V_SIGN": 138,
+    "label_WRIST_CW": 126
+  },
+  "action_window_policy": "onset_peak",
+  "clip_diagnostics": [
+    {
+      "relative_path": "CONTINUE/20260314T185919__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          2380,
+          2500
+        ],
+        [
+          2390,
+          2510
+        ],
+        [
+          2400,
+          2520
+        ],
+        [
+          2370,
+          2490
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260314T190021__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          660,
+          780
+        ],
+        [
+          670,
+          790
+        ],
+        [
+          650,
+          770
+        ],
+        [
+          640,
+          760
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260314T190034__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          310,
+          430
+        ],
+        [
+          290,
+          410
+        ],
+        [
+          300,
+          420
+        ],
+        [
+          270,
+          390
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260314T190046__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          920,
+          1040
+        ],
+        [
+          930,
+          1050
+        ],
+        [
+          940,
+          1060
+        ],
+        [
+          910,
+          1030
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260314T190059__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          3410,
+          3530
+        ],
+        [
+          3420,
+          3540
+        ],
+        [
+          3400,
+          3520
+        ],
+        [
+          3430,
+          3550
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260314T202028__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1630,
+          1750
+        ],
+        [
+          1640,
+          1760
+        ],
+        [
+          1670,
+          1790
+        ],
+        [
+          1620,
+          1740
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260314T202049__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          700,
+          820
+        ],
+        [
+          690,
+          810
+        ],
+        [
+          290,
+          410
+        ],
+        [
+          300,
+          420
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T115757__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          420,
+          540
+        ],
+        [
+          430,
+          550
+        ],
+        [
+          410,
+          530
+        ],
+        [
+          400,
+          520
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T115803__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1100,
+          1220
+        ],
+        [
+          1110,
+          1230
+        ],
+        [
+          1070,
+          1190
+        ],
+        [
+          1080,
+          1200
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T115809__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1340,
+          1460
+        ],
+        [
+          1330,
+          1450
+        ],
+        [
+          1350,
+          1470
+        ],
+        [
+          990,
+          1110
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T115815__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1520,
+          1640
+        ],
+        [
+          1540,
+          1660
+        ],
+        [
+          1550,
+          1670
+        ],
+        [
+          1510,
+          1630
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122003__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1870,
+          1990
+        ],
+        [
+          1880,
+          2000
+        ],
+        [
+          1860,
+          1980
+        ],
+        [
+          1890,
+          2010
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122009__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1130,
+          1250
+        ],
+        [
+          1120,
+          1240
+        ],
+        [
+          1140,
+          1260
+        ],
+        [
+          1110,
+          1230
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122016__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          320,
+          440
+        ],
+        [
+          300,
+          420
+        ],
+        [
+          310,
+          430
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122023__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1820,
+          1940
+        ],
+        [
+          1880,
+          2000
+        ],
+        [
+          1840,
+          1960
+        ],
+        [
+          1830,
+          1950
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122029__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          810,
+          930
+        ],
+        [
+          820,
+          940
+        ],
+        [
+          800,
+          920
+        ],
+        [
+          830,
+          950
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122036__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1680,
+          1800
+        ],
+        [
+          1810,
+          1930
+        ],
+        [
+          1820,
+          1940
+        ],
+        [
+          1670,
+          1790
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122840__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1450,
+          1570
+        ],
+        [
+          1440,
+          1560
+        ],
+        [
+          1460,
+          1580
+        ],
+        [
+          1430,
+          1550
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122847__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1820,
+          1940
+        ],
+        [
+          1870,
+          1990
+        ],
+        [
+          1830,
+          1950
+        ],
+        [
+          1880,
+          2000
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122853__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1070,
+          1190
+        ],
+        [
+          1080,
+          1200
+        ],
+        [
+          1090,
+          1210
+        ],
+        [
+          1100,
+          1220
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122900__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          890,
+          1010
+        ],
+        [
+          1170,
+          1290
+        ],
+        [
+          1180,
+          1300
+        ],
+        [
+          1150,
+          1270
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122906__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1090,
+          1210
+        ],
+        [
+          1020,
+          1140
+        ],
+        [
+          1080,
+          1200
+        ],
+        [
+          1070,
+          1190
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122912__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          760,
+          880
+        ],
+        [
+          750,
+          870
+        ],
+        [
+          770,
+          890
+        ],
+        [
+          740,
+          860
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122918__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          290,
+          410
+        ],
+        [
+          270,
+          390
+        ],
+        [
+          280,
+          400
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122925__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          410,
+          530
+        ],
+        [
+          420,
+          540
+        ],
+        [
+          400,
+          520
+        ],
+        [
+          440,
+          560
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122931__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1780,
+          1900
+        ],
+        [
+          1770,
+          1890
+        ],
+        [
+          1830,
+          1950
+        ],
+        [
+          1860,
+          1980
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122938__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1450,
+          1570
+        ],
+        [
+          1460,
+          1580
+        ],
+        [
+          1050,
+          1170
+        ],
+        [
+          1060,
+          1180
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122944__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1190,
+          1310
+        ],
+        [
+          1180,
+          1300
+        ],
+        [
+          1170,
+          1290
+        ],
+        [
+          1200,
+          1320
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T122950__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          500,
+          620
+        ],
+        [
+          290,
+          410
+        ],
+        [
+          490,
+          610
+        ],
+        [
+          300,
+          420
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260315T192452__u-demo_user__s-s2__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          390,
+          510
+        ],
+        [
+          350,
+          470
+        ],
+        [
+          360,
+          480
+        ],
+        [
+          380,
+          500
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193303__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1550,
+          1670
+        ],
+        [
+          1560,
+          1680
+        ],
+        [
+          1540,
+          1660
+        ],
+        [
+          1570,
+          1690
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193309__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          0,
+          120
+        ],
+        [
+          30,
+          150
+        ],
+        [
+          10,
+          130
+        ],
+        [
+          20,
+          140
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193316__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1430,
+          1550
+        ],
+        [
+          1440,
+          1560
+        ],
+        [
+          1420,
+          1540
+        ],
+        [
+          1480,
+          1600
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193322__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          670,
+          790
+        ],
+        [
+          630,
+          750
+        ],
+        [
+          680,
+          800
+        ],
+        [
+          650,
+          770
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193328__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          30,
+          150
+        ],
+        [
+          40,
+          160
+        ],
+        [
+          20,
+          140
+        ],
+        [
+          0,
+          120
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193334__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1490,
+          1610
+        ],
+        [
+          1480,
+          1600
+        ],
+        [
+          1500,
+          1620
+        ],
+        [
+          1530,
+          1650
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193340__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          970,
+          1090
+        ],
+        [
+          930,
+          1050
+        ],
+        [
+          960,
+          1080
+        ],
+        [
+          890,
+          1010
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193347__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          30,
+          150
+        ],
+        [
+          20,
+          140
+        ],
+        [
+          10,
+          130
+        ],
+        [
+          920,
+          1040
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193354__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1450,
+          1570
+        ],
+        [
+          1390,
+          1510
+        ],
+        [
+          1360,
+          1480
+        ],
+        [
+          1370,
+          1490
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193400__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1220,
+          1340
+        ],
+        [
+          1210,
+          1330
+        ],
+        [
+          1200,
+          1320
+        ],
+        [
+          1230,
+          1350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193406__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          270,
+          390
+        ],
+        [
+          260,
+          380
+        ],
+        [
+          230,
+          350
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193412__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          0,
+          120
+        ],
+        [
+          810,
+          930
+        ],
+        [
+          10,
+          130
+        ],
+        [
+          20,
+          140
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193419__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          910,
+          1030
+        ],
+        [
+          920,
+          1040
+        ],
+        [
+          960,
+          1080
+        ],
+        [
+          350,
+          470
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193425__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          600,
+          720
+        ],
+        [
+          900,
+          1020
+        ],
+        [
+          630,
+          750
+        ],
+        [
+          820,
+          940
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193431__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          30,
+          150
+        ],
+        [
+          40,
+          160
+        ],
+        [
+          20,
+          140
+        ],
+        [
+          10,
+          130
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193437__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          160,
+          280
+        ],
+        [
+          150,
+          270
+        ],
+        [
+          170,
+          290
+        ],
+        [
+          90,
+          210
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193443__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          20,
+          140
+        ],
+        [
+          10,
+          130
+        ],
+        [
+          30,
+          150
+        ],
+        [
+          0,
+          120
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193450__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          710,
+          830
+        ],
+        [
+          730,
+          850
+        ],
+        [
+          750,
+          870
+        ],
+        [
+          740,
+          860
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193456__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1620,
+          1740
+        ],
+        [
+          1600,
+          1720
+        ],
+        [
+          1580,
+          1700
+        ],
+        [
+          1560,
+          1680
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T193502__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1260,
+          1380
+        ],
+        [
+          1270,
+          1390
+        ],
+        [
+          790,
+          910
+        ],
+        [
+          810,
+          930
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214802__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1560,
+          1680
+        ],
+        [
+          1570,
+          1690
+        ],
+        [
+          1580,
+          1700
+        ],
+        [
+          1550,
+          1670
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214808__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          990,
+          1110
+        ],
+        [
+          1000,
+          1120
+        ],
+        [
+          980,
+          1100
+        ],
+        [
+          1010,
+          1130
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214821__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          780,
+          900
+        ],
+        [
+          770,
+          890
+        ],
+        [
+          790,
+          910
+        ],
+        [
+          760,
+          880
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214831__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          60,
+          180
+        ],
+        [
+          70,
+          190
+        ],
+        [
+          560,
+          680
+        ],
+        [
+          80,
+          200
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214838__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          470,
+          590
+        ],
+        [
+          460,
+          580
+        ],
+        [
+          400,
+          520
+        ],
+        [
+          1670,
+          1790
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214844__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          880,
+          1000
+        ],
+        [
+          890,
+          1010
+        ],
+        [
+          870,
+          990
+        ],
+        [
+          860,
+          980
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214851__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          270,
+          390
+        ],
+        [
+          280,
+          400
+        ],
+        [
+          290,
+          410
+        ],
+        [
+          1330,
+          1450
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214857__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          0,
+          120
+        ],
+        [
+          1860,
+          1980
+        ],
+        [
+          1850,
+          1970
+        ],
+        [
+          30,
+          150
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214903__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          270,
+          390
+        ],
+        [
+          580,
+          700
+        ],
+        [
+          570,
+          690
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214909__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1460,
+          1580
+        ],
+        [
+          120,
+          240
+        ],
+        [
+          920,
+          1040
+        ],
+        [
+          1480,
+          1600
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214915__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1500,
+          1620
+        ],
+        [
+          1510,
+          1630
+        ],
+        [
+          1490,
+          1610
+        ],
+        [
+          1480,
+          1600
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214921__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          730,
+          850
+        ],
+        [
+          720,
+          840
+        ],
+        [
+          650,
+          770
+        ],
+        [
+          630,
+          750
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214928__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          270,
+          390
+        ],
+        [
+          280,
+          400
+        ],
+        [
+          180,
+          300
+        ],
+        [
+          690,
+          810
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214934__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          350,
+          470
+        ],
+        [
+          340,
+          460
+        ],
+        [
+          360,
+          480
+        ],
+        [
+          490,
+          610
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214940__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          570,
+          690
+        ],
+        [
+          100,
+          220
+        ],
+        [
+          560,
+          680
+        ],
+        [
+          580,
+          700
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214947__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          280,
+          400
+        ],
+        [
+          710,
+          830
+        ],
+        [
+          720,
+          840
+        ],
+        [
+          730,
+          850
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214953__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          150,
+          270
+        ],
+        [
+          140,
+          260
+        ],
+        [
+          160,
+          280
+        ],
+        [
+          850,
+          970
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T214959__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [],
+      "dropped_reasons": [
+        "no_relax_window_after_filter"
+      ],
+      "selected_count": 0
+    },
+    {
+      "relative_path": "CONTINUE/20260317T215005__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          30,
+          150
+        ],
+        [
+          20,
+          140
+        ],
+        [
+          1210,
+          1330
+        ],
+        [
+          990,
+          1110
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T215011__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          40,
+          160
+        ],
+        [
+          50,
+          170
+        ],
+        [
+          100,
+          220
+        ],
+        [
+          90,
+          210
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T215018__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1550,
+          1670
+        ],
+        [
+          1560,
+          1680
+        ],
+        [
+          1570,
+          1690
+        ],
+        [
+          150,
+          270
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T215024__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          710,
+          830
+        ],
+        [
+          720,
+          840
+        ],
+        [
+          460,
+          580
+        ],
+        [
+          420,
+          540
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T215030__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          730,
+          850
+        ],
+        [
+          1590,
+          1710
+        ],
+        [
+          720,
+          840
+        ],
+        [
+          1580,
+          1700
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260317T215038__u-your_id__s-s3_demo3_0317__d-armband01__w-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1860,
+          1980
+        ],
+        [
+          1880,
+          2000
+        ],
+        [
+          1680,
+          1800
+        ],
+        [
+          1850,
+          1970
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260321T155550__u-your_id__s-supp_continue_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          690,
+          810
+        ],
+        [
+          680,
+          800
+        ],
+        [
+          530,
+          650
+        ],
+        [
+          700,
+          820
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260321T155600__u-your_id__s-supp_continue_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1320,
+          1440
+        ],
+        [
+          1310,
+          1430
+        ],
+        [
+          1290,
+          1410
+        ],
+        [
+          1300,
+          1420
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260321T155609__u-your_id__s-supp_continue_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1370,
+          1490
+        ],
+        [
+          1340,
+          1460
+        ],
+        [
+          1330,
+          1450
+        ],
+        [
+          1390,
+          1510
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260321T155622__u-your_id__s-supp_continue_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1680,
+          1800
+        ],
+        [
+          1740,
+          1860
+        ],
+        [
+          1690,
+          1810
+        ],
+        [
+          1700,
+          1820
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260321T155631__u-your_id__s-supp_continue_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          30,
+          150
+        ],
+        [
+          100,
+          220
+        ],
+        [
+          0,
+          120
+        ],
+        [
+          20,
+          140
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260321T155641__u-your_id__s-supp_continue_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1870,
+          1990
+        ],
+        [
+          1880,
+          2000
+        ],
+        [
+          1860,
+          1980
+        ],
+        [
+          1850,
+          1970
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260321T155654__u-your_id__s-supp_continue_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          900,
+          1020
+        ],
+        [
+          910,
+          1030
+        ],
+        [
+          950,
+          1070
+        ],
+        [
+          960,
+          1080
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "CONTINUE/20260321T155705__u-your_id__s-supp_continue_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "CONTINUE",
+      "policy": "relax_idle",
+      "onset_indices": [],
+      "selected_window_ranges": [
+        [
+          1630,
+          1750
+        ],
+        [
+          220,
+          340
+        ],
+        [
+          230,
+          350
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 4
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T190124__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        1246
+      ],
+      "selected_window_ranges": [
+        [
+          1190,
+          1310
+        ],
+        [
+          1180,
+          1300
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T190136__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        249
+      ],
+      "selected_window_ranges": [
+        [
+          190,
+          310
+        ],
+        [
+          180,
+          300
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T190148__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        299
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T190201__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        249
+      ],
+      "selected_window_ranges": [
+        [
+          190,
+          310
+        ],
+        [
+          180,
+          300
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T190213__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        190
+      ],
+      "selected_window_ranges": [
+        [
+          130,
+          250
+        ],
+        [
+          140,
+          260
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T214208__u-demo_user__s-s2__d-armband01__w-normal__seg-001.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        296
+      ],
+      "selected_window_ranges": [
+        [
+          180,
+          300
+        ],
+        [
+          330,
+          450
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T214208__u-demo_user__s-s2__d-armband01__w-normal__seg-002.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        348
+      ],
+      "selected_window_ranges": [
+        [
+          340,
+          460
+        ],
+        [
+          350,
+          470
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T214208__u-demo_user__s-s2__d-armband01__w-normal__seg-003.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        355
+      ],
+      "selected_window_ranges": [
+        [
+          370,
+          490
+        ],
+        [
+          380,
+          500
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T214208__u-demo_user__s-s2__d-armband01__w-normal__seg-004.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        281
+      ],
+      "selected_window_ranges": [
+        [
+          180,
+          300
+        ],
+        [
+          170,
+          290
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T214208__u-demo_user__s-s2__d-armband01__w-normal__seg-005.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        286
+      ],
+      "selected_window_ranges": [
+        [
+          180,
+          300
+        ],
+        [
+          170,
+          290
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T214208__u-demo_user__s-s2__d-armband01__w-normal__seg-006.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        288
+      ],
+      "selected_window_ranges": [
+        [
+          180,
+          300
+        ],
+        [
+          170,
+          290
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T214208__u-demo_user__s-s2__d-armband01__w-normal__seg-007.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        10
+      ],
+      "selected_window_ranges": [
+        [
+          0,
+          120
+        ],
+        [
+          10,
+          130
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T214208__u-demo_user__s-s2__d-armband01__w-normal__seg-008.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        290
+      ],
+      "selected_window_ranges": [
+        [
+          210,
+          330
+        ],
+        [
+          200,
+          320
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T214208__u-demo_user__s-s2__d-armband01__w-normal__seg-009.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        297
+      ],
+      "selected_window_ranges": [
+        [
+          200,
+          320
+        ],
+        [
+          190,
+          310
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T214208__u-demo_user__s-s2__d-armband01__w-normal__seg-010.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        297
+      ],
+      "selected_window_ranges": [
+        [
+          190,
+          310
+        ],
+        [
+          180,
+          300
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T214208__u-demo_user__s-s2__d-armband01__w-normal__seg-011.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        295
+      ],
+      "selected_window_ranges": [
+        [
+          190,
+          310
+        ],
+        [
+          180,
+          300
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260314T214208__u-demo_user__s-s2__d-armband01__w-normal__seg-012.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        362
+      ],
+      "selected_window_ranges": [
+        [
+          390,
+          510
+        ],
+        [
+          400,
+          520
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191556__u-demo_user__s-s2__d-armband01__w-normal__seg-001.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        318
+      ],
+      "selected_window_ranges": [
+        [
+          280,
+          400
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191556__u-demo_user__s-s2__d-armband01__w-normal__seg-002.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        301
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          250,
+          370
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191556__u-demo_user__s-s2__d-armband01__w-normal__seg-003.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        29
+      ],
+      "selected_window_ranges": [
+        [
+          0,
+          120
+        ],
+        [
+          10,
+          130
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191556__u-demo_user__s-s2__d-armband01__w-normal__seg-004.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        807
+      ],
+      "selected_window_ranges": [
+        [
+          750,
+          870
+        ],
+        [
+          740,
+          860
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191556__u-demo_user__s-s2__d-armband01__w-normal__seg-005.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        310
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191556__u-demo_user__s-s2__d-armband01__w-normal__seg-006.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        310
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191556__u-demo_user__s-s2__d-armband01__w-normal__seg-007.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        348
+      ],
+      "selected_window_ranges": [
+        [
+          290,
+          410
+        ],
+        [
+          280,
+          400
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191556__u-demo_user__s-s2__d-armband01__w-normal__seg-008.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        326
+      ],
+      "selected_window_ranges": [
+        [
+          270,
+          390
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191556__u-demo_user__s-s2__d-armband01__w-normal__seg-009.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        309
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191556__u-demo_user__s-s2__d-armband01__w-normal__seg-010.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        284
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191556__u-demo_user__s-s2__d-armband01__w-normal__seg-011.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        307
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191556__u-demo_user__s-s2__d-armband01__w-normal__seg-012.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        310
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191556__u-demo_user__s-s2__d-armband01__w-normal__seg-013.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        305
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191556__u-demo_user__s-s2__d-armband01__w-normal__seg-014.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        306
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191556__u-demo_user__s-s2__d-armband01__w-normal__seg-015.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        308
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-001.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        385
+      ],
+      "selected_window_ranges": [
+        [
+          320,
+          440
+        ],
+        [
+          330,
+          450
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-002.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        310
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-003.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        306
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-004.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        338
+      ],
+      "selected_window_ranges": [
+        [
+          280,
+          400
+        ],
+        [
+          270,
+          390
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-005.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        308
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-006.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        308
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-007.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        307
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-008.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        309
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-009.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        311
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-010.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        309
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-011.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        314
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-012.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        311
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-013.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        312
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260315T191659__u-demo_user__s-s2__d-armband01__w-normal__seg-014.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        333
+      ],
+      "selected_window_ranges": [
+        [
+          270,
+          390
+        ],
+        [
+          280,
+          400
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T192955__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-001.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        313
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T192955__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-002.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        302
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          250,
+          370
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T192955__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-003.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        297
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T192955__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-004.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        303
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          250,
+          370
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T192955__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-005.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        297
+      ],
+      "selected_window_ranges": [
+        [
+          200,
+          320
+        ],
+        [
+          280,
+          400
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T192955__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-006.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        307
+      ],
+      "selected_window_ranges": [
+        [
+          190,
+          310
+        ],
+        [
+          310,
+          430
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T192955__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-007.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        294
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T192955__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-008.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        305
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T192955__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-009.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        310
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T192955__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-010.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        295
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T214457__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-001.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        286
+      ],
+      "selected_window_ranges": [
+        [
+          180,
+          300
+        ],
+        [
+          170,
+          290
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T214457__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-002.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        289
+      ],
+      "selected_window_ranges": [
+        [
+          210,
+          330
+        ],
+        [
+          200,
+          320
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T214457__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-003.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        297
+      ],
+      "selected_window_ranges": [
+        [
+          210,
+          330
+        ],
+        [
+          200,
+          320
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T214457__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-004.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        285
+      ],
+      "selected_window_ranges": [
+        [
+          200,
+          320
+        ],
+        [
+          190,
+          310
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T214457__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-005.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        298
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T214457__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-006.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        297
+      ],
+      "selected_window_ranges": [
+        [
+          200,
+          320
+        ],
+        [
+          190,
+          310
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T214457__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-007.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        288
+      ],
+      "selected_window_ranges": [
+        [
+          200,
+          320
+        ],
+        [
+          190,
+          310
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T214457__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-008.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        290
+      ],
+      "selected_window_ranges": [
+        [
+          210,
+          330
+        ],
+        [
+          200,
+          320
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T214457__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-009.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        295
+      ],
+      "selected_window_ranges": [
+        [
+          200,
+          320
+        ],
+        [
+          190,
+          310
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T214457__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-010.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        299
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T214457__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-011.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        287
+      ],
+      "selected_window_ranges": [
+        [
+          210,
+          330
+        ],
+        [
+          200,
+          320
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T215903__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-001.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        296
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T215903__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-002.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        294
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T215903__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-003.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        299
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T215903__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-004.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        287
+      ],
+      "selected_window_ranges": [
+        [
+          210,
+          330
+        ],
+        [
+          200,
+          320
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T215903__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-005.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        296
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T215903__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-006.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        293
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T215903__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-007.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        291
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T215903__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-008.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        297
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T215903__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-009.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        297
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T215903__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-010.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        294
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T220011__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-001.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        294
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T220011__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-002.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        294
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T220011__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-003.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        296
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T220011__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-004.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        296
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T220011__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-005.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        301
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T220011__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-006.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        278
+      ],
+      "selected_window_ranges": [
+        [
+          210,
+          330
+        ],
+        [
+          200,
+          320
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T220011__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-007.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        291
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T220011__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-008.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        294
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T220011__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-009.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        295
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T220011__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-010.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        296
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T220011__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-012.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        288
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T220011__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-013.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        278
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260317T220011__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-014.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        279
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T155416__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        616
+      ],
+      "selected_window_ranges": [
+        [
+          500,
+          620
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 1
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T155425__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        503
+      ],
+      "selected_window_ranges": [
+        [
+          440,
+          560
+        ],
+        [
+          450,
+          570
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T155434__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        506
+      ],
+      "selected_window_ranges": [
+        [
+          450,
+          570
+        ],
+        [
+          440,
+          560
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T155444__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        660
+      ],
+      "selected_window_ranges": [
+        [
+          630,
+          750
+        ],
+        [
+          570,
+          690
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T155501__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        573
+      ],
+      "selected_window_ranges": [
+        [
+          510,
+          630
+        ],
+        [
+          520,
+          640
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T155510__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        524
+      ],
+      "selected_window_ranges": [
+        [
+          460,
+          580
+        ],
+        [
+          470,
+          590
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T161101__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        611
+      ],
+      "selected_window_ranges": [
+        [
+          540,
+          660
+        ],
+        [
+          530,
+          650
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T161110__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        477
+      ],
+      "selected_window_ranges": [
+        [
+          420,
+          540
+        ],
+        [
+          410,
+          530
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T161119__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        575
+      ],
+      "selected_window_ranges": [
+        [
+          480,
+          600
+        ],
+        [
+          470,
+          590
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T161129__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        479
+      ],
+      "selected_window_ranges": [
+        [
+          370,
+          490
+        ],
+        [
+          470,
+          590
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T161138__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        545
+      ],
+      "selected_window_ranges": [
+        [
+          490,
+          610
+        ],
+        [
+          480,
+          600
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T161147__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        725
+      ],
+      "selected_window_ranges": [
+        [
+          650,
+          770
+        ],
+        [
+          640,
+          760
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T161156__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        530
+      ],
+      "selected_window_ranges": [
+        [
+          450,
+          570
+        ],
+        [
+          440,
+          560
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T161208__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        420
+      ],
+      "selected_window_ranges": [
+        [
+          350,
+          470
+        ],
+        [
+          340,
+          460
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T161217__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        469
+      ],
+      "selected_window_ranges": [
+        [
+          390,
+          510
+        ],
+        [
+          380,
+          500
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T161226__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        496
+      ],
+      "selected_window_ranges": [
+        [
+          440,
+          560
+        ],
+        [
+          430,
+          550
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T161235__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        491
+      ],
+      "selected_window_ranges": [
+        [
+          430,
+          550
+        ],
+        [
+          440,
+          560
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "TENSE_OPEN/20260321T161244__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "TENSE_OPEN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        505
+      ],
+      "selected_window_ranges": [
+        [
+          450,
+          570
+        ],
+        [
+          440,
+          560
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T114928__u-demo_user__s-s2__d-armband01__w-normal__seg-001.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        995
+      ],
+      "selected_window_ranges": [
+        [
+          890,
+          1010
+        ],
+        [
+          1010,
+          1130
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T114928__u-demo_user__s-s2__d-armband01__w-normal__seg-002.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        320
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T114928__u-demo_user__s-s2__d-armband01__w-normal__seg-003.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        372
+      ],
+      "selected_window_ranges": [
+        [
+          320,
+          440
+        ],
+        [
+          330,
+          450
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T114928__u-demo_user__s-s2__d-armband01__w-normal__seg-004.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        357
+      ],
+      "selected_window_ranges": [
+        [
+          340,
+          460
+        ],
+        [
+          350,
+          470
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T114928__u-demo_user__s-s2__d-armband01__w-normal__seg-006.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        365
+      ],
+      "selected_window_ranges": [
+        [
+          350,
+          470
+        ],
+        [
+          360,
+          480
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T114928__u-demo_user__s-s2__d-armband01__w-normal__seg-007.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        363
+      ],
+      "selected_window_ranges": [
+        [
+          360,
+          480
+        ],
+        [
+          370,
+          490
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T114928__u-demo_user__s-s2__d-armband01__w-normal__seg-008.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        297
+      ],
+      "selected_window_ranges": [
+        [
+          310,
+          430
+        ],
+        [
+          320,
+          440
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T114928__u-demo_user__s-s2__d-armband01__w-normal__seg-013.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        318
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T114928__u-demo_user__s-s2__d-armband01__w-normal__seg-014.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        365
+      ],
+      "selected_window_ranges": [
+        [
+          310,
+          430
+        ],
+        [
+          300,
+          420
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T114928__u-demo_user__s-s2__d-armband01__w-normal__seg-017.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        351
+      ],
+      "selected_window_ranges": [
+        [
+          290,
+          410
+        ],
+        [
+          300,
+          420
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191802__u-demo_user__s-s2__d-armband01__w-normal__seg-002.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        638
+      ],
+      "selected_window_ranges": [
+        [
+          580,
+          700
+        ],
+        [
+          570,
+          690
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191802__u-demo_user__s-s2__d-armband01__w-normal__seg-003.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        18
+      ],
+      "selected_window_ranges": [
+        [
+          0,
+          120
+        ],
+        [
+          10,
+          130
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191802__u-demo_user__s-s2__d-armband01__w-normal__seg-004.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        389
+      ],
+      "selected_window_ranges": [
+        [
+          330,
+          450
+        ],
+        [
+          320,
+          440
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191802__u-demo_user__s-s2__d-armband01__w-normal__seg-005.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        372
+      ],
+      "selected_window_ranges": [
+        [
+          310,
+          430
+        ],
+        [
+          320,
+          440
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191802__u-demo_user__s-s2__d-armband01__w-normal__seg-006.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        319
+      ],
+      "selected_window_ranges": [
+        [
+          260,
+          380
+        ],
+        [
+          250,
+          370
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191802__u-demo_user__s-s2__d-armband01__w-normal__seg-007.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        299
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191802__u-demo_user__s-s2__d-armband01__w-normal__seg-008.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        307
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191802__u-demo_user__s-s2__d-armband01__w-normal__seg-009.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        312
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191802__u-demo_user__s-s2__d-armband01__w-normal__seg-010.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        309
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191802__u-demo_user__s-s2__d-armband01__w-normal__seg-011.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        361
+      ],
+      "selected_window_ranges": [
+        [
+          300,
+          420
+        ],
+        [
+          310,
+          430
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191802__u-demo_user__s-s2__d-armband01__w-normal__seg-012.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        311
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191802__u-demo_user__s-s2__d-armband01__w-normal__seg-013.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        310
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191802__u-demo_user__s-s2__d-armband01__w-normal__seg-014.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        293
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191802__u-demo_user__s-s2__d-armband01__w-normal__seg-015.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        312
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191905__u-demo_user__s-s2__d-armband01__w-normal__seg-001.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        343
+      ],
+      "selected_window_ranges": [
+        [
+          280,
+          400
+        ],
+        [
+          290,
+          410
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191905__u-demo_user__s-s2__d-armband01__w-normal__seg-002.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        314
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191905__u-demo_user__s-s2__d-armband01__w-normal__seg-003.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        307
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191905__u-demo_user__s-s2__d-armband01__w-normal__seg-004.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        309
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191905__u-demo_user__s-s2__d-armband01__w-normal__seg-005.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        318
+      ],
+      "selected_window_ranges": [
+        [
+          260,
+          380
+        ],
+        [
+          250,
+          370
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191905__u-demo_user__s-s2__d-armband01__w-normal__seg-006.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        317
+      ],
+      "selected_window_ranges": [
+        [
+          260,
+          380
+        ],
+        [
+          250,
+          370
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191905__u-demo_user__s-s2__d-armband01__w-normal__seg-007.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        297
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191905__u-demo_user__s-s2__d-armband01__w-normal__seg-008.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        315
+      ],
+      "selected_window_ranges": [
+        [
+          260,
+          380
+        ],
+        [
+          250,
+          370
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260315T191905__u-demo_user__s-s2__d-armband01__w-normal__seg-010.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        307
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260317T193050__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-001.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        316
+      ],
+      "selected_window_ranges": [
+        [
+          260,
+          380
+        ],
+        [
+          250,
+          370
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260317T193050__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-002.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        381
+      ],
+      "selected_window_ranges": [
+        [
+          320,
+          440
+        ],
+        [
+          330,
+          450
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260317T193050__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-003.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        297
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260317T193050__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-004.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        309
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260317T193050__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-005.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        352
+      ],
+      "selected_window_ranges": [
+        [
+          290,
+          410
+        ],
+        [
+          300,
+          420
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260317T193050__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-006.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        343
+      ],
+      "selected_window_ranges": [
+        [
+          280,
+          400
+        ],
+        [
+          290,
+          410
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260317T193050__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-007.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        307
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260317T193050__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-008.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        41
+      ],
+      "selected_window_ranges": [
+        [
+          0,
+          120
+        ],
+        [
+          10,
+          130
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260317T193050__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-009.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        333
+      ],
+      "selected_window_ranges": [
+        [
+          270,
+          390
+        ],
+        [
+          280,
+          400
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260317T193050__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-010.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        302
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          250,
+          370
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260317T193050__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-011.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        315
+      ],
+      "selected_window_ranges": [
+        [
+          260,
+          380
+        ],
+        [
+          250,
+          370
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260317T193050__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-012.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        384
+      ],
+      "selected_window_ranges": [
+        [
+          320,
+          440
+        ],
+        [
+          330,
+          450
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260317T193050__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-013.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        338
+      ],
+      "selected_window_ranges": [
+        [
+          280,
+          400
+        ],
+        [
+          270,
+          390
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260317T193050__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-014.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        14
+      ],
+      "selected_window_ranges": [
+        [
+          0,
+          120
+        ],
+        [
+          10,
+          130
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T155217__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        639
+      ],
+      "selected_window_ranges": [
+        [
+          580,
+          700
+        ],
+        [
+          570,
+          690
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T155225__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        510
+      ],
+      "selected_window_ranges": [
+        [
+          470,
+          590
+        ],
+        [
+          480,
+          600
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T155234__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        480
+      ],
+      "selected_window_ranges": [
+        [
+          460,
+          580
+        ],
+        [
+          470,
+          590
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T155243__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        470
+      ],
+      "selected_window_ranges": [
+        [
+          410,
+          530
+        ],
+        [
+          420,
+          540
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T155253__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        459
+      ],
+      "selected_window_ranges": [
+        [
+          410,
+          530
+        ],
+        [
+          420,
+          540
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T155302__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        480
+      ],
+      "selected_window_ranges": [
+        [
+          460,
+          580
+        ],
+        [
+          470,
+          590
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T160722__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        580
+      ],
+      "selected_window_ranges": [
+        [
+          520,
+          640
+        ],
+        [
+          530,
+          650
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T160731__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        419
+      ],
+      "selected_window_ranges": [
+        [
+          390,
+          510
+        ],
+        [
+          400,
+          520
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T160740__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        600
+      ],
+      "selected_window_ranges": [
+        [
+          540,
+          660
+        ],
+        [
+          550,
+          670
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T160749__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        450
+      ],
+      "selected_window_ranges": [
+        [
+          390,
+          510
+        ],
+        [
+          400,
+          520
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T160757__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        570
+      ],
+      "selected_window_ranges": [
+        [
+          510,
+          630
+        ],
+        [
+          520,
+          640
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T160806__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        480
+      ],
+      "selected_window_ranges": [
+        [
+          420,
+          540
+        ],
+        [
+          410,
+          530
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T160815__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        519
+      ],
+      "selected_window_ranges": [
+        [
+          460,
+          580
+        ],
+        [
+          450,
+          570
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T160824__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        449
+      ],
+      "selected_window_ranges": [
+        [
+          390,
+          510
+        ],
+        [
+          380,
+          500
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T160833__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        490
+      ],
+      "selected_window_ranges": [
+        [
+          430,
+          550
+        ],
+        [
+          420,
+          540
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T160842__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        469
+      ],
+      "selected_window_ranges": [
+        [
+          410,
+          530
+        ],
+        [
+          400,
+          520
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T160850__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        617
+      ],
+      "selected_window_ranges": [
+        [
+          560,
+          680
+        ],
+        [
+          550,
+          670
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "THUMB_UP/20260321T160902__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "THUMB_UP",
+      "policy": "onset_peak",
+      "onset_indices": [
+        429
+      ],
+      "selected_window_ranges": [
+        [
+          370,
+          490
+        ],
+        [
+          360,
+          480
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T192618__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        869
+      ],
+      "selected_window_ranges": [
+        [
+          810,
+          930
+        ],
+        [
+          800,
+          920
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T192642__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        910
+      ],
+      "selected_window_ranges": [
+        [
+          810,
+          930
+        ],
+        [
+          800,
+          920
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T192651__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        380
+      ],
+      "selected_window_ranges": [
+        [
+          280,
+          400
+        ],
+        [
+          400,
+          520
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T192659__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        191
+      ],
+      "selected_window_ranges": [
+        [
+          80,
+          200
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T192749__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        40
+      ],
+      "selected_window_ranges": [
+        [
+          0,
+          120
+        ],
+        [
+          10,
+          130
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T192935__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        689
+      ],
+      "selected_window_ranges": [
+        [
+          610,
+          730
+        ],
+        [
+          600,
+          720
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T192946__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        419
+      ],
+      "selected_window_ranges": [
+        [
+          420,
+          540
+        ],
+        [
+          430,
+          550
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T192958__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        569
+      ],
+      "selected_window_ranges": [
+        [
+          530,
+          650
+        ],
+        [
+          540,
+          660
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T193524__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        293
+      ],
+      "selected_window_ranges": [
+        [
+          200,
+          320
+        ],
+        [
+          190,
+          310
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T193535__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        529
+      ],
+      "selected_window_ranges": [
+        [
+          470,
+          590
+        ],
+        [
+          460,
+          580
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T193544__u-demo_user__s-s1__d-armband01__w-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        759
+      ],
+      "selected_window_ranges": [
+        [
+          750,
+          870
+        ],
+        [
+          760,
+          880
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T195036__u-demo_user__s-s1__d-armband01__w-normal__seg-003.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        370
+      ],
+      "selected_window_ranges": [
+        [
+          310,
+          430
+        ],
+        [
+          320,
+          440
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T195036__u-demo_user__s-s1__d-armband01__w-normal__seg-004.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        257
+      ],
+      "selected_window_ranges": [
+        [
+          210,
+          330
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T195036__u-demo_user__s-s1__d-armband01__w-normal__seg-005.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        266
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T195036__u-demo_user__s-s1__d-armband01__w-normal__seg-006.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        269
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T195852__u-demo_user__s-s1__d-armband01__w-normal__seg-002.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        308
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T195852__u-demo_user__s-s1__d-armband01__w-normal__seg-003.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        305
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T195852__u-demo_user__s-s1__d-armband01__w-normal__seg-004.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        79
+      ],
+      "selected_window_ranges": [
+        [
+          20,
+          140
+        ],
+        [
+          10,
+          130
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T195852__u-demo_user__s-s1__d-armband01__w-normal__seg-005.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        16
+      ],
+      "selected_window_ranges": [
+        [
+          0,
+          120
+        ],
+        [
+          10,
+          130
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T195852__u-demo_user__s-s1__d-armband01__w-normal__seg-006.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        215
+      ],
+      "selected_window_ranges": [
+        [
+          190,
+          310
+        ],
+        [
+          200,
+          320
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T195852__u-demo_user__s-s1__d-armband01__w-normal__seg-007.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        162
+      ],
+      "selected_window_ranges": [
+        [
+          180,
+          300
+        ],
+        [
+          190,
+          310
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T195852__u-demo_user__s-s1__d-armband01__w-normal__seg-008.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        149
+      ],
+      "selected_window_ranges": [
+        [
+          170,
+          290
+        ],
+        [
+          180,
+          300
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T195852__u-demo_user__s-s1__d-armband01__w-normal__seg-009.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        47
+      ],
+      "selected_window_ranges": [
+        [
+          0,
+          120
+        ],
+        [
+          10,
+          130
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T214529__u-demo_user__s-s2__d-armband01__w-normal__seg-001.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        340
+      ],
+      "selected_window_ranges": [
+        [
+          280,
+          400
+        ],
+        [
+          270,
+          390
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260314T214529__u-demo_user__s-s2__d-armband01__w-normal__seg-002.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        314
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260315T115242__u-demo_user__s-s2__d-armband01__w-normal__seg-005.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        308
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260315T115242__u-demo_user__s-s2__d-armband01__w-normal__seg-006.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        279
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260315T115242__u-demo_user__s-s2__d-armband01__w-normal__seg-008.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        281
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260315T115242__u-demo_user__s-s2__d-armband01__w-normal__seg-009.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        637
+      ],
+      "selected_window_ranges": [
+        [
+          580,
+          700
+        ],
+        [
+          570,
+          690
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260315T115242__u-demo_user__s-s2__d-armband01__w-normal__seg-011.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        475
+      ],
+      "selected_window_ranges": [
+        [
+          420,
+          540
+        ],
+        [
+          410,
+          530
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260315T115242__u-demo_user__s-s2__d-armband01__w-normal__seg-013.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        707
+      ],
+      "selected_window_ranges": [
+        [
+          650,
+          770
+        ],
+        [
+          640,
+          760
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T155119__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        669
+      ],
+      "selected_window_ranges": [
+        [
+          610,
+          730
+        ],
+        [
+          600,
+          720
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T155128__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        576
+      ],
+      "selected_window_ranges": [
+        [
+          520,
+          640
+        ],
+        [
+          510,
+          630
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T155137__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        594
+      ],
+      "selected_window_ranges": [
+        [
+          530,
+          650
+        ],
+        [
+          540,
+          660
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T155147__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        549
+      ],
+      "selected_window_ranges": [
+        [
+          490,
+          610
+        ],
+        [
+          480,
+          600
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T155156__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        449
+      ],
+      "selected_window_ranges": [
+        [
+          400,
+          520
+        ],
+        [
+          410,
+          530
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T155207__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        549
+      ],
+      "selected_window_ranges": [
+        [
+          490,
+          610
+        ],
+        [
+          480,
+          600
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T160537__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        519
+      ],
+      "selected_window_ranges": [
+        [
+          460,
+          580
+        ],
+        [
+          450,
+          570
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T160546__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        514
+      ],
+      "selected_window_ranges": [
+        [
+          450,
+          570
+        ],
+        [
+          460,
+          580
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T160555__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        469
+      ],
+      "selected_window_ranges": [
+        [
+          410,
+          530
+        ],
+        [
+          400,
+          520
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T160603__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        521
+      ],
+      "selected_window_ranges": [
+        [
+          460,
+          580
+        ],
+        [
+          470,
+          590
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T160612__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        420
+      ],
+      "selected_window_ranges": [
+        [
+          360,
+          480
+        ],
+        [
+          370,
+          490
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T160621__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        449
+      ],
+      "selected_window_ranges": [
+        [
+          390,
+          510
+        ],
+        [
+          380,
+          500
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T160629__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        470
+      ],
+      "selected_window_ranges": [
+        [
+          410,
+          530
+        ],
+        [
+          400,
+          520
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T160638__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        450
+      ],
+      "selected_window_ranges": [
+        [
+          390,
+          510
+        ],
+        [
+          380,
+          500
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T160646__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        567
+      ],
+      "selected_window_ranges": [
+        [
+          510,
+          630
+        ],
+        [
+          500,
+          620
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T160655__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        519
+      ],
+      "selected_window_ranges": [
+        [
+          460,
+          580
+        ],
+        [
+          450,
+          570
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T160704__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        446
+      ],
+      "selected_window_ranges": [
+        [
+          390,
+          510
+        ],
+        [
+          380,
+          500
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T160713__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        459
+      ],
+      "selected_window_ranges": [
+        [
+          400,
+          520
+        ],
+        [
+          390,
+          510
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161430__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        467
+      ],
+      "selected_window_ranges": [
+        [
+          410,
+          530
+        ],
+        [
+          400,
+          520
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161438__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        475
+      ],
+      "selected_window_ranges": [
+        [
+          410,
+          530
+        ],
+        [
+          420,
+          540
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161446__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        404
+      ],
+      "selected_window_ranges": [
+        [
+          340,
+          460
+        ],
+        [
+          350,
+          470
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161454__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        461
+      ],
+      "selected_window_ranges": [
+        [
+          400,
+          520
+        ],
+        [
+          410,
+          530
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161504__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        454
+      ],
+      "selected_window_ranges": [
+        [
+          390,
+          510
+        ],
+        [
+          400,
+          520
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161515__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        461
+      ],
+      "selected_window_ranges": [
+        [
+          400,
+          520
+        ],
+        [
+          410,
+          530
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161525__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        505
+      ],
+      "selected_window_ranges": [
+        [
+          450,
+          570
+        ],
+        [
+          440,
+          560
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161535__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        459
+      ],
+      "selected_window_ranges": [
+        [
+          400,
+          520
+        ],
+        [
+          390,
+          510
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161545__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        430
+      ],
+      "selected_window_ranges": [
+        [
+          370,
+          490
+        ],
+        [
+          380,
+          500
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161555__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        474
+      ],
+      "selected_window_ranges": [
+        [
+          410,
+          530
+        ],
+        [
+          420,
+          540
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161603__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        489
+      ],
+      "selected_window_ranges": [
+        [
+          430,
+          550
+        ],
+        [
+          420,
+          540
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161612__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        439
+      ],
+      "selected_window_ranges": [
+        [
+          380,
+          500
+        ],
+        [
+          370,
+          490
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161621__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        465
+      ],
+      "selected_window_ranges": [
+        [
+          400,
+          520
+        ],
+        [
+          410,
+          530
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161630__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        490
+      ],
+      "selected_window_ranges": [
+        [
+          430,
+          550
+        ],
+        [
+          420,
+          540
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161638__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        429
+      ],
+      "selected_window_ranges": [
+        [
+          370,
+          490
+        ],
+        [
+          360,
+          480
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161647__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        480
+      ],
+      "selected_window_ranges": [
+        [
+          420,
+          540
+        ],
+        [
+          410,
+          530
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161655__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        457
+      ],
+      "selected_window_ranges": [
+        [
+          400,
+          520
+        ],
+        [
+          390,
+          510
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161703__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        574
+      ],
+      "selected_window_ranges": [
+        [
+          510,
+          630
+        ],
+        [
+          520,
+          640
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161723__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        547
+      ],
+      "selected_window_ranges": [
+        [
+          490,
+          610
+        ],
+        [
+          480,
+          600
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "V_SIGN/20260321T161733__u-your_id__s-supp_vsign_bulk_b_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "V_SIGN",
+      "policy": "onset_peak",
+      "onset_indices": [
+        614
+      ],
+      "selected_window_ranges": [
+        [
+          550,
+          670
+        ],
+        [
+          560,
+          680
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260314T214818__u-demo_user__s-s2__d-armband01__w-normal__seg-001.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        305
+      ],
+      "selected_window_ranges": [
+        [
+          300,
+          420
+        ],
+        [
+          310,
+          430
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260314T214818__u-demo_user__s-s2__d-armband01__w-normal__seg-002.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        410
+      ],
+      "selected_window_ranges": [
+        [
+          350,
+          470
+        ],
+        [
+          340,
+          460
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260314T214818__u-demo_user__s-s2__d-armband01__w-normal__seg-003.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        312
+      ],
+      "selected_window_ranges": [
+        [
+          310,
+          430
+        ],
+        [
+          320,
+          440
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260314T214818__u-demo_user__s-s2__d-armband01__w-normal__seg-004.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        1402
+      ],
+      "selected_window_ranges": [],
+      "dropped_reasons": [
+        "no_action_window_after_filter"
+      ],
+      "selected_count": 0
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T115405__u-demo_user__s-s2__d-armband01__w-normal__seg-002.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        304
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          250,
+          370
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T115405__u-demo_user__s-s2__d-armband01__w-normal__seg-006.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        312
+      ],
+      "selected_window_ranges": [
+        [
+          250,
+          370
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-001.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        303
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          250,
+          370
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-002.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        406
+      ],
+      "selected_window_ranges": [
+        [
+          420,
+          540
+        ],
+        [
+          430,
+          550
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-003.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        308
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-004.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        218
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-005.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        306
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-006.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        286
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-007.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        308
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-008.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        288
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-009.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        306
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-010.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        214
+      ],
+      "selected_window_ranges": [
+        [
+          200,
+          320
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-011.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        1445
+      ],
+      "selected_window_ranges": [
+        [
+          1350,
+          1470
+        ],
+        [
+          1340,
+          1460
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-012.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        305
+      ],
+      "selected_window_ranges": [
+        [
+          210,
+          330
+        ],
+        [
+          200,
+          320
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-013.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        347
+      ],
+      "selected_window_ranges": [
+        [
+          260,
+          380
+        ],
+        [
+          250,
+          370
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-014.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        307
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-015.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        338
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-016.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        306
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-017.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        285
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-018.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        304
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-019.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        287
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-020.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        300
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-021.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        294
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-022.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        298
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-023.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        331
+      ],
+      "selected_window_ranges": [
+        [
+          270,
+          390
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-024.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        302
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260315T121923__u-demo_user__s-s2__d-armband01__w-normal__seg-025.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        343
+      ],
+      "selected_window_ranges": [
+        [
+          270,
+          390
+        ],
+        [
+          260,
+          380
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T193204__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-001.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        289
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T193204__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-003.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        288
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T193204__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-004.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        296
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T193204__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-005.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        279
+      ],
+      "selected_window_ranges": [
+        [
+          220,
+          340
+        ],
+        [
+          210,
+          330
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T193204__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-006.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        288
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          220,
+          340
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T193204__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-007.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        10
+      ],
+      "selected_window_ranges": [
+        [
+          0,
+          120
+        ],
+        [
+          10,
+          130
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T193204__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-008.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        303
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          250,
+          370
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T193204__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-009.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        296
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T193204__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-010.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        290
+      ],
+      "selected_window_ranges": [
+        [
+          230,
+          350
+        ],
+        [
+          240,
+          360
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T193204__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-011.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        64
+      ],
+      "selected_window_ranges": [
+        [
+          0,
+          120
+        ],
+        [
+          10,
+          130
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T193204__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-012.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        296
+      ],
+      "selected_window_ranges": [
+        [
+          240,
+          360
+        ],
+        [
+          230,
+          350
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T214557__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-001.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        297
+      ],
+      "selected_window_ranges": [
+        [
+          340,
+          460
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 1
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T214557__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-002.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        145
+      ],
+      "selected_window_ranges": [
+        [
+          30,
+          150
+        ],
+        [
+          150,
+          270
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T214557__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-003.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        311
+      ],
+      "selected_window_ranges": [
+        [
+          320,
+          440
+        ],
+        [
+          330,
+          450
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T214557__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-004.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        297
+      ],
+      "selected_window_ranges": [
+        [
+          180,
+          300
+        ],
+        [
+          310,
+          430
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260317T214557__u-your_id__s-s3_demo3_0317__d-armband01__w-normal__seg-005.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        78
+      ],
+      "selected_window_ranges": [
+        [
+          50,
+          170
+        ],
+        [
+          60,
+          180
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T155311__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        550
+      ],
+      "selected_window_ranges": [
+        [
+          430,
+          550
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 1
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T155323__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        499
+      ],
+      "selected_window_ranges": [
+        [
+          390,
+          510
+        ],
+        [
+          380,
+          500
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T155335__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        617
+      ],
+      "selected_window_ranges": [
+        [
+          520,
+          640
+        ],
+        [
+          510,
+          630
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T155347__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        550
+      ],
+      "selected_window_ranges": [
+        [
+          470,
+          590
+        ],
+        [
+          460,
+          580
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T155356__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        550
+      ],
+      "selected_window_ranges": [
+        [
+          460,
+          580
+        ],
+        [
+          450,
+          570
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T155407__u-your_id__s-supp_actions_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        519
+      ],
+      "selected_window_ranges": [
+        [
+          420,
+          540
+        ],
+        [
+          410,
+          530
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T160912__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        448
+      ],
+      "selected_window_ranges": [
+        [
+          360,
+          480
+        ],
+        [
+          420,
+          540
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T160920__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        492
+      ],
+      "selected_window_ranges": [
+        [
+          420,
+          540
+        ],
+        [
+          410,
+          530
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T160930__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        450
+      ],
+      "selected_window_ranges": [
+        [
+          390,
+          510
+        ],
+        [
+          400,
+          520
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T160939__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        510
+      ],
+      "selected_window_ranges": [
+        [
+          450,
+          570
+        ],
+        [
+          440,
+          560
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T160947__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        359
+      ],
+      "selected_window_ranges": [
+        [
+          280,
+          400
+        ],
+        [
+          270,
+          390
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T160956__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        489
+      ],
+      "selected_window_ranges": [
+        [
+          430,
+          550
+        ],
+        [
+          420,
+          540
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T161004__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        632
+      ],
+      "selected_window_ranges": [
+        [
+          560,
+          680
+        ],
+        [
+          550,
+          670
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T161013__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        500
+      ],
+      "selected_window_ranges": [
+        [
+          420,
+          540
+        ],
+        [
+          410,
+          530
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T161022__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        459
+      ],
+      "selected_window_ranges": [
+        [
+          400,
+          520
+        ],
+        [
+          390,
+          510
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T161032__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        440
+      ],
+      "selected_window_ranges": [
+        [
+          380,
+          500
+        ],
+        [
+          390,
+          510
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T161042__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        550
+      ],
+      "selected_window_ranges": [
+        [
+          470,
+          590
+        ],
+        [
+          460,
+          580
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    },
+    {
+      "relative_path": "WRIST_CW/20260321T161051__u-your_id__s-supp_actions_bulk_a_20260321__d-armband01__w-normal__ao-normal.csv",
+      "target_state": "WRIST_CW",
+      "policy": "onset_peak",
+      "onset_indices": [
+        430
+      ],
+      "selected_window_ranges": [
+        [
+          360,
+          480
+        ],
+        [
+          350,
+          470
+        ]
+      ],
+      "dropped_reasons": [],
+      "selected_count": 2
+    }
+  ],
+  "manifest_path": "/home/ma-user/work/ICT-vsign-mainline-clean/data/recordings_manifest.csv"
+}

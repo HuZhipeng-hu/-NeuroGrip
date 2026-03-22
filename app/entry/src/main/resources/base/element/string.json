@@ -15,6 +15,10 @@
     {
       "name": "api_reason",
       "value": "需要连接 Spring Boot 后端 API"
+    },
+    {
+      "name": "location_reason",
+      "value": "需要获取地理位置以提供轨迹记录服务"
     }
   ]
 }

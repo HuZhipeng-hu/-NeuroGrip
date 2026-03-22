@@ -1,0 +1,134 @@
+{
+  "status": "ok",
+  "generated_at_unix": 1774102057.06729,
+  "session_dir": "/home/HwHiAiUser/projects/ICT/code/artifacts/runtime_sessions/20260321_220737_event_runtime",
+  "startup_only": false,
+  "backend": "lite",
+  "trace_predictions": true,
+  "trace_jsonl": true,
+  "source_mode": "live",
+  "source_csv": "",
+  "duration_sec": 25.0,
+  "config_files": {
+    "runtime_config": {
+      "path": "/home/HwHiAiUser/projects/ICT/code/configs/runtime_event_onset_kunpeng_pro.yaml",
+      "exists": true,
+      "size_bytes": 2163,
+      "sha256": "491f42a5b76b68c761ccc8cc4736c473f6383cb783039f7d2a2b2583555cf4dc"
+    },
+    "training_config": {
+      "path": "/home/HwHiAiUser/projects/ICT/code/configs/training_event_onset.yaml",
+      "exists": true,
+      "size_bytes": 2004,
+      "sha256": "113aa9d52e98d026d7ab510396941a136e415d82569d0e5f466cbde498a71728"
+    },
+    "actuation_mapping": {
+      "path": "/home/HwHiAiUser/projects/ICT/code/configs/event_actuation_mapping.yaml",
+      "exists": true,
+      "size_bytes": 279,
+      "sha256": "8c06256220bee4bf3d3c490cf3e8ff3f72081139daef78d71abd02c7fcffdbf8"
+    }
+  },
+  "model_artifacts": {
+    "model_path": {
+      "path": "/home/HwHiAiUser/projects/ICT/code/models/event_onset.mindir",
+      "exists": true,
+      "size_bytes": 367823,
+      "sha256": "029c94056624eafbad2c4ef68223a2f9db0614cd33be2e23b75f605c4da06768"
+    },
+    "model_metadata_path": {
+      "path": "/home/HwHiAiUser/projects/ICT/code/models/event_onset.model_metadata.json",
+      "exists": true,
+      "size_bytes": 1080,
+      "sha256": "fca86b79dcecf0d523a3b894d0b633a34e37186d9ffa23276896dfb9dcce7991"
+    }
+  },
+  "release_artifacts": {
+    "release_summary": {
+      "path": "/home/HwHiAiUser/projects/ICT/code/release_summary.json",
+      "exists": true,
+      "size_bytes": 11099,
+      "sha256": "6762df02f955bb368c1c914531e39d060847c8080641ac5c93a49ecf7ec139f9"
+    }
+  },
+  "runtime_contract": {
+    "class_order": [
+      "CONTINUE",
+      "TENSE_OPEN",
+      "V_SIGN",
+      "THUMB_UP",
+      "WRIST_CW"
+    ],
+    "class_mapping": {
+      "CONTINUE": "CONTINUE",
+      "TENSE_OPEN": "TENSE_OPEN",
+      "V_SIGN": "V_SIGN",
+      "THUMB_UP": "THUMB_UP",
+      "WRIST_CW": "WRIST_CW"
+    },
+    "release_mode": "command_only",
+    "momentary_action_labels": [],
+    "device_target": "CPU"
+  },
+  "hardware_config": {
+    "sensor_mode": "armband",
+    "actuator_mode": "pca9685",
+    "sensor_port": "/dev/ttyUSB0",
+    "sensor_baudrate": 115200,
+    "actuator_i2c_bus": 7,
+    "actuator_i2c_address": 64,
+    "safe_profile_preset": "test_py_v1"
+  },
+  "metadata_summary": {
+    "model_variant": "event_onset_two_stage_demo3",
+    "class_names": [
+      "CONTINUE",
+      "TENSE_OPEN",
+      "V_SIGN",
+      "THUMB_UP",
+      "WRIST_CW"
+    ],
+    "public_class_names": [
+      "CONTINUE",
+      "TENSE_OPEN",
+      "V_SIGN",
+      "THUMB_UP",
+      "WRIST_CW"
+    ],
+    "gate_classes": [
+      "CONTINUE",
+      "COMMAND"
+    ],
+    "command_classes": [
+      "TENSE_OPEN",
+      "V_SIGN",
+      "THUMB_UP",
+      "WRIST_CW"
+    ],
+    "output_names": [
+      "gate_logits",
+      "command_logits"
+    ]
+  },
+  "actuator_info": {
+    "type": "PCA9685Actuator",
+    "i2c_bus": 7,
+    "i2c_address": "0x40",
+    "frequency": 50,
+    "connected": true,
+    "safe_profile_preset": "test_py_v1",
+    "wrist_channel": 5,
+    "wrist_neutral_angle": 120.0,
+    "wrist_cw_angle": 0.0,
+    "current_gesture": null,
+    "current_angles": [
+      180.0,
+      180.0,
+      180.0,
+      180.0,
+      180.0
+    ],
+    "current_wrist_angle": 120.0
+  },
+  "warnings": []
+}

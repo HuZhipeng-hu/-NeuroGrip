@@ -1,0 +1,46 @@
+run_id: vsign_mainline_clean_full_b0_s42_supp100
+device:
+  device_target: Ascend
+  device_id: 0
+model:
+  model_type: event_onset_two_stage_demo3
+  num_classes: 5
+  base_channels: 16
+  use_se: true
+  dropout_rate: 0.3
+training:
+  loss_type: cross_entropy
+  hard_mining_ratio: 0.0
+  split_seed: 42
+  freeze_emg_epochs: 8
+  unfreeze_last_blocks: true
+  encoder_lr_ratio: 0.3
+  head_lr_ratio: 1.0
+data:
+  label_mode: event_onset
+  target_db5_keys:
+  - TENSE_OPEN
+  - V_SIGN
+  - THUMB_UP
+  - WRIST_CW
+  capture_mode_filter: event_onset
+  device_sampling_rate_hz: 500
+  imu_sampling_rate_hz: 50
+  context_window_ms: 240
+  window_step_ms: 20
+  top_k_windows_per_clip: 2
+  idle_top_k_windows_per_clip: 4
+  action_window_policy: onset_peak
+  action_onset_pre_ms: 120
+  action_onset_post_ms: 220
+  action_onset_min_gap_ms: 180
+  action_onset_threshold_alpha: 0.25
+  use_imu: true
+  budget_per_class: 0
+  budget_seed: 42
+incremental:
+  enabled: false
+  checkpoint_path: ''
+  old_target_db5_keys: []
+  head_only_priority: true
+  init_seed: 42

@@ -1,0 +1,60 @@
+{
+  "status": "ok",
+  "started_at_unix": 1774102057.0650263,
+  "ended_at_unix": 1774102082.0860903,
+  "duration_sec": 25.021064519882202,
+  "session_dir": "/home/HwHiAiUser/projects/ICT/code/artifacts/runtime_sessions/20260321_220737_event_runtime",
+  "startup_report": "/home/HwHiAiUser/projects/ICT/code/artifacts/runtime_sessions/20260321_220737_event_runtime/startup_report.json",
+  "decision_log": "/home/HwHiAiUser/projects/ICT/code/artifacts/runtime_sessions/20260321_220737_event_runtime/decision_log.jsonl",
+  "step_trace_log": "/home/HwHiAiUser/projects/ICT/code/artifacts/runtime_sessions/20260321_220737_event_runtime/step_trace_log.jsonl",
+  "source_mode": "live",
+  "trace_predictions": true,
+  "trace_jsonl": true,
+  "total_steps": 1242,
+  "step_trace_count": 1242,
+  "transition_count": 12,
+  "transition_counts": {
+    "THUMB_UP": 2,
+    "TENSE_OPEN": 4,
+    "V_SIGN": 4,
+    "WRIST_CW": 2
+  },
+  "last_state": "TENSE_OPEN",
+  "device_diagnostics": {
+    "type": "Device",
+    "port": "/dev/ttyUSB0",
+    "baudrate": 115200,
+    "connected": false,
+    "battery_level": 0,
+    "stats": {
+      "frames_received": 1253,
+      "frames_parsed": 1253,
+      "frames_failed": 0,
+      "sync_errors": 41,
+      "bytes_received": 122880,
+      "connect_time": 1774102057.0731812
+    },
+    "fps": 50.094003168388234
+  },
+  "actuator_info": {
+    "type": "PCA9685Actuator",
+    "i2c_bus": 7,
+    "i2c_address": "0x40",
+    "frequency": 50,
+    "connected": true,
+    "safe_profile_preset": "test_py_v1",
+    "wrist_channel": 5,
+    "wrist_neutral_angle": 120.0,
+    "wrist_cw_angle": 0.0,
+    "current_gesture": "TENSE_OPEN",
+    "current_angles": [
+      180.0,
+      180.0,
+      180.0,
+      180.0,
+      180.0
+    ],
+    "current_wrist_angle": 120.0
+  },
+  "error": null
+}

@@ -1,0 +1,67 @@
+[WARNING] CORE(2001084,ffffb23770e0,python3):2026-03-21-16:33:32.924.252 [mindspore/core/utils/ms_context.cc:533] GetJitLevel] Set jit level to O2 for rank table startup method.
+[WARNING] ME(2001084:281473671721184,MainProcess):2026-03-21-16:33:32.989.000 [mindspore/run_check/_check_version.py:408] Can not find the tbe operator implementation(need by mindspore-ascend). Please check whether the Environment Variable PYTHONPATH is set. For details, refer to the installation guidelines: https://www.mindspore.cn/install
+16:33:43 [INFO] event_onset.finetune: Using recordings_manifest: /home/ma-user/work/ICT-vsign-mainline-clean/data/recordings_manifest.csv
+16:33:43 [INFO] event_onset.finetune: Budget mode: budget_per_class=0 budget_seed=42
+16:33:43 [INFO] training.event_onset: Run ID: vsign_mainline_clean_full_b0_s42_supp100
+16:33:43 [INFO] training.event_onset: Run directory: artifacts/runs/vsign_mainline_clean_full_b0_s42_supp100
+[WARNING] ME(2001084:281473671721184,MainProcess):2026-03-21-16:33:43.563.000 [mindspore/run_check/_check_version.py:408] Can not find the tbe operator implementation(need by mindspore-ascend). Please check whether the Environment Variable PYTHONPATH is set. For details, refer to the installation guidelines: https://www.mindspore.cn/install
+[WARNING] ME(2001084:281473671721184,MainProcess):2026-03-21-16:33:43.564.000 [mindspore/run_check/_check_version.py:408] Can not find the tbe operator implementation(need by mindspore-ascend). Please check whether the Environment Variable PYTHONPATH is set. For details, refer to the installation guidelines: https://www.mindspore.cn/install
+16:33:43 [INFO] training.event_onset: Training device configured: mode=graph target=Ascend device_id=0
+16:33:43 [INFO] training.event_onset: Event dataset stats: {'CONTINUE': 82, 'total_clips': 389, 'TENSE_OPEN': 108, 'THUMB_UP': 65, 'V_SIGN': 69, 'WRIST_CW': 65}
+16:35:15 [INFO] training.event_onset: Loaded event samples: emg=(933, 8, 24, 3) imu=(933, 6, 16) labels=933
+16:35:15 [INFO] training.event_onset: Saved quality report: artifacts/runs/vsign_mainline_clean_full_b0_s42_supp100/quality/quality_report.json
+16:35:15 [INFO] training.event_onset: Rebuilt split manifest at /home/ma-user/work/ICT-vsign-mainline-clean/code/artifacts/runs/vsign_mainline_clean_full_b0_s42_supp100/manifests/event_onset_demo3_split_manifest.json because --split_manifest_out was provided without --split_manifest_in.
+16:35:15 [INFO] training.event_onset: Split sizes => train=559, val=187, test=187
+16:35:15 [INFO] event_onset.trainer: Start phase=head_only epochs=8 trainable=6 frozen=36
+.......16:36:46 [INFO] event_onset.trainer: Epoch 001/060 phase=head_only train_loss=2.0938 train_acc=0.1982 val_loss=1.5921 val_acc=0.3422 val_f1=0.1020 lr=0.000100
+16:36:46 [INFO] event_onset.trainer:  New best model: epoch=1 val_f1=0.1020 val_acc=0.3422
+16:36:46 [INFO] event_onset.trainer: Epoch 002/060 phase=head_only train_loss=1.9357 train_acc=0.1946 val_loss=1.5181 val_acc=0.3422 val_f1=0.1024 lr=0.000200
+16:36:46 [INFO] event_onset.trainer:  New best model: epoch=2 val_f1=0.1024 val_acc=0.3422
+16:36:47 [INFO] event_onset.trainer: Epoch 003/060 phase=head_only train_loss=1.7710 train_acc=0.3857 val_loss=1.3078 val_acc=0.5668 val_f1=0.4444 lr=0.000300
+16:36:47 [INFO] event_onset.trainer:  New best model: epoch=3 val_f1=0.4444 val_acc=0.5668
+16:36:47 [INFO] event_onset.trainer: Epoch 004/060 phase=head_only train_loss=1.5963 train_acc=0.5357 val_loss=1.1771 val_acc=0.6096 val_f1=0.5514 lr=0.000273
+16:36:47 [INFO] event_onset.trainer:  New best model: epoch=4 val_f1=0.5514 val_acc=0.6096
+16:36:47 [INFO] event_onset.trainer: Epoch 005/060 phase=head_only train_loss=1.5103 train_acc=0.5482 val_loss=1.1231 val_acc=0.5989 val_f1=0.5244 lr=0.000199
+16:36:48 [INFO] event_onset.trainer: Epoch 006/060 phase=head_only train_loss=1.4646 train_acc=0.5875 val_loss=1.1003 val_acc=0.6364 val_f1=0.5779 lr=0.000106
+16:36:48 [INFO] event_onset.trainer:  New best model: epoch=6 val_f1=0.5779 val_acc=0.6364
+16:36:48 [INFO] event_onset.trainer: Epoch 007/060 phase=head_only train_loss=1.4354 train_acc=0.6054 val_loss=1.0912 val_acc=0.6310 val_f1=0.5702 lr=0.000030
+16:36:49 [INFO] event_onset.trainer: Epoch 008/060 phase=head_only train_loss=1.4215 train_acc=0.5929 val_loss=1.0943 val_acc=0.6364 val_f1=0.5735 lr=0.000000
+16:36:49 [INFO] event_onset.trainer: Start phase=unfreeze epochs=52 trainable=25 frozen=17
+..16:37:08 [INFO] event_onset.trainer: Epoch 009/060 phase=unfreeze train_loss=1.4062 train_acc=0.6179 val_loss=1.0471 val_acc=0.6471 val_f1=0.5808 lr=0.000100
+16:37:08 [INFO] event_onset.trainer:  New best model: epoch=9 val_f1=0.5808 val_acc=0.6471
+16:37:09 [INFO] event_onset.trainer: Epoch 010/060 phase=unfreeze train_loss=1.3511 train_acc=0.6429 val_loss=0.9735 val_acc=0.7380 val_f1=0.6762 lr=0.000200
+16:37:09 [INFO] event_onset.trainer:  New best model: epoch=10 val_f1=0.6762 val_acc=0.7380
+16:37:09 [INFO] event_onset.trainer: Epoch 011/060 phase=unfreeze train_loss=1.2321 train_acc=0.6875 val_loss=0.9306 val_acc=0.7487 val_f1=0.7042 lr=0.000300
+16:37:09 [INFO] event_onset.trainer:  New best model: epoch=11 val_f1=0.7042 val_acc=0.7487
+16:37:10 [INFO] event_onset.trainer: Epoch 012/060 phase=unfreeze train_loss=1.1668 train_acc=0.7411 val_loss=0.8913 val_acc=0.7594 val_f1=0.6952 lr=0.000300
+16:37:10 [INFO] event_onset.trainer: Epoch 013/060 phase=unfreeze train_loss=1.0858 train_acc=0.7821 val_loss=0.8446 val_acc=0.7968 val_f1=0.7504 lr=0.000299
+16:37:10 [INFO] event_onset.trainer:  New best model: epoch=13 val_f1=0.7504 val_acc=0.7968
+16:37:10 [INFO] event_onset.trainer: Epoch 014/060 phase=unfreeze train_loss=1.0160 train_acc=0.7982 val_loss=0.8342 val_acc=0.7754 val_f1=0.7305 lr=0.000297
+16:37:11 [INFO] event_onset.trainer: Epoch 015/060 phase=unfreeze train_loss=0.9457 train_acc=0.8286 val_loss=0.7891 val_acc=0.8128 val_f1=0.7690 lr=0.000295
+16:37:11 [INFO] event_onset.trainer:  New best model: epoch=15 val_f1=0.7690 val_acc=0.8128
+16:37:11 [INFO] event_onset.trainer: Epoch 016/060 phase=unfreeze train_loss=0.9015 train_acc=0.8518 val_loss=0.7859 val_acc=0.8075 val_f1=0.7611 lr=0.000292
+16:37:12 [INFO] event_onset.trainer: Epoch 017/060 phase=unfreeze train_loss=0.8787 train_acc=0.8661 val_loss=0.8133 val_acc=0.7968 val_f1=0.7399 lr=0.000289
+16:37:12 [INFO] event_onset.trainer: Epoch 018/060 phase=unfreeze train_loss=0.8537 train_acc=0.8750 val_loss=0.7762 val_acc=0.8182 val_f1=0.7781 lr=0.000285
+16:37:12 [INFO] event_onset.trainer:  New best model: epoch=18 val_f1=0.7781 val_acc=0.8182
+16:37:13 [INFO] event_onset.trainer: Epoch 019/060 phase=unfreeze train_loss=0.8172 train_acc=0.9018 val_loss=0.7708 val_acc=0.8503 val_f1=0.8189 lr=0.000281
+16:37:13 [INFO] event_onset.trainer:  New best model: epoch=19 val_f1=0.8189 val_acc=0.8503
+16:37:13 [INFO] event_onset.trainer: Epoch 020/060 phase=unfreeze train_loss=0.8103 train_acc=0.8786 val_loss=0.7718 val_acc=0.8182 val_f1=0.7796 lr=0.000276
+16:37:13 [INFO] event_onset.trainer: Epoch 021/060 phase=unfreeze train_loss=0.8018 train_acc=0.9089 val_loss=0.7847 val_acc=0.8075 val_f1=0.7698 lr=0.000270
+16:37:14 [INFO] event_onset.trainer: Epoch 022/060 phase=unfreeze train_loss=0.7598 train_acc=0.9214 val_loss=0.7559 val_acc=0.8449 val_f1=0.8125 lr=0.000264
+16:37:14 [INFO] event_onset.trainer: Epoch 023/060 phase=unfreeze train_loss=0.7371 train_acc=0.9321 val_loss=0.7856 val_acc=0.8182 val_f1=0.7743 lr=0.000258
+16:37:15 [INFO] event_onset.trainer: Epoch 024/060 phase=unfreeze train_loss=0.6957 train_acc=0.9393 val_loss=0.7800 val_acc=0.8075 val_f1=0.7583 lr=0.000251
+16:37:15 [INFO] event_onset.trainer: Epoch 025/060 phase=unfreeze train_loss=0.7078 train_acc=0.9304 val_loss=0.7809 val_acc=0.8235 val_f1=0.7836 lr=0.000244
+16:37:16 [INFO] event_onset.trainer: Epoch 026/060 phase=unfreeze train_loss=0.6833 train_acc=0.9518 val_loss=0.7939 val_acc=0.7861 val_f1=0.7290 lr=0.000236
+16:37:16 [INFO] event_onset.trainer: Epoch 027/060 phase=unfreeze train_loss=0.6662 train_acc=0.9607 val_loss=0.7522 val_acc=0.8235 val_f1=0.7749 lr=0.000228
+16:37:16 [INFO] event_onset.trainer: Epoch 028/060 phase=unfreeze train_loss=0.6770 train_acc=0.9554 val_loss=0.7589 val_acc=0.8396 val_f1=0.8012 lr=0.000220
+16:37:17 [INFO] event_onset.trainer: Epoch 029/060 phase=unfreeze train_loss=0.6337 train_acc=0.9696 val_loss=0.7692 val_acc=0.8342 val_f1=0.7997 lr=0.000211
+16:37:17 [INFO] event_onset.trainer: Epoch 030/060 phase=unfreeze train_loss=0.6541 train_acc=0.9607 val_loss=0.7594 val_acc=0.8396 val_f1=0.7994 lr=0.000202
+16:37:18 [INFO] event_onset.trainer: Epoch 031/060 phase=unfreeze train_loss=0.6504 train_acc=0.9714 val_loss=0.7765 val_acc=0.8075 val_f1=0.7508 lr=0.000193
+16:37:18 [INFO] event_onset.trainer: Epoch 032/060 phase=unfreeze train_loss=0.6851 train_acc=0.9482 val_loss=0.7538 val_acc=0.8396 val_f1=0.7982 lr=0.000184
+16:37:19 [INFO] event_onset.trainer: Epoch 033/060 phase=unfreeze train_loss=0.6371 train_acc=0.9786 val_loss=0.7628 val_acc=0.8396 val_f1=0.7982 lr=0.000174
+16:37:19 [INFO] event_onset.trainer: Epoch 034/060 phase=unfreeze train_loss=0.6217 train_acc=0.9732 val_loss=0.7536 val_acc=0.8235 val_f1=0.7772 lr=0.000165
+16:37:19 [INFO] event_onset.trainer: Early stopping: patience=15 best_epoch=19 best_val_f1=0.8189 best_val_acc=0.8503
+[WARNING] ME(2001084:281473671721184,MainProcess):2026-03-21-16:37:19.464.000 [mindspore/run_check/_check_version.py:408] Can not find the tbe operator implementation(need by mindspore-ascend). Please check whether the Environment Variable PYTHONPATH is set. For details, refer to the installation guidelines: https://www.mindspore.cn/install
+[WARNING] ME(2001084:281473671721184,MainProcess):2026-03-21-16:37:19.465.000 [mindspore/run_check/_check_version.py:408] Can not find the tbe operator implementation(need by mindspore-ascend). Please check whether the Environment Variable PYTHONPATH is set. For details, refer to the installation guidelines: https://www.mindspore.cn/install
+16:37:19 [INFO] event_onset.evaluate: Loaded event checkpoint: artifacts/runs/vsign_mainline_clean_full_b0_s42_supp100/checkpoints/event_onset_best.ckpt
+.

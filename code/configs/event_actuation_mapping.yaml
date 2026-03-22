@@ -1,0 +1,9 @@
+actuation_map:
+  # Frozen latch contract:
+  # CONTINUE keeps the current state, while TENSE_OPEN/V_SIGN/THUMB_UP/WRIST_CW
+  # each map to their own latched actuator gesture.
+  CONTINUE: CONTINUE
+  TENSE_OPEN: TENSE_OPEN
+  V_SIGN: V_SIGN
+  THUMB_UP: THUMB_UP
+  WRIST_CW: WRIST_CW

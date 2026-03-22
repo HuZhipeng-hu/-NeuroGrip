@@ -1,0 +1,62 @@
+{
+  "model_type": "event_onset",
+  "model_variant": "event_onset_two_stage_demo3",
+  "training_config": "configs/training_event_onset.yaml",
+  "checkpoint_path": "artifacts/runs/vsign_mainline_clean_full_b0_s42_supp100/checkpoints/event_onset_best.ckpt",
+  "model_path": "models/event_onset.mindir",
+  "inputs": [
+    {
+      "name": "emg",
+      "shape": [
+        1,
+        8,
+        24,
+        3
+      ],
+      "dtype": "float32"
+    },
+    {
+      "name": "imu",
+      "shape": [
+        1,
+        6,
+        16
+      ],
+      "dtype": "float32"
+    }
+  ],
+  "class_names": [
+    "CONTINUE",
+    "TENSE_OPEN",
+    "V_SIGN",
+    "THUMB_UP",
+    "WRIST_CW"
+  ],
+  "public_class_names": [
+    "CONTINUE",
+    "TENSE_OPEN",
+    "V_SIGN",
+    "THUMB_UP",
+    "WRIST_CW"
+  ],
+  "outputs": [
+    {
+      "name": "gate_logits",
+      "dtype": "float32"
+    },
+    {
+      "name": "command_logits",
+      "dtype": "float32"
+    }
+  ],
+  "gate_classes": [
+    "CONTINUE",
+    "COMMAND"
+  ],
+  "command_classes": [
+    "TENSE_OPEN",
+    "V_SIGN",
+    "THUMB_UP",
+    "WRIST_CW"
+  ]
+}

@@ -1,7 +1,0 @@
-{
-  "models/event_onset.mindir": "c7cfc1b0d6cac2e8c21d497c1f5bd0dec4c179071cbe17981a2307b8470a5ad8",
-  "models/event_onset.model_metadata.json": "7fc061eb9895f50288d86ef76b6af27d5fdcf31eef82eff4b8a68efed68e4e94",
-  "configs/runtime_event_onset.yaml": "cf7becd88eac991dd10490d5e9ef8a217091e221996afc3e496fb3d3ec1d966b",
-  "configs/event_actuation_mapping.yaml": "b3b14b45a60dc43e2d864091c135a42a9e5370cca3f2f63bdbaf58798dcd181d",
-  "release_summary.json": "32476ebc220f765ba9714292a8c711f686f241a32e30301daad04d8d31540f4a"
-}

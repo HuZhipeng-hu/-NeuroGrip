@@ -1738,12 +1738,4 @@ java -jar emg-backend-1.0.0.jar \
 
 ---
 
-## 🤝 技术支持
-
-- **GitHub Issues**: https://github.com/your-org/huawei-ict-emg/issues
-- **邮件**: emg-support@huawei.com
-- **文档**: https://docs.emg-project.com
-
----
-
-**© 2024 华为 ICT 赛道 EMG 项目组**
+## 
