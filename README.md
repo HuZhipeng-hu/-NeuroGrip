@@ -64,7 +64,7 @@ HUAWEI_ICT/
 
 1.  安装依赖:
     ```bash
-    cd code/code/scripts
+    cd code/scripts
     pip install -r requirements_orangepi.txt
     ```
 2.  运行采集与推理核心脚本:
@@ -97,8 +97,7 @@ HUAWEI_ICT/
 
 *   **模型架构**: 基于 CNN/RNN 的 `EventOnset` 模型，专为低功耗边缘设别优化。
 *   **输入**: 8通道 EMG (500Hz) + 6轴 IMU (50Hz)。
-*   **输出**: 7类手势 (Relax, Fist, Open, Like, Ok, Wrist_CW, Wrist_CCW)。
-*   **训练**: 详见 `code/code/README.md`。支持使用 `trainer.py` 进行微调。
+*   **训练**: 详见 `code/README.md`。支持使用 `trainer.py` 进行微调。
 
 ## 🐞 常见问题
 
@@ -109,6 +108,4 @@ HUAWEI_ICT/
     *   检查 OrangePi 脚本是否正在运行且无报错。
     *   使用 `test_websocket_app.py` 验证后端是否接收到了数据。
 
-## 📜 许可证
 
-HUAWEI ICT Competition Project.
