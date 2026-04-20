@@ -46,6 +46,11 @@ It also includes the official dataset subset and the fixed split used by the bas
 - runtime: `scripts/run_event_runtime.py`
 - deployment: `scripts/deploy_event_release_bundle.py`
 - environment check: `scripts/preflight.py`
+- unsupervised pretrain: `python unsupervised/train_autoencoder.py --config configs/unsupervised_event_onset.yaml`
+
+## Unsupervised Mode
+
+We added an autoencoder-based self-supervised path to learn embeddings without gesture labels. It reuses the event-onset data loader and evaluates embeddings with K-Means/ARI/NMI/Silhouette. Configure via `configs/unsupervised_event_onset.yaml` and run `python unsupervised/train_autoencoder.py` (MindSpore required). Outputs (checkpoint, embeddings, metrics) are saved under `artifacts/runs/<run_id>/`.
 
 ## Reproduce The Baseline
 

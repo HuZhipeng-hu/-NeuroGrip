@@ -20,7 +20,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                 华为 ICT EMG 手势识别系统全架构                      │
+│                  EMG 手势识别系统全架构                      │
 └─────────────────────────────────────────────────────────────────────┘
 
         ╔══════════════╗
@@ -38,7 +38,7 @@
     │                       │                    │
     ▼                       ▼                    ▼
 ╔═══════════╗        ╔═══════════╗       ╔═══════════╗
-║ OrangePi  ║        ║ Windows   ║       ║   Linux   ║
+║ KunpengPro  ║        ║ Windows   ║       ║   Linux   ║
 ║   5B      ║        ║    PC     ║       ║    PC     ║
 ║ (生产环境) ║        ║ (开发测试) ║       ║ (可选)    ║
 ╚═════╤═════╝        ╚═════╤═════╝       ╚═════╤═════╝
@@ -78,15 +78,15 @@
 | 组件 | 型号/规格 | 数量 | 用途 | 备注 |
 |------|----------|------|------|------|
 | **EMG 臂带** | 8通道采集器 | 1 | 肌电信号采集 | 采样率 1000Hz |
-| **OrangePi 5B** | RK3588, 8GB RAM | 1 | 边缘数据采集器 | 生产环境主设备 |
-| **USB 转串口线** | CH340/CP2102/FTDI | 1-2 | 串口连接 | 用于 OrangePi 或 PC |
+| **KunpengPro 5B** | RK3588, 8GB RAM | 1 | 边缘数据采集器 | 生产环境主设备 |
+| **USB 转串口线** | CH340/CP2102/FTDI | 1-2 | 串口连接 | 用于 KunpengPro 或 PC |
 | **Windows PC** | - | 1 | 开发测试 | 可选，用于调试 |
 | **华为云 ECS** | 2核4GB, Ubuntu 22.04 | 1 | 云端服务器 | IP: 1.95.65.51 |
 | **华为云 RDS** | MySQL 8.0 | 1 | 数据库 | IP: 1.94.234.114 |
 
 ### 2. 软件依赖
 
-#### OrangePi 5B (OpenEuler 24.03 LTS)
+#### KunpengPro 5B (OpenEuler 24.03 LTS)
 ```bash
 # 系统更新
 sudo yum update -y
@@ -117,11 +117,11 @@ sudo apt install mysql-client -y
 
 | 连接 | 源 | 目标 | 协议 | 端口 | 说明 |
 |------|------|------|------|------|------|
-| 设备上报 | OrangePi | ECS | WebSocket | 8080 | 实时数据流 |
-| 设备上报 | OrangePi | ECS | HTTP | 8080 | 批量数据备用 |
+| 设备上报 | KunpengPro | ECS | WebSocket | 8080 | 实时数据流 |
+| 设备上报 | KunpengPro | ECS | HTTP | 8080 | 批量数据备用 |
 | App 订阅 | HarmonyOS | ECS | WebSocket | 8080 | 实时波形展示 |
 | 数据存储 | ECS | RDS | MySQL | 3306 | 数据持久化 |
-| SSH 管理 | 管理员 | OrangePi | SSH | 22 | 远程管理 |
+| SSH 管理 | 管理员 | KunpengPro | SSH | 22 | 远程管理 |
 | SSH 管理 | 管理员 | ECS | SSH | 22 | 服务器管理 |
 
 ---
@@ -232,13 +232,13 @@ python windows_emg_uploader.py --port COM3
 
 ---
 
-### 3. OrangePi 连接配置
+### 3. KunpengPro 连接配置
 
 #### 3.1 硬件连接
 
 1. **USB 转串口线连接**:
    ```
-   EMG 臂带 (USB-A) ──── USB 转串口线 ──── OrangePi USB 口
+   EMG 臂带 (USB-A) ──── USB 转串口线 ──── KunpengPro USB 口
    ```
 
 2. **查看串口设备**:
@@ -285,7 +285,7 @@ sudo minicom -D /dev/ttyUSB0 -b 115200
 python3 -c "import serial; s=serial.Serial('/dev/ttyUSB0', 115200); print('连接成功'); s.close()"
 
 # 3. 完整测试（上报到云端）
-python3 orangepi_emg_uploader.py
+python3 KunpengPro_emg_uploader.py
 ```
 
 ---
@@ -300,7 +300,7 @@ python3 orangepi_emg_uploader.py
 python --version  # 验证
 
 # 安装依赖
-cd "E:\桌面\HUAWEI ICT"
+cd "E:\桌面\"
 pip install pyserial numpy matplotlib requests websocket-client
 ```
 
@@ -406,13 +406,13 @@ curl http://localhost:8080/api/emg/latest
 
 ---
 
-### 阶段三：OrangePi 边缘部署
+### 阶段三：KunpengPro 边缘部署
 
 #### Step 1: 系统初始化
 
 ```bash
-# SSH 连接 OrangePi（替换为实际 IP）
-ssh orangepi@192.168.1.100
+# SSH 连接 KunpengPro（替换为实际 IP）
+ssh KunpengPro@192.168.1.100
 
 # 更新系统
 sudo yum update -y
@@ -426,8 +426,8 @@ pip3 install --upgrade pip
 
 ```bash
 # 从 PC 上传文件
-scp orangepi_emg_uploader.py orangepi@192.168.1.100:~/
-scp emg_armband.py orangepi@192.168.1.100:~/  # 如果需要 SDK
+scp KunpengPro_emg_uploader.py KunpengPro@192.168.1.100:~/
+scp emg_armband.py KunpengPro@192.168.1.100:~/  # 如果需要 SDK
 
 # 或克隆整个项目
 git clone https://github.com/your-org/huawei-ict-emg.git
@@ -460,12 +460,12 @@ echo "source ~/.emg_config" >> ~/.bashrc
 #### Step 4: 测试运行
 
 ```bash
-# 1. 连接 EMG 臂带到 OrangePi USB 口
+# 1. 连接 EMG 臂带到 KunpengPro USB 口
 # 2. 检查串口
 ls /dev/ttyUSB*
 
 # 3. 测试运行
-python3 orangepi_emg_uploader.py
+python3 KunpengPro_emg_uploader.py
 
 # 输出应包含:
 # ✅ WebSocket connected: ws://1.95.65.51:8080/ws/emg
@@ -488,11 +488,11 @@ After=network.target
 
 [Service]
 Type=simple
-User=orangepi
-WorkingDirectory=/home/orangepi
+User=KunpengPro
+WorkingDirectory=/home/KunpengPro
 Environment="EMG_SERIAL_PORT=/dev/ttyUSB0"
 Environment="BACKEND_URL=http://1.95.65.51:8080"
-ExecStart=/usr/bin/python3 /home/orangepi/orangepi_emg_uploader.py
+ExecStart=/usr/bin/python3 /home/KunpengPro/KunpengPro_emg_uploader.py
 Restart=always
 RestartSec=10
 
@@ -515,7 +515,7 @@ crontab -e
 
 添加:
 ```
-@reboot sleep 30 && cd /home/orangepi && python3 orangepi_emg_uploader.py >> logs/uploader.log 2>&1
+@reboot sleep 30 && cd /home/KunpengPro && python3 KunpengPro_emg_uploader.py >> logs/uploader.log 2>&1
 ```
 
 ---
@@ -571,7 +571,7 @@ private readonly SERVER_URL: string = 'ws://1.95.65.51:8080/ws/app';
 | TCP | 22 | 你的IP | SSH 管理 |
 | TCP | 3306 | ECS内网IP | MySQL (RDS) |
 
-#### OrangePi 防火墙（OpenEuler）
+#### KunpengPro 防火墙（OpenEuler）
 
 ```bash
 # 关闭防火墙（开发环境）
@@ -585,7 +585,7 @@ sudo firewall-cmd --reload
 
 ### 2. 网络测试
 
-#### 从 OrangePi 测试到 ECS
+#### 从 KunpengPro 测试到 ECS
 
 ```bash
 # 1. Ping 测试
@@ -736,7 +736,7 @@ fi
 
 # 4. 启动上传脚本（前台运行 10 秒）
 echo -e "\n4️⃣ 测试数据上报（10秒）..."
-timeout 10s python3 orangepi_emg_uploader.py
+timeout 10s python3 KunpengPro_emg_uploader.py
 echo -e "\n✅ 数据流测试完成！"
 ```
 
@@ -763,7 +763,7 @@ echo -e "\n✅ 数据流测试完成！"
 python windows_emg_uploader.py --list-ports
 ```
 
-**Linux/OrangePi**:
+**Linux/KunpengPro**:
 ```bash
 # 1. 检查 USB 设备
 lsusb
@@ -822,13 +822,13 @@ tail -f /var/log/emg-backend.log
 
 ```bash
 # 1. 检查设备是否正在发送数据
-# 在 OrangePi 上查看上传脚本输出
+# 在 KunpengPro 上查看上传脚本输出
 sudo systemctl status emg-uploader
 sudo journalctl -u emg-uploader -f
 
 # 2. 检查 Spring Boot 是否接收到数据
 # 查看后端日志，应有类似输出:
-# [WS] 设备注册: orangepi_01
+# [WS] 设备注册: KunpengPro_01
 # [WS] 收到 EMG 帧: deviceTs=1709894400
 
 # 3. 使用浏览器开发者工具
@@ -866,7 +866,7 @@ spring:
 
 **2. 启用批量上传**
 
-`orangepi_emg_uploader.py`:
+`KunpengPro_emg_uploader.py`:
 ```python
 UPLOAD_MODE = 'both'  # 同时使用 WebSocket 和 HTTP
 HTTP_BATCH_SIZE = 50  # 增加批量大小
@@ -875,7 +875,7 @@ HTTP_BATCH_SIZE = 50  # 增加批量大小
 **3. 网络优化**
 
 ```bash
-# OrangePi 网络优化
+# KunpengPro 网络优化
 sudo sysctl -w net.core.rmem_max=16777216
 sudo sysctl -w net.core.wmem_max=16777216
 sudo sysctl -w net.ipv4.tcp_rmem='4096 87380 16777216'
@@ -935,7 +935,7 @@ class Device:
 ### 2. 网络传输优化
 
 ```python
-# orangepi_emg_uploader.py 优化
+# KunpengPro_emg_uploader.py 优化
 class WebSocketUploader:
     def __init__(self, ...):
         # 启用压缩
@@ -957,7 +957,7 @@ public void flushToDatabase() {
 }
 ```
 
-### 4. OrangePi 系统优化
+### 4. KunpengPro 系统优化
 
 ```bash
 # 1. 禁用不必要的服务
@@ -984,13 +984,13 @@ sudo sh -c 'echo 4096 > /sys/class/tty/ttyUSB0/rx_buffer_size'
 | 数据库写入 TPS | > 500 | 300-800 | 批量插入 |
 | App 刷新率 | 20-50 fps | > 15 fps | 前端显示 |
 | 丢包率 | < 0.1% | < 1% | WebSocket 丢包 |
-| CPU 占用 (OrangePi) | < 15% | < 30% | Python 进程 |
-| 内存占用 (OrangePi) | < 100MB | < 200MB | Python 进程 |
+| CPU 占用 (KunpengPro) | < 15% | < 30% | Python 进程 |
+| 内存占用 (KunpengPro) | < 100MB | < 200MB | Python 进程 |
 
 ### 监控命令
 
 ```bash
-# OrangePi 资源监控
+# KunpengPro 资源监控
 watch -n 1 'ps aux | grep python'
 
 # Spring Boot 性能
@@ -1021,4 +1021,5 @@ mysql -h 1.94.234.114 -u root -p -e "SHOW STATUS LIKE 'Threads_connected';"
 
 ---
 
-**© 2024 华为 ICT 赛道 EMG 项目组**
+**© 2024  赛道 EMG 项目组**
+

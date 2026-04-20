@@ -137,7 +137,7 @@ logging:
     name: /opt/emg/logs/emg-backend.log
   level:
     root: INFO
-    com.huaweiict: DEBUG
+    com.: DEBUG
 EOF
 ```
 
@@ -359,3 +359,4 @@ systemctl daemon-reload && systemctl restart emg-backend
 查找pid：ps -ef | grep emg-backend
 
 停止：kill -15 12345
+

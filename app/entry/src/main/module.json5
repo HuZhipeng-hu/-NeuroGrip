@@ -17,6 +17,16 @@
         "reason": "$string:api_reason"
       },
       {
+        "name": "ohos.permission.MICROPHONE",
+        "reason": "$string:api_reason",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "inuse"
+        }
+      },
+      {
         "name": "ohos.permission.APPROXIMATELY_LOCATION",
         "reason": "$string:location_reason",
         "usedScene": {

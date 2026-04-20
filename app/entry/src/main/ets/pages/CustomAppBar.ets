@@ -7,6 +7,7 @@ export struct CustomAppBar {
   @Prop title: string;
   private onBack?: () => void;
   @Prop showSettings: boolean = true;
+  @Prop showVoice: boolean = true;
 
   build() {
     Row() {
@@ -40,17 +41,31 @@ export struct CustomAppBar {
         .fontColor('#1E40AF')
 
       Blank()
-      Text('⚙️')
-        .fontSize(20)
-        .width(40)
-        .height(40)
-        .textAlign(TextAlign.Center)
-        .visibility(this.showSettings ? Visibility.Visible : Visibility.Hidden)
-        .onClick(() => {
-          router.pushUrl({
-            url: 'pages/Settings'
+      Row() {
+        Text('🎙️')
+          .fontSize(18)
+          .width(32)
+          .height(32)
+          .textAlign(TextAlign.Center)
+          .visibility(this.showVoice ? Visibility.Visible : Visibility.Hidden)
+          .onClick(() => {
+            router.pushUrl({
+              url: 'pages/VoiceControlPage'
+            });
           });
-        });
+
+        Text('⚙️')
+          .fontSize(20)
+          .width(40)
+          .height(40)
+          .textAlign(TextAlign.Center)
+          .visibility(this.showSettings ? Visibility.Visible : Visibility.Hidden)
+          .onClick(() => {
+            router.pushUrl({
+              url: 'pages/Settings'
+            });
+          });
+      }
     }
     .width('100%')
     .height(56)

@@ -1,0 +1,45 @@
+model:
+  input_shape: [16, 24, 6]      # (channels, freq_bins, time_frames) for EMG STFT features
+  embedding_dim: 128
+  hidden_dim: 512
+  dropout_rate: 0.2
+
+training:
+  epochs: 40
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  device_target: CPU             # CPU | GPU | Ascend
+  device_id: 0
+  shuffle: true
+  num_workers: 1                 # MindSpore requires >=1
+
+augmentation:
+  noise_std: 0.02                # Gaussian noise std applied to inputs
+  temporal_shift_max: 1          # Max temporal shift (frames) for STFT feature axis
+  scale_min: 0.9
+  scale_max: 1.1
+
+loss:
+  type: mse                      # Currently fixed to reconstruction MSE
+
+logging:
+  run_root: artifacts/runs
+  run_tag: unsupervised
+
+# Dataset configuration mirrors the supervised pipeline
+# and reuses recordings manifest + preprocessing choices.
+data:
+  data_dir: ../data
+  recordings_manifest_path: recordings_manifest.csv
+  label_mode: event_onset
+  capture_mode_filter: event_onset
+  target_db5_keys: [TENSE_OPEN, V_SIGN, THUMB_UP, WRIST_CW]
+  split_manifest_path: artifacts/splits/event_onset_demo3_split_manifest.json
+  feature:
+    emg_freq_bins: 24
+    emg_stft_window: 64
+    emg_stft_hop: 24
+    context_window_ms: 240
+    window_step_ms: 20
+  device_sampling_rate_hz: 500

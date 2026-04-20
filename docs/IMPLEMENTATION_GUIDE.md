@@ -18,7 +18,7 @@
 本次架构升级实现了以下核心功能：
 
 1. **数据采集与标注分离** ✅
-   - OrangePi采集的EMG数据默认**不保存**到MySQL
+   - KunpengPro采集的EMG数据默认**不保存**到MySQL
    - 数据在Spring Boot缓存10分钟
    - 用户通过App主动选择标注和保存
 
@@ -34,14 +34,14 @@
 
 4. **智能模型管理** ✅
    - 版本化管理所有训练模型
-   - 支持边缘（OrangePi）和云端部署
+   - 支持边缘（KunpengPro）和云端部署
    - 模型自动更新机制
 
 ### 架构图
 
 ```
 ┌──────────┐       ┌──────────────┐       ┌───────────────┐       ┌──────────┐
-│ EMG臂带  │──串口──│  OrangePi    │──WS──│ Spring Boot   │──WS──│ HarmonyOS│
+│ EMG臂带  │──串口──│  KunpengPro    │──WS──│ Spring Boot   │──WS──│ HarmonyOS│
 │          │       │              │      │  + MySQL      │      │   App    │
 │          │       │ • 采集数据    │      │ • 缓存数据    │      │ • 标注   │
 │          │       │ • 本地推理    │      │ • 训练管理    │      │ • 训练   │
@@ -61,7 +61,7 @@
 ### 前置条件
 
 1. **硬件**
-   - OrangePi（已配置好开发环境）
+   - KunpengPro（已配置好开发环境）
    - EMG臂带
    - 开发PC（Windows/Linux/Mac）
 
@@ -72,7 +72,7 @@
    - Python 3.8+（用于训练）
 
 3. **网络**
-   - OrangePi和ECS可以互相访问
+   - KunpengPro和ECS可以互相访问
    - App可以访问ECS公网IP
 
 ### 30分钟快速部署
@@ -141,15 +141,15 @@ ssh your-ecs
 pip3 install torch numpy scikit-learn
 ```
 
-#### 第4步：更新OrangePi采集程序（5分钟）
+#### 第4步：更新KunpengPro采集程序（5分钟）
 
 ```bash
-# 修改orangepi_emg_uploader.py
+# 修改KunpengPro_emg_uploader.py
 # 确保数据上传到Spring Boot的WebSocket接口
 # （现有代码已经实现，无需修改）
 
-# 重启OrangePi服务
-ssh orangepi
+# 重启KunpengPro服务
+ssh KunpengPro
 sudo systemctl restart emg-uploader
 ```
 
@@ -220,13 +220,13 @@ dataCache.add(frameMap);  // 保留10分钟
 
 ```bash
 # 1. 获取缓存数据
-curl "http://localhost:8080/api/annotation/cache-data?device_id=orangepi_01"
+curl "http://localhost:8080/api/annotation/cache-data?device_id=KunpengPro_01"
 
 # 2. 保存标注
 curl -X POST http://localhost:8080/api/annotation/save \\
   -H "Content-Type: application/json" \\
   -d '{
-    "device_id": "orangepi_01",
+    "device_id": "KunpengPro_01",
     "start_time": "2026-03-10T10:00:00",
     "end_time": "2026-03-10T10:00:05",
     "gesture_label": "fist",
@@ -403,12 +403,12 @@ python3 code/conversion/convert.py \\
 python3 validate_onnx.py /opt/emg/models/v1.0.0.onnx
 ```
 
-#### 3.3 部署到OrangePi
+#### 3.3 部署到KunpengPro
 
 **方案1：自动下载（推荐）**
 
 ```python
-# OrangePi上运行model_updater.py
+# KunpengPro上运行model_updater.py
 python3 /opt/emg/model_updater.py
 
 # 它会：
@@ -426,15 +426,15 @@ curl -X POST http://localhost:8080/api/model/deploy \\
   -H "Content-Type: application/json" \\
   -d '{
     "version": "v1.0.0",
-    "target_type": "orangepi",
-    "target_device_id": "orangepi_01",
+    "target_type": "KunpengPro",
+    "target_device_id": "KunpengPro_01",
     "set_as_active": true
   }'
 ```
 
 #### 3.4 推理引擎集成
 
-修改 `orangepi_emg_uploader.py`：
+修改 `KunpengPro_emg_uploader.py`：
 
 ```python
 from inference_engine import GestureInferenceEngine
@@ -466,7 +466,7 @@ def process_emg_frame(frame_data):
 **测试场景1：数据标注流程**
 
 ```
-1. OrangePi启动，开始采集数据
+1. KunpengPro启动，开始采集数据
 2. App打开实时监控页面，查看数据
 3. App切换到标注页面
 4. 用户选择手势"fist"，点击"开始录制"
@@ -493,7 +493,7 @@ def process_emg_frame(frame_data):
 1. App打开模型管理页面
 2. 查看最新训练的模型版本
 3. 选择该版本，点击"部署"
-4. 选择目标"OrangePi"
+4. 选择目标"KunpengPro"
 5. 等待部署完成
 6. 在实时监控页面观察推理结果
 7. 做出不同手势，验证识别准确性
@@ -601,7 +601,7 @@ python3 tests/test_websocket_load.py
 
 ## 常见问题
 
-### Q1: OrangePi上报的数据在Spring Boot中找不到？
+### Q1: KunpengPro上报的数据在Spring Boot中找不到？
 
 **排查步骤：**
 1. 检查WebSocket连接状态
@@ -727,7 +727,7 @@ tail -f /var/log/emg-inference.log
 - `harmony_app/TrainingPage.ets` - 模型训练页面
 - `harmony_app/ModelManagePage.ets` - 模型管理页面
 
-#### OrangePi脚本
+#### KunpengPro脚本
 
 - `inference_engine.py` - 推理引擎（见部署指南）
 - `model_updater.py` - 模型更新服务（见部署指南）
@@ -773,3 +773,4 @@ tail -f /var/log/emg-inference.log
 **文档版本：** v1.0  
 **最后更新：** 2026-03-10  
 **作者：** EMG手势识别系统开发团队
+

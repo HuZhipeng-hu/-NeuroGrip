@@ -2,7 +2,7 @@
 
 ## 目录
 - [部署架构总览](#部署架构总览)
-- [边缘部署（OrangePi）](#边缘部署orangepi)
+- [边缘部署（KunpengPro）](#边缘部署KunpengPro)
 - [云端部署](#云端部署)
 - [模型转换与优化](#模型转换与优化)
 - [部署流程说明](#部署流程说明)
@@ -32,7 +32,7 @@
          │
          ↓
     ┌─────────────────────┐
-    │  OrangePi + 模型     │
+    │  KunpengPro + 模型     │
     │  - 本地推理        │
     │  - 低延迟(<10ms)   │
     │  - 离线可用        │
@@ -41,7 +41,7 @@
 
 ### 2. 部署策略对比
 
-| 维度 | 边缘部署（OrangePi） | 云端部署 | 混合部署 |
+| 维度 | 边缘部署（KunpengPro） | 云端部署 | 混合部署 |
 |------|---------------------|---------|---------|
 | **延迟** | ⭐⭐⭐⭐⭐ <5ms | ⭐⭐ 50-200ms | ⭐⭐⭐⭐ |
 | **离线可用** | ✅ 完全支持 | ❌ 需要网络 | ✅ 边缘支持 |
@@ -52,7 +52,7 @@
 
 ---
 
-## 边缘部署（OrangePi）
+## 边缘部署（KunpengPro）
 
 ### 1. 硬件要求
 
@@ -70,7 +70,7 @@
 ### 2. 软件环境
 
 ```bash
-# OrangePi上安装依赖
+# KunpengPro上安装依赖
 sudo apt-get update
 sudo apt-get install python3 python3-pip
 
@@ -146,14 +146,14 @@ with open("model.tflite", "wb") as f:
 print("✓ TFLite模型转换成功")
 ```
 
-### 4. OrangePi推理引擎
+### 4. KunpengPro推理引擎
 
 创建：`/opt/emg/inference_engine.py`
 
 ```python
 # -*- coding: utf-8 -*-
 """
-inference_engine.py - OrangePi边缘推理引擎
+inference_engine.py - KunpengPro边缘推理引擎
 """
 import numpy as np
 import onnxruntime as ort
@@ -241,7 +241,7 @@ if __name__ == '__main__':
 
 ### 5. 集成到数据采集脚本
 
-修改 `orangepi_emg_uploader.py`：
+修改 `KunpengPro_emg_uploader.py`：
 
 ```python
 from inference_engine import GestureInferenceEngine
@@ -583,10 +583,10 @@ torch.save(model.state_dict(), 'pruned_model.pth')
 5. 上传模型文件到存储（OSS/NFS）
    ↓
 6. 选择部署目标
-   ├─ OrangePi边缘部署
+   ├─ KunpengPro边缘部署
    │  ├─ App发起部署请求
    │  ├─ Spring Boot推送模型信息
-   │  ├─ OrangePi下载模型文件
+   │  ├─ KunpengPro下载模型文件
    │  ├─ 推理引擎热加载新模型
    │  └─ 验证推理结果
    │
@@ -608,7 +608,7 @@ torch.save(model.state_dict(), 'pruned_model.pth')
 # deploy_model.sh
 
 VERSION=$1
-TARGET=$2  # orangepi / cloud
+TARGET=$2  # KunpengPro / cloud
 
 echo "部署模型: $VERSION 到 $TARGET"
 
@@ -619,11 +619,11 @@ python3 convert_to_onnx.py --input models/${VERSION}.pth --output models/${VERSI
 python3 validate_model.py --model models/${VERSION}.onnx
 
 # 3. 根据目标部署
-if [ "$TARGET" == "orangepi" ]; then
-    # 上传到OrangePi
-    scp models/${VERSION}.onnx orangepi:/opt/emg/models/
-    ssh orangepi "ln -sf /opt/emg/models/${VERSION}.onnx /opt/emg/models/model.onnx"
-    ssh orangepi "systemctl restart emg-inference"
+if [ "$TARGET" == "KunpengPro" ]; then
+    # 上传到KunpengPro
+    scp models/${VERSION}.onnx KunpengPro:/opt/emg/models/
+    ssh KunpengPro "ln -sf /opt/emg/models/${VERSION}.onnx /opt/emg/models/model.onnx"
+    ssh KunpengPro "systemctl restart emg-inference"
 elif [ "$TARGET" == "cloud" ]; then
     # 构建Docker镜像
     docker build -t emg-inference:${VERSION} .
@@ -759,4 +759,5 @@ groups:
 - ✅ **可靠性保障**：健康检查、自动重试、故障转移
 - ✅ **运维友好**：完善的监控、日志和告警
 
-建议生产环境采用**混合部署**方案，主要在OrangePi边缘推理，云端作为备份和新模型测试平台。
+建议生产环境采用**混合部署**方案，主要在KunpengPro边缘推理，云端作为备份和新模型测试平台。
+

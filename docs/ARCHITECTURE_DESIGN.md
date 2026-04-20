@@ -3,13 +3,13 @@
 ## 1. 系统概述
 
 ### 1.1 核心需求
-- **数据采集控制**：OrangePi采集的EMG数据默认不保存到MySQL，由App控制保存
+- **数据采集控制**：KunpengPro采集的EMG数据默认不保存到MySQL，由App控制保存
 - **数据标注**：保存的数据需要通过App进行手势标注
 - **模型训练**：App可以主动触发使用MySQL中的标注数据训练模型
-- **模型部署**：训练完成的模型可部署到OrangePi或云端进行实时推理
+- **模型部署**：训练完成的模型可部署到KunpengPro或云端进行实时推理
 
 ### 1.2 技术栈
-- **硬件层**：OrangePi + EMG臂带
+- **硬件层**：KunpengPro + EMG臂带
 - **后端**：Spring Boot + MySQL（华为云RDS）
 - **前端**：HarmonyOS App（ArkTS）
 - **训练**：Python + PyTorch/MindSpore
@@ -26,9 +26,9 @@
          │ 串口
          ↓
 ┌─────────────────────────────────────────────────────────┐
-│                    OrangePi                             │
+│                    KunpengPro                             │
 │  ┌──────────────────────────────────────────────────┐  │
-│  │  orangepi_emg_uploader.py                        │  │
+│  │  KunpengPro_emg_uploader.py                        │  │
 │  │  - 采集EMG数据                                    │  │
 │  │  - 实时推送到Spring Boot（WebSocket）            │  │
 │  │  - 数据不直接保存到MySQL                         │  │
@@ -41,7 +41,7 @@
 │              Spring Boot 后端（华为云ECS）               │
 │  ┌───────────────────────────────────────────────────┐ │
 │  │  📡 实时数据流服务                                 │ │
-│  │  - WebSocket Hub（接收OrangePi，广播给App）       │ │
+│  │  - WebSocket Hub（接收KunpengPro，广播给App）       │ │
 │  │  - 数据缓存（Redis）                               │ │
 │  │  - 默认不保存到MySQL                              │ │
 │  └───────────────────────────────────────────────────┘ │
@@ -109,7 +109,7 @@
 │  ┌───────────────────────────────────────────────────┐ │
 │  │  📦 模型管理页面                                   │ │
 │  │  - 查看所有模型版本                               │ │
-│  │  - 部署模型到OrangePi                             │ │
+│  │  - 部署模型到KunpengPro                             │ │
 │  │  - 切换使用的模型版本                             │ │
 │  │  - 查看模型性能指标                               │ │
 │  └───────────────────────────────────────────────────┘ │
@@ -271,7 +271,7 @@ Response:
 POST /api/annotation/save
 Request Body:
 {
-  "device_id": "orangepi_01",
+  "device_id": "KunpengPro_01",
   "start_time": "2026-03-10T10:00:00",
   "end_time": "2026-03-10T10:00:05",
   "gesture_label": "fist",
@@ -436,8 +436,8 @@ POST /api/model/deploy
 Request Body:
 {
   "version": "v1.0.5",
-  "target": "orangepi",  // orangepi/cloud
-  "device_id": "orangepi_01"
+  "target": "KunpengPro",  // KunpengPro/cloud
+  "device_id": "KunpengPro_01"
 }
 Response:
 {
@@ -456,7 +456,7 @@ Response: 模型文件（二进制流）
 
 ## 5. WebSocket 协议设计
 
-### 5.1 OrangePi → Spring Boot
+### 5.1 KunpengPro → Spring Boot
 
 #### 连接端点
 ```
@@ -467,7 +467,7 @@ ws://backend:8080/ws/emg
 ```json
 {
   "type": "emg_data",
-  "device_id": "orangepi_01",
+  "device_id": "KunpengPro_01",
   "device_ts": 1234567890,
   "data": {
     "emg": [[ch1_1, ch2_1, ...], ...],  // 10x8
@@ -492,7 +492,7 @@ ws://backend:8080/ws/app
 ```json
 {
   "type": "emg_data",
-  "device_id": "orangepi_01",
+  "device_id": "KunpengPro_01",
   "timestamp": "2026-03-10T10:00:00",
   "data": { ... }
 }
@@ -525,7 +525,7 @@ ws://backend:8080/ws/app
 {
   "type": "model_deployed",
   "version": "v1.0.5",
-  "target": "orangepi_01",
+  "target": "KunpengPro_01",
   "status": "success"
 }
 ```
@@ -623,12 +623,12 @@ Process process = pb.start();
         │                     │
         ↓                     ↓
 ┌───────────────┐    ┌────────────────────┐
-│ OrangePi部署  │    │  云端部署          │
+│ KunpengPro部署  │    │  云端部署          │
 │ (边缘推理)    │    │  (中心推理)        │
 └───────────────┘    └────────────────────┘
 ```
 
-### 7.2 OrangePi 边缘部署（推荐）
+### 7.2 KunpengPro 边缘部署（推荐）
 
 **优点**：
 - 低延迟（本地推理，无网络往返）
@@ -646,9 +646,9 @@ Process process = pb.start();
    # ONNX → NCNN (for ARM CPU)
    ```
 
-2. **OrangePi推理脚本**
+2. **KunpengPro推理脚本**
    ```python
-   # orangepi_emg_uploader.py 增加推理模块
+   # KunpengPro_emg_uploader.py 增加推理模块
    import onnxruntime as ort
    
    class GestureInferenceEngine:
@@ -664,14 +664,14 @@ Process process = pb.start();
    ```
 
 3. **模型自动更新**
-   - OrangePi定期检查新模型版本
+   - KunpengPro定期检查新模型版本
    - 从Spring Boot下载最新模型
    - 热加载新模型
 
 ### 7.3 云端推理部署（备选）
 
 **适用场景**：
-- OrangePi性能不足
+- KunpengPro性能不足
 - 需要集中管理推理资源
 - 需要A/B测试不同模型
 
@@ -695,7 +695,7 @@ Process process = pb.start();
        return jsonify(result)
    ```
 
-3. **OrangePi调用云端推理**
+3. **KunpengPro调用云端推理**
    ```python
    response = requests.post(
        'http://backend:8080/api/inference/predict',
@@ -706,9 +706,9 @@ Process process = pb.start();
 
 ### 7.4 混合部署（最佳方案）
 
-- **主推理**：OrangePi本地推理（低延迟）
-- **备用推理**：云端推理（OrangePi离线或模型未部署时）
-- **模型验证**：新模型先在云端测试，稳定后部署到OrangePi
+- **主推理**：KunpengPro本地推理（低延迟）
+- **备用推理**：云端推理（KunpengPro离线或模型未部署时）
+- **模型验证**：新模型先在云端测试，稳定后部署到KunpengPro
 
 ---
 
@@ -716,7 +716,7 @@ Process process = pb.start();
 
 ### 8.1 实时监控流程（不保存）
 ```
-EMG臂带 → OrangePi → WebSocket → Spring Boot → WebSocket → App显示
+EMG臂带 → KunpengPro → WebSocket → Spring Boot → WebSocket → App显示
 （数据在Spring Boot缓存中保留10分钟，然后丢弃）
 ```
 
@@ -744,8 +744,8 @@ EMG臂带 → OrangePi → WebSocket → Spring Boot → WebSocket → App显示
 ```
 1. App选择模型版本，发起部署请求
 2. Spring Boot准备模型文件
-3. 模型推送到OrangePi
-4. OrangePi加载新模型
+3. 模型推送到KunpengPro
+4. KunpengPro加载新模型
 5. 开始使用新模型进行推理
 ```
 
@@ -833,7 +833,7 @@ while ((line = reader.readLine()) != null) {
 
 ### 10.1 认证授权
 - App访问API需要JWT Token
-- OrangePi使用设备密钥认证
+- KunpengPro使用设备密钥认证
 - 数据标注记录标注人信息
 
 ### 10.2 数据隐私
@@ -870,7 +870,7 @@ while ((line = reader.readLine()) != null) {
 ## 12. 监控与日志
 
 ### 12.1 系统监控
-- OrangePi上报健康状态
+- KunpengPro上报健康状态
 - Spring Boot Actuator监控
 - MySQL性能监控
 
@@ -888,8 +888,8 @@ while ((line = reader.readLine()) != null) {
 
 ## 13. 部署清单
 
-### 13.1 OrangePi
-- [x] orangepi_emg_uploader.py（数据采集）
+### 13.1 KunpengPro
+- [x] KunpengPro_emg_uploader.py（数据采集）
 - [ ] inference_engine.py（边缘推理，新增）
 - [ ] model_updater.py（模型更新，新增）
 
@@ -936,7 +936,7 @@ while ((line = reader.readLine()) != null) {
 **阶段3：模型管理与部署（1周）**
 - [ ] 模型版本管理
 - [ ] 模型转换（ONNX）
-- [ ] OrangePi推理引擎
+- [ ] KunpengPro推理引擎
 - [ ] 模型自动更新
 
 **阶段4：测试与优化（1周）**
@@ -953,7 +953,8 @@ while ((line = reader.readLine()) != null) {
 - ✅ **灵活的数据标注**：App端便捷标注，支持预览和批量操作
 - ✅ **自动化训练**：App一键触发，后台异步执行
 - ✅ **智能模型管理**：版本化管理，支持多种部署方式
-- ✅ **边缘推理优化**：OrangePi本地推理，低延迟高可用
+- ✅ **边缘推理优化**：KunpengPro本地推理，低延迟高可用
 - ✅ **可扩展架构**：支持多设备、多用户、分布式训练
 
 建议优先实现**阶段1和阶段2**，确保数据标注和训练流程打通，再逐步完善模型部署功能。
+

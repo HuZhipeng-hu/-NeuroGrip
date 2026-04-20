@@ -1,0 +1,11 @@
+{
+  "run_id": "20260323_143037_unsupervised",
+  "checkpoint": "artifacts\\runs\\20260323_143037_unsupervised\\unsupervised_autoencoder.ckpt",
+  "embeddings": "artifacts\\runs\\20260323_143037_unsupervised\\unsupervised_embeddings.npy",
+  "history": "artifacts\\runs\\20260323_143037_unsupervised\\unsupervised_history.json",
+  "metrics": {
+    "ari": 0.18378181846759578,
+    "nmi": 0.3958219138381464,
+    "silhouette": 0.2589845657348633
+  }
+}

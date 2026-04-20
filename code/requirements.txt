@@ -4,6 +4,8 @@
 numpy>=1.21.0
 scipy>=1.7.0
 pyyaml>=6.0
+scikit-learn>=1.2.0
+tqdm>=4.66.0
 
 # 训练环境
 # mindspore>=2.7.1    # NPU/GPU 上安装, 参考: https://www.mindspore.cn/install

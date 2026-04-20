@@ -10,7 +10,7 @@
 
 ```
 ┌─────────────────┐
-│  OrangePi 设备  │
+│  KunpengPro 设备  │
 │  EMG 采集器     │
 └────────┬────────┘
          │ WebSocket (/ws/emg)
@@ -386,7 +386,7 @@ ws.on('error', (error) => {
 ## 🔧 后端实现细节
 
 ### **核心代码位置**
-📁 [EmgWebSocketHandler.java](../springboot_backend/src/main/java/com/huaweiict/emg/websocket/EmgWebSocketHandler.java)
+📁 [EmgWebSocketHandler.java](../springboot_backend/src/main/java/com//emg/websocket/EmgWebSocketHandler.java)
 
 ### **关键方法**
 
@@ -578,7 +578,7 @@ ws.on('message', (data) => {
 - [Spring Boot 后端功能说明](README.md#springboot-后端)
 - [HarmonyOS App 开发指南](../harmony_app/EmgRealtimePage.ets)
 - [数据过滤控制指南](DATA_FILTER_GUIDE.md)
-- [WebSocket 配置](../springboot_backend/src/main/java/com/huaweiict/emg/config/WebSocketConfig.java)
+- [WebSocket 配置](../springboot_backend/src/main/java/com//emg/config/WebSocketConfig.java)
 
 ---
 
@@ -593,3 +593,4 @@ WebSocket `/ws/app` 端点的核心优势：
 ✅ **高效性**：广播模式，节省服务器资源  
 
 非常适合构建**实时监控、数据可视化、远程控制**等应用场景！
+

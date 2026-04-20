@@ -305,3 +305,4 @@ const colors = [
 **最后更新**: 2026-03-18  
 **版本**: EmgRealtimePage v2.0  
 **维护者**: EMG识别系统开发团队
+

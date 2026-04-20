@@ -4,10 +4,19 @@ import router from '@ohos.router';
 import promptAction from '@ohos.promptAction';
 import { CustomAppBar } from './CustomAppBar';
 import preferences from '@ohos.data.preferences';
+import common from '@ohos.app.ability.common';
+import { voiceCommandService } from '../services/VoiceCommandService';
 
 @Entry
 @Component
 struct Setting {
+  @State voiceEnabled: boolean = false;
+  @State wakeWord: string = '小臂助手';
+
+  aboutToAppear() {
+    this.loadVoicePrefs();
+  }
+
   build() {
     Column() {
       CustomAppBar({ title: '系统设置', onBack: () => router.back(), showSettings: false })
@@ -39,6 +48,24 @@ struct Setting {
             color: '#DC2626',
             onTap: () => { // 👈 添加这一段
               AlertDialog.show({ message: '数据会自动同步' });
+            }
+          });
+        }
+
+        ListItem() {
+          SectionTitle({ title: '语音控制' })
+        }
+        .enabled(false)
+
+        ListItem() {
+          SettingItem({
+            icon: '🎙️',
+            title: '语音操控',
+            desc: `唤醒词：${this.wakeWord}`,
+            extra: this.voiceEnabled ? '已开启' : '已关闭',
+            color: '#10B981',
+            onTap: () => {
+              this.toggleVoiceControl();
             }
           });
         }
@@ -111,6 +138,41 @@ struct Setting {
     .width('100%')
     .height('100%')
     .backgroundColor('#F8FAFC')
+  }
+
+  private loadVoicePrefs() {
+    const context = getContext(this) as common.UIAbilityContext;
+    preferences.getPreferences(context, 'voice_prefs', (err, prefs) => {
+      if (err || !prefs) {
+        return;
+      }
+      this.voiceEnabled = Boolean(prefs.getSync('voice_enabled', false));
+      this.wakeWord = String(prefs.getSync('voice_wake_word', '小臂助手')) || '小臂助手';
+    });
+  }
+
+  private toggleVoiceControl() {
+    const context = getContext(this) as common.UIAbilityContext;
+    const nextValue = !this.voiceEnabled;
+    this.voiceEnabled = nextValue;
+
+    preferences.getPreferences(context, 'voice_prefs', (err, prefs) => {
+      if (err || !prefs) {
+        promptAction.showToast({ message: '语音设置保存失败' });
+        return;
+      }
+      prefs.putSync('voice_enabled', nextValue);
+      prefs.putSync('voice_wake_word', this.wakeWord);
+      prefs.flushSync();
+
+      if (nextValue) {
+        voiceCommandService.start(context, this.wakeWord);
+        promptAction.showToast({ message: `语音控制已开启（唤醒词：${this.wakeWord}）` });
+      } else {
+        voiceCommandService.stop();
+        promptAction.showToast({ message: '语音控制已关闭' });
+      }
+    });
   }
 }
 

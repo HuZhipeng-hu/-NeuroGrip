@@ -10,6 +10,7 @@
     "pages/EmgRealtimePage",
     "pages/AnnotationPage",
     "pages/ModelTrainingPage",
-    "pages/ModelManagePage"
+    "pages/ModelManagePage",
+    "pages/VoiceControlPage"
   ]
 }

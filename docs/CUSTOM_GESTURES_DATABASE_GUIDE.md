@@ -498,10 +498,10 @@ tail -f nohup.out | grep "设备=emg_device_abc123"
 ## 📚 相关文件
 
 - 前端: `app/entry/src/main/ets/pages/AnnotationPage.ets`
-- 后端控制器: `springboot_backend/src/main/java/com/huaweiict/emg/controller/AnnotationController.java`
-- 后端服务: `springboot_backend/src/main/java/com/huaweiict/emg/service/CustomGestureService.java`
-- 数据访问: `springboot_backend/src/main/java/com/huaweiict/emg/repository/CustomGestureRepository.java`
-- 数据模型: `springboot_backend/src/main/java/com/huaweiict/emg/model/CustomGesture.java`
+- 后端控制器: `springboot_backend/src/main/java/com//emg/controller/AnnotationController.java`
+- 后端服务: `springboot_backend/src/main/java/com//emg/service/CustomGestureService.java`
+- 数据访问: `springboot_backend/src/main/java/com//emg/repository/CustomGestureRepository.java`
+- 数据模型: `springboot_backend/src/main/java/com//emg/model/CustomGesture.java`
 - 数据库迁移: `docs/add_custom_gestures_table.sql`
 
 ## 📝 更新日志
@@ -528,3 +528,4 @@ tail -f nohup.out | grep "设备=emg_device_abc123"
 
 **文档更新时间**: 2026-03-18  
 **维护者**: EMG识别系统开发团队
+
