@@ -1,4 +1,4 @@
-# NeuroGrip Pro - 智能仿生机械臂控制系统
+# NeuroGrip - 智能仿生机械臂控制系统
 
 本项目实现了一套基于肌电信号（sEMG）的智能手势识别与机械臂控制系统。系统采用端云协同架构，利用 KunpengPro 进行边缘端实时采集与推理，通过 WebSocket 将数据传输至 Spring Boot 后端，并由 HarmonyOS App 提供可视化交互与训练管理。
 
